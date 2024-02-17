@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Across - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="web-cms-module" data-version="0.2.0-SNAPSHOT">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Web CMS</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.2.x.html">0.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.1.x.html">0.1.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.0.x.html">0.0.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration-properties.html">Configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../domain-model/assets/index.html">Web CMS Asset model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../domain-model/assets/endpoint-url.html">Endpoints &amp; URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/pages/index.html">Web Pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/publication/index.html">Publications &amp; Articles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/images/index.html">Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/redirects/index.html">Redirects</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/menus/index.html">Menus</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Web Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="component-types.html">Component types</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="creating-a-component-type.html">Creating a custom component</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-markers.html">Content markers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="thymeleaf.html">Thymeleaf integration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../importing/index.html">Importing data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../importing/yaml-structure.html">YAML structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../multi-domain/index.html">Multi-domain support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/setup.html">Application configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/using-domains.html">Using domains</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/importing.html">Importing domain data</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/entitymodule-attributes.html">EntityModule attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/thymeleaf-dialect.html">Thymeleaf dialect</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/default-data.html">Default data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../performance-tuning/index.html">Performance tuning</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/creating-a-custom-asset.html">Creating a custom asset type</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Web CMS</span>
+    <span class="version">0.2.0-SNAPSHOT</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.2.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Web CMS</a></li>
+    <li class="crumb"><a href="index.html">Web Components</a></li>
+    <li class="crumb"><a href="component-types.html">Component types</a></li>
+    <li class="crumb"><a href="creating-a-component-type.html">Creating a custom component</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">0.2.0-SNAPSHOT</button>
+  <div class="versions-menu">
+    <a class="version is-current" href="creating-a-component-type.html">0.2.0-SNAPSHOT</a>
+    <a class="version" href="../../0.0.7/components/creating-a-component-type.html">0.0.7</a>
+    <a class="version" href="../../0.0.6/components/creating-a-component-type.html">0.0.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-web-cms-module/edit/master/docs/modules/ROOT/pages/components/creating-a-component-type.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+    <div class="sect1">
+<h2 id="components-defining-component-types"><a class="anchor" href="#components-defining-component-types"></a>Defining component types</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can easily define your own component types.
+Depending on your needs you can <a href="#components-extending-base-types">extend one of the base types</a> or create a <a href="#components-custom-component-type">fully custom implementation</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="components-extending-base-types"><a class="anchor" href="#components-extending-base-types"></a>Extending the base types</h3>
+<div class="paragraph">
+<p>You can add a custom <code>WebCmsComponentType</code> by importing it via YAML or by adding it via the <code>WebCmsComponentTypeRepository</code>.
+Component types to import should be defined in the section <strong>types - component</strong> where the key of a component type definition is the`unique <code>WebCmsComponentType</code> <code>typeKey</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example YAML component type definition</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">types:
+  component:
+    my-component:
+      name: Custom component
+      description: Custom HTML component with additional metadata.
+      attributes:
+        type: markup
+        metadata: "my.component.MyMetadata"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A <code>WebCmsComponentType</code> has a collection of attributes.
+This is a map of <code>String</code> key/value pairs.
+Adding attributes is a way to provide processing metadata without having to create custom <code>WebCmsComponentType</code> implementations.</p>
+</div>
+<div class="paragraph">
+<div class="title">Default attributes</div>
+<p>All base types support 3 default attributes that pack a lot of punch in creating custom component types:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute name</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>type</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contains the base type for the component type.</p>
+<p class="tableblock"> Examples: <em>container</em>, <em>markup</em> &#8230;&#8203;</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>template</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: identifier of the (Thymeleaf) template that should be used for rendering the resulting <code>WebCmsComponentModel</code> for a component of this type.</p>
+<p class="tableblock">Example: <em>th/mymodule/mytemplate :: fragment</em></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>metadata</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optional: name of the class that should be used for the component metadata.</p>
+<p class="tableblock">Example: <em>my.module.components.MyComponentMetadata</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<div class="title">Custom template</div>
+<p>Any component type can have a <em>template</em> attribute set that identifies the (Thymeleaf) template that should be used for rendering the component instances.
+If a template is specified it will always be used for rendering and any other <code>WebCmsComponentModelRenderer</code> for that component type will be skipped.</p>
+</div>
+<div class="paragraph">
+<p>You can customize rendering the default <code>WebCmsComponentModel</code> implementations just by specifying a custom template.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Property <code>renderTemplate</code> on <code>WebCmsComponentModel</code> allows you to set a custom template per-component instead of per component type.
+If a <code>renderTemplate</code> is set on the component itself, it will take precedence over the <code>WebCmsComponentType</code> template attribute.
+Setting <code>renderTemplate</code> is not enabled by default in the administration UI.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Metadata</div>
+<p>Any <code>WebCmsComponentModel</code> has a <code>metadata</code> property that refers to an object that has all custom metadata for a component.
+The type of metadata object is configured by setting the class name as the <em>metadata</em> attribute on the <code>WebCmsComponentType</code>.
+The metadata instance will always be created as a prototype using the <code>BeanFactory</code> and as such supports autowiring other beans from the <code>ApplicationContext</code>.</p>
+</div>
+<div class="paragraph">
+<p>A metadata class must:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>be serializable to and from JSON using Jackson <code>ObjectMapper</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Jackson annotations on the metadata class are supported if necessary to define (de-)serializer rules</p>
+</li>
+<li>
+<p>special care should be taken not to serializer any beans that might have been wired</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>implement a valid <code>equals()</code> method in order to have change detection and better import/export performance</p>
+</li>
+<li>
+<p>be easily cloneable:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>have either a no-arguments public constructor and provide setters/getters for all relevant properties</p>
+</li>
+<li>
+<p>OR implement <code>EntityWithDto</code> or <code>Cloneable</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If the administration UI is active, a form for metadata properties will automatically be generated using the EntityModule.
+This does require you to register the metadata type as an entity in the <code>EntityRegistry</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Default (de-)serialization for <code>WebCmsObject</code> implementations is provided by the WebCmsModule by dispatching to the <code>WebCmsDataConversionService</code>.
+This means metadata properties can often refer to other web cms types without requiring custom configuration.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>See <a href="#components-custom-component-type">creating a custom component type</a> if you want to have a custom metadata class, change serialization or admin UI rendering.</p>
+</div>
+<div class="paragraph">
+<div class="title">Providing a component template</div>
+<p>When defining a custom component type, you can link a <strong>componentTemplate</strong> component to the <code>WebCmsComponentType</code> definition.
+If present, that component will be used as a template for a new component of your custom component type.
+Class properties as well as any child components will be copied to a new component your type.</p>
+</div>
+<div class="paragraph">
+<p>When your component type and <strong>componentTemplate</strong> are a container type, any <code>TextWebCmsComponentModel</code> member of the template component can have special markers in its content.
+These markers will be replaced when copying the template to a newly created component:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@@container.name@@</code> will be replaced with the <code>name</code> of the newly created container</p>
+</li>
+<li>
+<p><code>@@container.title@@</code> will be replaced with the <code>title</code> of the newly created container</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <strong>componentTemplate</strong> should have the same class implementation as the component type being defined.
+For example when creating a <strong>fixed-container</strong>, the <strong>componentTemplate</strong> must implement <code>ContainerWebCmsComponentModel</code>.
+Providing custom metadata is not supported on the template component, the metadata will be reset when creating a new component.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_example_custom_container_component"><a class="anchor" href="#_example_custom_container_component"></a>Example: custom container component</h4>
+<div class="paragraph">
+<p>This is an example of a custom component that is a fixed container with 2 member components.
+A custom metadata class allows configuring the position of the members (left or right), the custom template uses the metadata to determine what the output should be.</p>
+</div>
+<div class="listingblock">
+<div class="title">Component definition</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">types:
+  component:
+    left-right:
+      name: Left or Right
+      description: Renders 2 components in a specific layout.
+      attributes:
+        type: fixed-container
+        template: "th/mymodule/components :: left-right"
+        metadata: "mymodule.LeftRightMetadata"
+      wcm:components:
+        componentTemplate:
+          componentType: container
+          wcm:components:
+            one:
+              componentType: rich-text
+              title: One
+              sortIndex: 1
+              body: "@@container.name@@"
+            two:
+              componentType: rich-text
+              title: Two
+              sortIndex: 2
+              body: "@@container.title@@"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When creating a new <em>left-right</em> component the members of <em>componentTemplate</em> will be cloned into the new container.
+The text components <em>one</em> and <em>two</em> will get their default content set with respectively the name and title of the new <em>left-right</em> component.</p>
+</div>
+<div class="paragraph">
+<p>The <em>sortIndex</em> will determine the order of the components in the administration UI.</p>
+</div>
+<div class="listingblock">
+<div class="title">Metadata class</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Data   // Use Lombok @Data to generate getters, setters and equals() method
+public class LeftRightMetadata
+{
+    enum Layout
+    {
+        LEFT_TO_RIGHT,
+        RIGHT_TO_LEFT
+    }
+
+    /**
+     * Determines the order of rendering one and two.
+     */
+    @NotNull
+    private Layout layout = Layout.LEFT_TO_RIGHT;
+}
+
+// Register the metadata class as an entity as to activate the administration UI
+@Configuration
+@ConditionalOnAdminUi
+class LeftRightConfiguration implements EntityConfigurer {
+    @Override
+    public void configure( EntitiesConfigurationBuilder entities ) {
+        entities.create().entityType( LeftRightMetadata.class, true );
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The metadata only has a single property <code>layout</code>.
+When the administration UI is active (presence of EntityModule and AdminWebModule) the layout value can be selected in the user interface.
+The default administration UI uses the the EntityModule to build the metadata form, so we register the <code>LeftRightMetadata</code> as an entity.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you do not want to use the EntityModule to generate the metadata form, you can provide a custom <code>WebCmsComponentModelMetadataAdminRenderer</code>.
+See <a href="#components-custom-component-type">create a custom component type</a> for more information.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Thymeleaf template: th/mymodule/components</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;th:block th:fragment="left-right(component)"
+          th:with="metadata=${component.metadata}"&gt;
+    &lt;section th:if="${metadata.layout.name() eq 'LEFT_TO_RIGHT'}"&gt;
+        &lt;div class="left"&gt;&lt;across:view element="${component.getMember('one')}" /&gt;&lt;/div&gt;
+        &lt;div class="right"&gt;&lt;across:view element="${component.getMember('two')}" /&gt;&lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section th:if="${metadata.layout.name() eq 'RIGHT_TO_LEFT'}"&gt;
+        &lt;div class="left"&gt;&lt;across:view element="${component.getMember('two')}" /&gt;&lt;/div&gt;
+        &lt;div class="right"&gt;&lt;across:view element="${component.getMember('one')}" /&gt;&lt;/div&gt;
+    &lt;/section&gt;
+&lt;/th:block&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Thymeleaf template inspects the metadata <code>layout</code> property and renders members <em>one</em> and <em>two</em> in a fixed location.
+As a <code>WebCmsComponentModel</code> is a <code>ViewElement</code> using an <em>across:view</em> node takes care of rendering the member components.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_filtering_selectable_webcmscomponenttype_options"><a class="anchor" href="#_filtering_selectable_webcmscomponenttype_options"></a>Filtering selectable WebCmsComponentType options</h3>
+<div class="paragraph">
+<p>To filter the provided dropdown options for a WebCmsComponent, the user can perform two actions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>options that should never be present by default</p>
+</li>
+<li>
+<p>selected set of options that should be present.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These actions are provided through the <code>DefaultAllowedComponentTypeFetcher</code>. Should you like to provide your own logic to filter the selectable options, for one or more types, you will have to provide your own implementations of the <code>WebCmsAllowedComponentTypeFetcher</code> interface.</p>
+</div>
+<div class="sect3">
+<h4 id="_non_selectable_webcmscomponenttypes"><a class="anchor" href="#_non_selectable_webcmscomponenttypes"></a>Non-selectable WebCmsComponentTypes</h4>
+<div class="paragraph">
+<p>To prevent a <code>WebCmsComponentType</code> from showing up in the list unless explicitly specified, the user has to provide the component type with the <code>componentRestricted</code> attribute, with its value set to true. This ensures that unless the WebCmsComponentType is specified as an option for the <code>WebCmsObject</code> through a <code>WebCmsTypeSpecifierLink</code>, it will never be shown as an option.</p>
+</div>
+<div class="paragraph">
+<p>Examples of non-selectable WebCmsComponentTypes are the default placeholder, proxy and fixed-container component types.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">types:
+  component:
+    fixed-container:
+      objectId: "wcm:type:component:fixed-container"
+      name: Fixed container
+      description: Container of a fixed set of components.
+      attributes:
+        type: fixed-container
+        componentRestricted: true</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A <em>fixed-container</em> should never be available as a selectable option unless specified (through a <code>WebCmsTypeSpecifierLink</code>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_selectable_webcmscomponenttype_options"><a class="anchor" href="#_selectable_webcmscomponenttype_options"></a>Selectable WebCmsComponentType options</h4>
+<div class="paragraph">
+<p>In the case where a component type may only contain other specific component types, the type should be provided by the <code>childComponentsRestricted</code> attribute, with its value set to true. The provided component type options will then be equal to the specified <code>WebCmsTypeSpecifierLink</code> links with link type <em>allowed-component</em>.</p>
+</div>
+<div class="paragraph">
+<p>Example</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">types:
+  component:
+    partner-container:
+      name: Partners
+      attributes:
+        type: container
+        childComponentsRestricted: true
+      wcm:types:
+        - typeSpecifier: "wcm:type:component:partner"
+          linkType: allowed-component</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A <em>partner-container</em> should only contain components of the type <em>partner</em></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="components-custom-component-type"><a class="anchor" href="#components-custom-component-type"></a>Custom component type</h3>
+<div class="paragraph">
+<p>Apart from extending one of the base types and using a custom template or metadata class, you can also pretty much customize any part of the component related infrastructure by providing specific interface implementations.
+This allows you to create a fully custom component type and read/write/render or manage it in whichever way you like.</p>
+</div>
+<div class="paragraph">
+<p>The following list of the component related interfaces and their role:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Interface</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WebCmsComponentModelReader</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts from a <code>WebCmsComponent</code> to the relevant <code>WebCmsComponentModel</code> implementation.
+If you want to have the default metadata support, consider extending <code>AbstractWebCmsComponentModelReader</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WebCmsComponentModelWriter</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Saves a <code>WebCmsComponentModel</code> to the backing repository.
+Provides the backing <code>WebCmsComponent</code>.
+Consider extending <code>AbstractWebCmsComponentModelWriter</code> if you want default metadata support.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WebCmsComponentModelRenderer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renders a <code>WebCmsComponentModel</code> in a Thymeleaf template.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WebCmsComponentModelContentAdminRenderer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a <code>ViewElementBuilder</code> for managing the content of a <code>WebCmsComponentModel</code> in the administration UI.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WebCmsComponentModelMetadataAdminRenderer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a <code>ViewElementBuilder</code> for managing the metadata of a <code>WebCmsComponentModel</code> in the administration UI.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WebCmsComponentModelMembersAdminRenderer</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Provides a <code>ViewElementBuilder</code> for managing child components (usually container members) of a <code>WebCmsComponentModel</code> in the administration UI.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>WebCmsComponentAutoCreateStrategy</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Builds a <code>WebCmsComponentModel</code> when it is being auto-created, for example during first render of a template.
+Gets the processed template markup as input parameters.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>All component related interfaces use the same processing approach:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>all beans of that type are detected and ordered</p>
+</li>
+<li>
+<p>a <code>supports()</code> method is used to check if the bean applies for a certain component</p>
+</li>
+<li>
+<p>the first bean that applies will be used</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As the implementations are always queried in order, customizing an implementation is a matter of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>providing your implementation as a bean</p>
+</li>
+<li>
+<p>implementing <code>supports()</code> to match for all component types you want</p>
+</li>
+<li>
+<p>ensure your bean is ordered (use <code>@Order</code> or implement <code>Ordered</code>) before any other that might also apply for that component type</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_customizing_the_components_administration_ui"><a class="anchor" href="#_customizing_the_components_administration_ui"></a>Customizing the components administration UI</h3>
+<div class="paragraph">
+<p>WebCmsModule provides a default administration UI built on AdminWebModule and EntityModule.</p>
+</div>
+<div class="paragraph">
+<p>The default administration UI uses a form of tabs to display the different sections (eg. content, members, metadata) of a component.  Only sections relevant for the component type will be shown to the user.</p>
+</div>
+<div class="sect3">
+<h4 id="_administration_ui_labels_and_descriptions"><a class="anchor" href="#_administration_ui_labels_and_descriptions"></a>Administration UI labels and descriptions</h4>
+<div class="paragraph">
+<p>The default administration UI for components supports configuring the labels.
+See the <a href="../services-and-components/message-codes.html" class="page">message codes overview</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_creating_custom_component_forms"><a class="anchor" href="#_creating_custom_component_forms"></a>Creating custom component forms</h4>
+<div class="paragraph">
+<p>You can customize the forms being rendered by providing custom <code>xAdminRenderer</code> implementations.  This allows you to build</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="components-component-profiles"><a class="anchor" href="#components-component-profiles"></a>Configuring rich-text and markup components</h4>
+<div class="paragraph">
+<p>WebCmsModule supports rich text components and HTML components out of the box, using TinyMCE and CodeMirror respectively.  Rich-text components are identified with the base type <code>rich-text</code>, markup with <code>markup</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">YAML definition of default Rich text and HTML component types</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">rich-text:
+  objectId: "wcm:type:component:rich-text"
+  name: Rich text
+  description: Rich text component - supporting HTML markup and default assets if enabled by other modules.
+  attributes:
+    type: rich-text
+    profile: rich-text
+html:
+  objectId: "wcm:type:component:html"
+  name: HTML
+  description: A snippet of HTML.
+  attributes:
+    type: markup</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In addition to the base type, a component type can define a <strong>profile</strong> attribute value, denoting a custom profile that should be used to initialize the editor for that component type.
+The default rich-text component type uses a profile called <code>rich-text</code> as well.</p>
+</div>
+<div class="paragraph">
+<p>You can customize the profile configuration using Javascript.  This is done by registering profiles on the <code>WebCmsComponentProfileRegistry</code>.  A profile registration requires the following three attributes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>componentType</strong>: this is the base type of the component (eg. <code>rich-text</code> or <code>markup</code>)</p>
+</li>
+<li>
+<p><strong>profileName</strong>: a unique profile name</p>
+</li>
+<li>
+<p><strong>profile</strong>: JSON object that holds the actual profile data (for example the TinyMCE configuration object)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Profiles can be inherited.  If your profile data has a <strong>_parentProfile</strong> attribute, the value is expected to be the name of another profile for the same component type.  The final profile will be the data of the parent profile merged together with the requested profile.  Values from the parent will be replaced by values from the requested profile. Every profile can have a (optional) single parent.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example registration of custom rich-text type</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">(function ( $ ) {
+  /**
+   * Limited rich-text profile: inherit from the _base profile
+   * and only show bold/italic buttons.
+   */
+  WebCmsComponentProfileRegistry.registerProfileForComponentType(
+    'rich-text', /* component type */
+    'limited', /* profile name */
+    {
+      _parentProfile: '_base',
+      toolbar1: 'bold italic'
+    }
+  );
+})(jQuery);</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Custom profiles must be registered in Javascript.  This usually happens before initialization of form elements (as the profiles should already be registered when that happens), but it must happen after the inclusion of the <code>TextWebCmsComponentAdminResources</code> package and in the javascript page end phase. The reason for this is that the profile registry and the default profiles are defined during <code>JAVASCRIPT_PAGE_END</code> of the WebCmsModule resources.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_default_profiles"><a class="anchor" href="#_default_profiles"></a>Default profiles</h5>
+<div class="paragraph">
+<p>The following default profiles are available:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component type</th>
+<th class="tableblock halign-left valign-top">Profile name</th>
+<th class="tableblock halign-left valign-top">Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rich-text</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>_base</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Base profile for technical configuration of TinyMCE.  Sets up things like the image picket configuration, toolbar behaviour etc.  It&#8217;s probably best to have your custom profiles inherit from this one.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rich-text</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>default</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default profile for a TinyMCE editor: configures default plugins and toolbars.  Extends <code>_base</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rich-text</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>rich-text</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Actual profile used by the default Rich text component.  Inherits from <code>default</code> but adds no custom settings - as such is identical to <code>default</code> out of the box.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>markup</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>default</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default CodeMirror configuration used by the HTML component.  Inherits from a <code>_base</code> profile even though no <code>_base</code> is defined.  You can either replace <code>default</code> with your custom settings or register the <code>_base</code> profile to extend <code>default</code> indirectly.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_detecting_tab_switching"><a class="anchor" href="#_detecting_tab_switching"></a>Detecting tab switching</h4>
+<div class="paragraph">
+<p>Sometimes tab switching needs to be detected in order to re-render the client-side interface.
+Any element that has data attribute <strong>data-wcm-component-refresh</strong> set will receive the <em>wcm:componentRefresh</em> event whenever a component tab is being activated.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">// Example refreshing the RTE when a component tab is being switched
+$( '[data-wcm-markup-type=markup]', node ).each( function () {
+    var cm = CodeMirror.fromTextArea( $( this )[0], {} );
+    $( this ).on( 'wcm:componentRefresh',
+                  function () {
+                      cm.refresh();
+                  } )
+            .attr( 'data-wcm-component-refresh', 'true' );  // ensure we receive the event
+} );</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="component-types.html">&laquo; Component types</a>
+            <span class="article-footer-nav-current">Creating a custom component</span>
+        <a class="article-footer-nav-next" href="content-markers.html">Content markers &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

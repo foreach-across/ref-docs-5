@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.x release notes - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="across" data-version="2.1.4">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Across Platform</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../in-a-nutshell.html">Across in a Nutshell</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../platform/current-release.html">Current release</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../platform/release-notes.html">Release notes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../platform/2.1.x.html">2.1.x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../platform/2.1.4.html">2.1.4</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../platform/2.1.3.html">2.1.3</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../platform/2.1.2.html">2.1.2</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../platform/2.1.1.html">2.1.1</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../platform/2.1.0.html">2.1.0</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Core Artifacts</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="releases-3.x.html">3.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="releases-2.x.html">2.x</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="releases-1.x.html">1.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../../migration/index.html">Migration guides</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-applications/creating-an-application/index.html">Developing applications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-applications/creating-an-application/index.html">Creating an application</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-applications/creating-an-application/application-descriptor.html">Application descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-applications/creating-an-application/project-structure.html">Project structure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../developing-applications/creating-an-application/project-structure.html#application-module">Application module</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../developing-applications/creating-an-application/project-structure.html#application-resources">Application resources</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-applications/application-configuration.html">Application configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-applications/application-configuration.html#configuration-properties">Configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-applications/application-configuration.html#application-profiles">Application profiles</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-applications/adding-modules.html">Adding modules</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-applications/adding-modules.html#conditional-modules">Conditional modules</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-applications/interacting-with-modules.html">Interacting with modules</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-applications/interacting-with-modules.html#using-components">Using components from modules</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-applications/interacting-with-modules.html#working-with-events">Working with events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-applications/connecting-to-a-database.html">Connecting to a database</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-applications/application-bootstrap.html">Application bootstrap</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-applications/extend-module-configuration.html">Customizing modules before starting</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-applications/initializing-data/index.html">Initializing application data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-applications/initializing-data/creating-database-schema.html">Creating database schema</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-applications/development-mode.html">Development mode</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-applications/messages.html">Localization and translations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-applications/testing.html">Testing your application</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-applications/default-modules.html">Default modules in an application</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-applications/default-components.html">Default components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-applications/application-deploy.html">Deploying your application</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-modules/creating-a-module/index.html">Developing modules</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-modules/creating-a-module/index.html">Creating a reusable module</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-modules/creating-a-module/module-descriptor.html">Module descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-modules/creating-a-module/project-structure.html">Project structure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../developing-modules/creating-a-module/project-structure.html#module-resources">Module resources</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-modules/creating-a-module/extracting-from-application.html">Extracting a module from your application</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-modules/module-dependencies/index.html">Module dependencies</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-modules/module-dependencies/sharing-components.html">Using components from other modules</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-modules/module-dependencies/sharing-components.html#exposing-beans">Exposing components for other modules</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-modules/module-dependencies/module-order-explained.html">Module order explained</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-modules/module-dependencies/refreshing.html">Solving order related problems</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-modules/configuration-properties.html">Using configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-modules/installers.html">Installers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-modules/events.html">Events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-modules/messages.html">Messages and localized data</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-modules/extending-modules.html">Extending other modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-modules/development-mode.html">Providing developer features</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-modules/testing.html">Testing your module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../developing-modules/distributing.html">Distributing your module</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../developing-modules/distributing.html#versioning">Versioning</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../developing-modules/best-practices.html">Best practices</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../across-web/index.html">Across Web</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../across-web/basic-features/index.html">Basic features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/basic-features/spring-mvc-support.html">Spring MVC support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/basic-features/view-engines.html">View engines</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/basic-features/servlets-and-filters.html">Registering servlets and filters</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/basic-features/error-pages.html">Error pages</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/basic-features/custom-request-mapping-support.html">Custom request mappings</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../across-web/configuration/index.html">Configuration options</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/configuration/module-settings.html">Module settings</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/configuration/http-encoding.html">Default HTTP encoding</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/configuration/multipart-support.html">Multipart support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/configuration/resource-versioning.html">Resource caching and versioning</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../across-web/web-views/index.html">Building web pages</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../across-web/web-views/static-resources.html">Static resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../across-web/web-views/webjars.html">Webjars support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/web-views/links-and-urls.html">Links and URLs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/web-views/web-resources.html">Web resources</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/web-views/layout-templates.html">Layout templates</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/web-views/working-with-menus.html">Working with menus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/web-views/view-elements.html">ViewElement infrastructure</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/web-views/partial-rendering.html">Partial view rendering</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../across-web/web-views/localized-text.html">Localizing text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../across-web/thymeleaf-dialect.html">Thymeleaf dialect</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../across-web/development-mode.html">Development mode support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../across-web/published-events.html">Published events</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../testing/index.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../testing/application-testing.html">Application testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../testing/module-testing.html">Module testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../testing/test-context-builders.html">Testing bootstrap combinations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../testing/test-dynamic-modules.html">Test an Application module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../testing/expose-for-test.html">Exposing components for tests</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../testing/test-datasources.html">Test datasources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../testing/testing-web-features.html">Testing web features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../testing/mock-mvc.html">Web requests using MockMvc</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../testing/mock-across-servlet-context.html">Filter and servlet registration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../testing/view-element-rendering.html">View element rendering</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cheat-sheet.html">Cheat Sheet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../spring-boot-compatibility.html">Spring Boot compatibility</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../../guides/5.1.0-SNAPSHOT/index.html">Application guides</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Across Platform</span>
+    <span class="version">2.1.4</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../../2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../../index.html">Across Platform</a></li>
+    <li class="crumb"><a href="../index.html">Releases</a></li>
+    <li class="crumb"><a href="index.html">Core Artifacts</a></li>
+    <li class="crumb"><a href="releases-3.x.html">3.x</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">2.1.4</button>
+  <div class="versions-menu">
+    <a class="version" href="../../../releases/core-artifacts/releases-3.x.html">master</a>
+    <a class="version" href="../../../2.1.5/releases/core-artifacts/releases-3.x.html">2.1.5</a>
+    <a class="version is-current" href="releases-3.x.html">2.1.4</a>
+    <a class="version" href="../../../2.1.3/releases/core-artifacts/releases-3.x.html">2.1.3</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-across/blob/2.1.4/docs/modules/releases/pages/core-artifacts/releases-3.x.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>3.x release notes</h1>
+    <div class="sect1">
+<h2 id="3-2-0"><a class="anchor" href="#3-2-0"></a>3.2.0.RELEASE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Several bugs fixed and some web related features added.</p>
+</div>
+<div class="sect2">
+<h3 id="_core_dependency_upgrades"><a class="anchor" href="#_core_dependency_upgrades"></a>Core dependency upgrades</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Spring Platform Brussels-SR17</p>
+</li>
+<li>
+<p>Spring Framework 4.3.23</p>
+</li>
+<li>
+<p>Spring Boot 1.5.20</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_additional_dependencies_for_junit_5"><a class="anchor" href="#_additional_dependencies_for_junit_5"></a>Additional dependencies for JUnit 5</h3>
+<div class="paragraph">
+<p>The <code>standard-module-bom</code> has been extended with dependencies for JUnit 5.
+These include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>org.junit.jupiter:junit-jupiter-engine:5.4.2</code></p>
+</li>
+<li>
+<p><code>org.junit.vintage:junit-vintage-engine:5.4.2</code></p>
+</li>
+<li>
+<p><code>org.mockito:mockito-junit-jupiter:2.27.0</code></p>
+</li>
+<li>
+<p><code>com.github.sbrannen:spring-test-junit5:1.4.0</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Modules or applications that wish to use JUnit 5 with this version of Across should add these dependencies in test scope.
+If you want to use Mockito with JUnit 5, you should also explicitly use <code>mockito-core</code> with the same version as <code>mockito-junit-jupiter</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>spring-test-junit5</code> dependency is not available on Maven central.
+Add the Jitpack repository to your <code>pom.xml</code> if you cannot fetch it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;jitpack.io&lt;/id&gt;
+        &lt;url&gt;https://jitpack.io&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Use maven 3.5.0 or higher if you want to use JUnit 5.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_across_core"><a class="anchor" href="#_across_core"></a>Across Core</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed issue where exposed <code>FactoryBean</code> beans did not behave consistently</p>
+<div class="ulist">
+<ul>
+<li>
+<p>full target bean and factory type information is now available</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Fixed issue where exposed <code>Lifecycle</code> beans would get started more than once</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_across_web"><a class="anchor" href="#_across_web"></a>Across Web</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>A global <code>ViewElementBuilderContext</code> is now created by default.
+To revert to the old behaviour set property <code>acrossWebModule.registerGlobalBuilderContext=false</code>.</p>
+</li>
+<li>
+<p>Fixed issue with <code>RequestMenuSelector</code> not selecting the correct items based on a request url with query string parameters</p>
+</li>
+<li>
+<p>Added a <code>@webjars</code> prefix for linking to Webjars content.
+See <a href="../../across-web/web-views/webjars.html" class="page">Webjars support</a> for more details.</p>
+</li>
+<li>
+<p>Added a more fluent and powerful API for <a href="../../across-web/web-views/web-resources.html" class="page">registering Web resources</a> based on view element rendering.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-1-2"><a class="anchor" href="#3-1-2"></a>3.1.2.RELEASE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mainly a bugfix release.</p>
+</div>
+<div class="sect2">
+<h3 id="_core_dependency_upgrades_2"><a class="anchor" href="#_core_dependency_upgrades_2"></a>Core dependency upgrades</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Spring Platform Brussels-SR15</p>
+</li>
+<li>
+<p>Spring Framework 4.3.21</p>
+</li>
+<li>
+<p>Spring Boot 1.5.18</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_across_core_2"><a class="anchor" href="#_across_core_2"></a>Across Core</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Deprecated <code>HikariDataSourceHelper</code> in favour of <code>DataSourceBuilder</code> or Spring Boot datasource properties.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_across_web_2"><a class="anchor" href="#_across_web_2"></a>Across Web</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixed an issue with thymeleaf output in JSP files using the ThymeleafTag.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-1-1"><a class="anchor" href="#3-1-1"></a>3.1.1.RELEASE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Mainly a bugfix release.</p>
+</div>
+<div class="sect2">
+<h3 id="_core_dependency_upgrades_3"><a class="anchor" href="#_core_dependency_upgrades_3"></a>Core dependency upgrades</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Spring Platform Brussels-SR14</p>
+</li>
+<li>
+<p>Spring Framework 4.3.20</p>
+</li>
+<li>
+<p>Spring Boot 1.5.17</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_across_web_3"><a class="anchor" href="#_across_web_3"></a>Across Web</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>fixed an issue with the automatic registration of a <code>MultipartResolver</code></p>
+</li>
+<li>
+<p><code>ViewElementBuilder</code> interface improvements</p>
+<div class="ulist">
+<ul>
+<li>
+<p>a <code>build()</code> method has been added with a default implementation which will create a new <code>DefaultViewElementBuilderContext</code> is no global context is available</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the <code>GlobalContextSupportingViewElementBuilder</code> base class has been removed as it was obsolete</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>andThen(ViewElementPostProcessor)</code> method added</p>
+<div class="ulist">
+<ul>
+<li>
+<p>supports chaining <code>ViewElementPostProcessors</code> on any builder</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>map(Function&lt;ViewElement&gt;)</code> and <code>map(BiFunction&lt;ViewElementBuilderContext,ViewElement&gt;)</code> methods added</p>
+<div class="ulist">
+<ul>
+<li>
+<p>supports transforming the actual <code>ViewElement</code> type and returns a new builder for the new type</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>HtmlViewElementBuilder</code> implementations has short-hand <code>data()</code> methods for adding <code>data-</code> attributes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>ViewElementBuilderContext</code> interface improvements</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>findAttribute()</code> methods added that allow looking up an attribute with meta information</p>
+<div class="ulist">
+<ul>
+<li>
+<p>allows checking if an attribute is present (but possibly <code>null</code>) and if it has been inherited</p>
+</li>
+<li>
+<p>mainly used internally for attribute precedence rules</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>withAttributeOverride()</code> methods added that return a <code>Closeable</code> for temporary overriding of attribute values in a builder context</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-1-0"><a class="anchor" href="#3-1-0"></a>3.1.0.RELEASE</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_core_dependency_upgrades_4"><a class="anchor" href="#_core_dependency_upgrades_4"></a>Core dependency upgrades</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Spring Platform Brussels-SR11</p>
+</li>
+<li>
+<p>Spring Framework 4.3.18</p>
+</li>
+<li>
+<p>Spring Boot 1.5.14</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_across_web_4"><a class="anchor" href="#_across_web_4"></a>Across Web</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>path prefixes are now supported directly in redirect view names<br></p>
+<div class="literalblock">
+<div class="content">
+<pre>return "redirect:@adminWeb:/somePath";</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-0-0"><a class="anchor" href="#3-0-0"></a>3.0.0.RELEASE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Across 3.0.0 is a big internal upgrade focused on improving Spring Boot compatibility.
+Although the number should be limited, this release does introduce some breaking changes.</p>
+</div>
+<div class="paragraph">
+<p>Across Framework 3.0.0 adds the <code>across-autoconfigure</code> artifact as a base dependency for creating Across applications.
+It is also the first release with auto-configuration support, see the separate documentation on <a href="#spring-boot-compatibility.adoc" class="page unresolved">Spring Boot compatibility</a> for more details.</p>
+</div>
+<div class="sect2">
+<h3 id="_core_dependency_upgrades_5"><a class="anchor" href="#_core_dependency_upgrades_5"></a>Core dependency upgrades</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Spring Platform Brussels-SR7</p>
+</li>
+<li>
+<p>Spring Framework 4.3.14</p>
+</li>
+<li>
+<p>Spring Boot 1.5.10</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_across_core_3"><a class="anchor" href="#_across_core_3"></a>Across Core</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>addition of the <code>@ConditionalOnAcrossModule</code> annotation that can be put on a <code>@Configuration</code> class, <code>@Bean</code> method and any <code>@Component</code> to depend on the presence of modules.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@AcrossDepends</code> should now only be used on module descriptors, and no longer for conditional component creation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>internal rewrite of the exposing mechanism: exposed bean definitions are now copied to the module context directly instead of shared via the parent <code>ApplicationContext</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>this improves compatibility with a lot of default Spring related configurations, but might introduce a breaking change for certain modules</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>the event handling system has been overhauled and now uses the default Spring events implementation</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the custom event bus using MBassador has been removed, as well as the MBassador dependency itself</p>
+</li>
+<li>
+<p>implementing <code>AcrossEvent</code> for your own events is no longer required</p>
+</li>
+<li>
+<p><code>@Event</code> has been deprecated in favour of the standard <code>@EventListener</code></p>
+</li>
+<li>
+<p><code>AcrossEventPublisher</code> has been deprecated in favour of the standard <code>ApplicationEventPublisher</code></p>
+</li>
+<li>
+<p><code>ParameterizedAcrossEvent</code> has been deprecated in favour of implementing <code>ResolvableTypeProvider</code></p>
+</li>
+<li>
+<p><code>@EventName</code> has been deprecated, use the <code>condition</code> attribute on <code>@EventListener</code> instead</p>
+</li>
+<li>
+<p>Please note that generic event types are handled differently with the new system, where in the past
+<code>SomeEvent&lt;Object&gt;</code> would have worked, the only working (and more correct) signature is now <code>SomeEvent&lt;? extends Object&gt;</code></p>
+</li>
+<li>
+<p>parameter-less event listener methods are now possible</p>
+</li>
+<li>
+<p>event listener methods can now also provide return values which will be published as new events</p>
+</li>
+<li>
+<p>ordering event listeners through annotations on a method level is now supported</p>
+</li>
+<li>
+<p>events <code>AcrossModuleBeforeBootstrapEvent</code>, <code>AcrossModuleBootstrappedEvent</code> and <code>AcrossContextBootstrappedEvent</code> now extend <code>AcrossLifecycleEvent</code> which implements the Spring <code>ApplicationEvent</code> directly</p>
+<div class="ulist">
+<ul>
+<li>
+<p>a utility interface <code>AcrossLifecycleListener</code> has been provided to intercept these common lifecycle events</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>some breaking changes that have been introduced as a result of the refactoring:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>any uncaught exception in an event listener will now bubble up to the caller and stop the subsequent listeners from being called, instead of just logging the exception and continuing to the next listener</p>
+</li>
+<li>
+<p>manual (de-)registration of event listeners on <code>AcrossEventPublisher</code> is no longer possible</p>
+</li>
+<li>
+<p>bootstrap events can no longer be captured through annotated methods in the parent <code>ApplicationContext</code>, implement <code>AcrossLifecycleListener</code> instead</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>add support for Spring Boot auto-configuration and the <code>META-INF/across.configuration</code> file inside libraries</p>
+</li>
+<li>
+<p>addition of <code>AcrossBootstrapConfigurer</code> that can be used to customize a bootstrapping Across context from a parent <code>ApplicationContext</code> (for example for auto-configuration classes)</p>
+</li>
+<li>
+<p>bean definition names generated for <code>@Configuration</code> or manually registered annotated classes (without <code>@Component</code>) are now always based on the fully qualified class name</p>
+<div class="ulist">
+<ul>
+<li>
+<p>in rare cases this could introduce a breaking change where configuration instances are wired by name as beans, in this case providing an explicit name for the configuration should fix the problem</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>it&#8217;s now possible to explicitly exclude annotated classes to be loaded as module extension during bootstrap configuration</p>
+</li>
+<li>
+<p>the default module scanning packages will now always be kept if you add additional packages on either <code>@EnableAcrossContext</code> or <code>@AcrossApplication</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>if you explicitly want to exclude the default packages you should add <strong>.</strong> (dot) as a package name to the list</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Bean Validation 1.1 method validation is now automatically enabled in every Across module if a JSR-303 implementation (eg. Hibernate validator) is on the classpath</p>
+</li>
+<li>
+<p>the <code>TransactionManagementConfigurer</code> helper class has been removed from the core artifact</p>
+<div class="ulist">
+<ul>
+<li>
+<p>modules should provide their own implementation when necessary</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>ComponentScanConfigurer.forAcrossModule(Class)</code> and <code>ComponentScanConfigurer.forAcrossModulePackage(String)</code> helper functions have been added to create default configurations for modules wishing to scan their entire root package</p>
+<div class="ulist">
+<ul>
+<li>
+<p>these will correctly exclude the <code>installers</code> and <code>extensions</code> child package</p>
+</li>
+<li>
+<p><strong>note</strong>: default <code>AcrossModule</code> implementations still only scan the <code>config</code> child package, this behaviour has not changed</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>failure analyzers have been added to provide better exception information when using <code>@AcrossApplication</code></p>
+</li>
+<li>
+<p>added support for <a href="../../../../across-autoconfigure/adding-auto-configuration-support.html#across-configuration" class="page"><code>META-INF/across.configuration</code></a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>allows for externalizing compatibility rules with regular Spring Boot auto-configuration</p>
+</li>
+<li>
+<p>allows for defining illegal use of configuration classes, this can help in avoiding bad use of regular Spring Boot configurations in an Across context</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>added illegal configuration detection on a <code>@AcrossApplication</code>, upon starting the presence of configuration classes will be detected and possibly result in an exception describing the illegal use</p>
+<div class="ulist">
+<ul>
+<li>
+<p>on by default, it can be disabled explicitly by setting <code>across.configuration.validate</code> to <code>false</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>@ModuleConfiguration</code> classes are now only supported in the <code>extensions</code> package, and no longer looked for in <code>config</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@ModuleConfiguration</code> is now always a configuration class as well (has <code>@Configuration</code> as meta-annotation)</p>
+</li>
+<li>
+<p>the implementation of <code>@ModuleConfiguration</code> has changed, they are now imported as regular configurations, with full support for conditionals</p>
+<div class="ulist">
+<ul>
+<li>
+<p>in rare cases this might lead to problems as these configuration classes are imported at a different point in time, usually before the addition of regular annotated classes added to the module</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>@InstallerMethod</code> methods now support arguments, much like a <code>@Autowired</code> or <code>@PostRefresh</code> method</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the arguments will be fetched from the <code>ApplicationContext</code> when the method is executed</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_across_web_5"><a class="anchor" href="#_across_web_5"></a>Across Web</h3>
+<div class="paragraph">
+<p>A lot of internal configuration has been modified to use out-of-the-box Spring Boot configuration classes instead of customized versions.</p>
+</div>
+<div class="paragraph">
+<p>The following changes and additions are included in the update:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a <code>RestTemplateBuilder</code> is created and exposed</p>
+</li>
+<li>
+<p>Jackson <code>ObjectMapper</code> and <code>Jackson2ObjectMapperBuilder</code> are created and exposed</p>
+</li>
+<li>
+<p>if Gson on the classpath: a <code>Gson</code> object is created and exposed</p>
+</li>
+<li>
+<p>support for <a href="#across-web/basic-features/error-pages.adoc" class="page unresolved">default error pages</a> is now automatically activated</p>
+</li>
+<li>
+<p>the <a href="https://github.com/thymeleaf/thymeleaf-extras-java8time">Thymeleaf Java 8 Time dialect</a> is now also included and enabled</p>
+</li>
+<li>
+<p>the default mvc <code>Validator</code> bean now implements <code>SmartValidator</code> directly, allowing <code>@Validated</code> with group validation to be used</p>
+</li>
+<li>
+<p>the <code>TextViewElementBuilder</code> now supports a <a href="#across-web/web-views/localized-text.adoc" class="page unresolved">localized text pattern</a> as text value</p>
+</li>
+<li>
+<p>several changes to the menu building infrastructure, some breaking. See the <a href="#across-web/web-views/working-with-menus.adoc" class="page unresolved">updated documentation</a> for use case examples.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>added <code>Menu.builder()</code> for easy ad-hoc creation of a menu using path registration</p>
+</li>
+<li>
+<p><code>MenuSelector</code> factory methods have been moved from the <code>Menu</code> to <code>MenuSelector</code> class</p>
+</li>
+<li>
+<p>some rarely used methods on <code>PathBasedMenuBuilder</code>, <code>PathBasedMenuItemBuilder</code> and <code>BuildMenuEvent</code> have been removed</p>
+</li>
+<li>
+<p><code>BuildMenuFinishedEvent</code> has been removed, modules requiring this functionality should now register a <code>Menu</code> post-processor on the <code>BuildMenuEvent</code> instead</p>
+</li>
+<li>
+<p>renamed methods on <code>BuildMenuEvent</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>setSelector()</code> &#8594; <code>setMenuSelector()</code>, <code>getSelector()</code> &#8594; <code>getMenuSelector()</code></p>
+</li>
+<li>
+<p><code>forMenu()</code> &#8594; <code>isForMenuOfType()</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>options to customize a menu have been improved and some new ones have been added:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>on a menu builder these are <code>changeItemPath()</code>, <code>removeItems()</code>, <code>optionalItem()</code> and <code>withProcessor()</code></p>
+</li>
+<li>
+<p>on a menu item builder these are <code>changePathTo()</code>, <code>remove()</code> and <code>comparator()</code></p>
+</li>
+<li>
+<p>the unreliable <code>move()</code> method for menu items has been deprecated, use the new <code>changeItemPath()</code> or <code>item().changePathTo()</code> instead</p>
+</li>
+<li>
+<p>using <code>PathBasedMenuBuilder.andThen()</code> it is now possible to register and apply additional configuration after all initial configuration has been done.
+This is especially useful if you want to make changes to a menu builder when you want to be sure all intial items have been added.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>ViewElement</code> related changes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>all <code>ViewElementBuilderSupport</code> extensions now have a <code>configure(Consumer&lt;ViewElementBuilder&gt;)</code> method to use a more fluent API callback approach for additional configuration</p>
+</li>
+<li>
+<p>container-like builders support <code>null</code> values for <code>ViewElement</code> or <code>ViewElementBuilder</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>these will safely be ignored and never added to the children of a container</p>
+</li>
+<li>
+<p>this makes it easier to keep a fluent API style</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>PrefixingHandlerMappingConfigurer</code> can no longer be applied to the default AcrossWebModule, use a regular <code>WebMvcConfigurer</code> to add interceptors</p>
+<div class="ulist">
+<ul>
+<li>
+<p>different prefixed handler mappings (eg. AdminWebModule) still require the use of <code>PrefixingHandlerMappingConfigurer</code> for adding interceptors</p>
+</li>
+<li>
+<p>if you want to add an interceptor to all controllers, you should implement both <code>WebMvcConfigurer</code> and <code>PrefixingHandlerMappingConfigurer</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>websocket support has been added, it is activated automatically:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>if the required dependencies are on the classpath</p>
+</li>
+<li>
+<p>a <code>WebSocketConfigurer</code> or <code>WebSocketMessageBrokerConfigurer</code> bean is provided by any module</p>
+</li>
+<li>
+<p>using <code>@EnableWebSocket</code> or <code>@EnableWebSocketMessageBroker</code> anywhere will result in a bootstrap failure, it&#8217;s usually enough to just remove these annotations and leave the rest of your code as is</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>the multipart configuration now uses the <code>spring.http.multipart.*</code> properties from Spring Boot (<code>MultipartProperties</code> class)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the <code>acrossWebModule.multipart.*</code> settings have been removed: replace <code>acrossWebModule.multipart.auto-configure=false</code> by <code>spring.http.multipart.enabled=false</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">New module extension support</div>
+<p>Extension configuration classes that can now be added to AcrossWebModule:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>RestTemplateCustomizer</code></p>
+</li>
+<li>
+<p><code>HttpMessageConverter</code></p>
+</li>
+<li>
+<p><code>Jackson2ObjectMapperBuilderCustomizer</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Changes in servlet and filter registration</div>
+<p>Filters and servlets are registered in a slightly different fashion than in previous versions.
+Any <code>Servlet</code> or <code>Filter</code> bean will now be automatically be exposed and registered.
+If there is an actual registration bean for the filter or servlet, it will take precedence.</p>
+</div>
+<div class="paragraph">
+<p>The new approach might introduce breaking changes with applications that do not use an embedded application context.
+The <code>AcrossWebDynamicServletConfigurer</code> is fully deprecated and any beans of that type created in the parent context will not be executed any longer in a non-embedded configuration.</p>
+</div>
+<div class="paragraph">
+<p>Also the ordering of filters might have changed slightly, modules providing filters should review the order assignment.</p>
+</div>
+<div class="paragraph">
+<p>Dynamically registered filters should preferably include an explicit order value and should be done inside the Across context (inside a module) and not on the application configuration level.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_across_test"><a class="anchor" href="#_across_test"></a>Across Test</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>new features for exposing additional components during the scope of a test</p>
+<div class="ulist">
+<ul>
+<li>
+<p>both <code>@AcrossTestConfiguration</code> and the <code>AcrossTestBuilders</code> now have an attribute/method to easily expose additional classes for the scope of the test</p>
+</li>
+<li>
+<p><a href="../../testing/expose-for-test.html" class="page"><code>@ExposeForTest</code></a> can be used in combination with <code>@SpringBootTest</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>the latter is particularly useful for integration testing of a dynamic application module</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="index.html">&laquo; Core Artifacts</a>
+            <span class="article-footer-nav-current">3.x</span>
+        <a class="article-footer-nav-next" href="releases-2.x.html">2.x &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script src="../../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

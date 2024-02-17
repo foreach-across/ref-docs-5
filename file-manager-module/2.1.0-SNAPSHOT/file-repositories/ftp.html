@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FTP(S) support - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="file-manager-module" data-version="2.1.0-SNAPSHOT">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: File Management</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/2.x.html">2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/1.x.html">1.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration-properties.html">Configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration with other modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../core-concepts/index.html">Virtual File System</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core-concepts/file-descriptor.html">File descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core-concepts/folder-descriptor.html">Folder descriptor</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core-concepts/file-manager.html">File manager</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core-concepts/file-repository.html">File repository</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core-concepts/file-resource.html">File resource</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core-concepts/folder-resource.html">Folder resource</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core-concepts/file-reference.html">File reference</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Supported file systems</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="local.html">Local files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="s3.html">Amazon S3</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="azure-blob.html">Azure Blob Storage</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="ftp.html">FTP/FTPS</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="expiring.html">Temporary files</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="caching.html">File resource caching</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="custom.html">Creating a custom file repository</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../file-reference/index.html">Linking to files</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../file-reference/file-reference.html">Uploading files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../file-reference/file-metadata.html">Add metadata to files</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developer-tools.html">Developer tools</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: File Management</span>
+    <span class="version">2.1.0-SNAPSHOT</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: File Management</a></li>
+    <li class="crumb"><a href="index.html">Supported file systems</a></li>
+    <li class="crumb"><a href="ftp.html">FTP/FTPS</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">2.1.0-SNAPSHOT</button>
+  <div class="versions-menu">
+    <a class="version" href="../../file-repositories/ftp.html">master</a>
+    <a class="version is-current" href="ftp.html">2.1.0-SNAPSHOT</a>
+    <a class="version is-missing" href="../../1.4.0/index.html">1.4.0</a>
+    <a class="version is-missing" href="../../1.3.0/index.html">1.3.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-file-manager-module/edit/develop/docs/modules/ROOT/pages/file-repositories/ftp.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>FTP(S) support</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>FTP/FTPS support has been provided based on <a href="https://docs.spring.io/spring-integration/docs/5.1.9.RELEASE/reference/html/#ftp">Spring Integration&#8217;s RemoteFileTemplate</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configuring_a_springintegrationftpfilerepository"><a class="anchor" href="#_configuring_a_springintegrationftpfilerepository"></a>Configuring a SpringIntegrationFtpFileRepository</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To configure a <code>SpringIntegrationFtpFileRepository</code>, a dependency to spring integration and its integration type is required.
+Using spring boot, we can make use of the spring integration starter in combination with the spring integration ftp dependencies:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-integration&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.integration&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-integration-ftp&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A repository is consequently created by configuring an <code>FtpRemoteFileTemplate</code> based on an FTP SessionFactory (either a <code>DefaultFtpSessionFactory</code> or a <code>DefaultFtpsSessionFactory</code>).</p>
+</div>
+<div class="listingblock">
+<div class="title">Configuration of a new Spring Integration FTP repository</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public FileRepository documentRepository( FtpRemoteFileTemplate ftpRemoteFileTemplate ) {
+   return SpringIntegrationFtpFileRepository.builder()
+                                  .repositoryId( "documents" ) <i class="conum" data-value="1"></i><b>(1)</b>
+                                  .remoteFileTemplate( ftpRemoteFileTemplate ) <i class="conum" data-value="2"></i><b>(2)</b>
+                                  .build();
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>the unique repository id, all file descriptors will have this repository id</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>the <code>FtpRemoteFileTemplate</code> to use</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A basic <code>FtpRemoteFileTemplate</code> connecting to a local ftp server can be configured as follows:</p>
+</div>
+<div class="listingblock">
+<div class="title">Configuring an <code>FtpRemoteFileTemplate</code></div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+DefaultFtpSessionFactory defaultFtpSessionFactory(
+        @Value("${ftp.username}") String username, <i class="conum" data-value="1"></i><b>(1)</b>
+        @Value("${ftp.password}") String pw, <i class="conum" data-value="2"></i><b>(2)</b>
+        @Value("${ftp.host}") String host, <i class="conum" data-value="3"></i><b>(3)</b>
+        @Value("${ftp.port}") int port ) { <i class="conum" data-value="4"></i><b>(4)</b>
+    DefaultFtpSessionFactory defaultFtpSessionFactory = new DefaultFtpSessionFactory();
+    defaultFtpSessionFactory.setClientMode( FTPClient.PASSIVE_LOCAL_DATA_CONNECTION_MODE ); <i class="conum" data-value="5"></i><b>(5)</b>
+    defaultFtpSessionFactory.setUsername( username );
+    defaultFtpSessionFactory.setPassword( pw );
+    defaultFtpSessionFactory.setHost( host );
+    defaultFtpSessionFactory.setPort( port );
+    return defaultFtpSessionFactory;
+}
+
+@Bean
+FtpRemoteFileTemplate ftpRemoteFileTemplate( DefaultFtpSessionFactory dsf ) {
+    return new FtpRemoteFileTemplate( dsf );
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The username of the user that you want to connect with. The root folder for the ftp repository will correspond to the root folder on the (external) system that the user has access to.
+This means that if the user has <code>/remote/users/joshua/</code> configured as it&#8217;s root folder, then using a folder descriptor of <code>/</code> will correspond to <code>/remote/users/joshua/</code> on the external system.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The password of the user that you want to connect with</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The hostname to connect to.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>The port to connect to on the host.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>The client mode that indicates which client or server connects to the other&#8217;s data port to initialize data transfers.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The above is a very basic configuration. For more configuration options, please refer to the Spring integration docs and the SessionFactory javadoc.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resource_support"><a class="anchor" href="#_resource_support"></a>Resource support</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Files and folders which do not exist remotely, will only be created after a specific command has been executed.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Folders will be created when <code>FolderResource.create()</code> is executed.</p>
+</li>
+<li>
+<p>Files will be created when an <code>OutputStream</code> is opened. If no data is transmitted to the stream, an empty file will remain on the remote repository.</p>
+</li>
+<li>
+<p>Parent folders will be created recursively, should they not exist yet.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Each call will open one or more sessions for the current user to fetch data</p>
+<div class="ulist">
+<ul>
+<li>
+<p>If multiple remote calls should be executed within the same command, a single session is reused as much as possible.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_folder_resource_support"><a class="anchor" href="#_folder_resource_support"></a>Folder resource support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>From a FileManagerModule perspective <code>FolderResource</code> is fully supported, with the following important side notes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ant pattern matching is fully supported for looking up files on the remote server</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Calls using listing or exhaustive patterns are likely to perform multiple calls to the remote server, which may lead to a lower performance.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_path_generation"><a class="anchor" href="#_path_generation"></a>Path generation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Like the <code><a href="local.html" class="page">LocalFileRepository</a></code>, the <code>SpringIntegrationFtpFileRepository</code> supports a <code>PathGenerator</code> for the automatic file resource creation.</p>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="azure-blob.html">&laquo; Azure Blob Storage</a>
+            <span class="article-footer-nav-current">FTP/FTPS</span>
+        <a class="article-footer-nav-next" href="expiring.html">Temporary files &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

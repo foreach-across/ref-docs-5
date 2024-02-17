@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Across BOM/POM changes - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="migration" data-version="master">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Migration guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="#platform-5.0-to-5.1/index.adoc">5.0.x to 5.1.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">2.1.x to 5.0.x</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="maven-artifacts.html">Maven artifact changes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="application-runner.html">Across application runner</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="spring-boot-upgrade.html">Spring Boot upgrade</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="across-core.html">Across core changes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="across-hibernate-module.html">Across Hibernate Module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="view-elements.html">ViewElement infrastructure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="bootstrap-4.html">Bootstrap 4 upgrade</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="standard-modules.html">Standard module changes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../platform-2-0-to-2-1.html">2.0.x to 2.1.x</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Migration guides</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Migration guides</a></li>
+    <li class="crumb"><a href="index.html">2.1.x to 5.0.x</a></li>
+    <li class="crumb"><a href="maven-artifacts.html">Maven artifact changes</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-platform/edit/master/docs/migration/modules/ROOT/pages/platform-2.1-to-5.0/maven-artifacts.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Across BOM/POM changes</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Across <code>platform-bom</code> and <code>standard-module-bom</code> do not exist anymore.
+The reason for this is a change in Spring, where the Spring platform bom has been replaced by <code>spring-boot-dependencies</code>.
+Due to this change, we have created a new POM structure, to also take advantage of the inheritance structure of parent POMs.
+This allows you to overwrite <code>&lt;properties&gt;</code> and re-use predefined <code>&lt;plugins&gt;</code> and <code>&lt;dependencyManagement&gt;</code> sections
+, managed by the Spring POMs or Across POMs.</p>
+</div>
+<div class="paragraph">
+<p><code>platform-bom</code> and <code>standard-module-bom</code> have been replaced by the following two parent poms:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Across Application Parent, <code>across-application-parent</code> - replaces <code>platform-bom</code>.</p>
+</li>
+<li>
+<p>Across Module Parent, <code>across-module-parent</code> - replaces <code>standard-module-bom</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some other POMs exist, but shouldn&#8217;t be used directly, unless you know what you are doing.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Across Core dependencies, <code>across-core-dependencies</code> - much like <code>spring-boot-dependencies</code>, contains additional dependency versions used by any of the child POMs.</p>
+</li>
+<li>
+<p>Across Platform Dependencies, <code>across-platform-dependencies</code>, holds the versions of the Across Standard modules.
+It is used by <code>across-module-parent</code> and <code>across-application-parent</code>.</p>
+</li>
+<li>
+<p>Across Standard Module POM, <code>across-standard-module-pom</code> is used by Across Standard Modules only.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_migrating_your_application_from_platfom_bom_to_across_application_parent"><a class="anchor" href="#_migrating_your_application_from_platfom_bom_to_across_application_parent"></a>Migrating your application from <code>platfom-bom</code> to <code>across-application-parent</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Migrating an Across application from <code>platform-bom</code> includes several tasks.</p>
+</div>
+<div class="sect2">
+<h3 id="_replacing_platform_bom"><a class="anchor" href="#_replacing_platform_bom"></a>Replacing platform-bom</h3>
+<div class="paragraph">
+<p>First thing to do is replace the BOM <code>import</code> with a <code>&lt;parent&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>You need to remove:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencyManagement&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.foreach.across&lt;/groupId&gt;
+            &lt;artifactId&gt;platform-bom&lt;/artifactId&gt;
+            &lt;version&gt;2.1.5.RELEASE&lt;/version&gt;
+            &lt;type&gt;pom&lt;/type&gt;
+            &lt;scope&gt;import&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/dependencyManagement&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And on top of your pom.xml you should add:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;parent&gt;
+    &lt;groupId&gt;com.foreach.across&lt;/groupId&gt;
+    &lt;artifactId&gt;across-application-parent&lt;/artifactId&gt;
+    &lt;version&gt;5.0.1.RELEASE&lt;/version&gt;
+    &lt;relativePath/&gt;
+&lt;/parent&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you have a multi-module Maven project, you should add it to the root Maven project.</p>
+</div>
+<div class="paragraph">
+<p>You will now inherit all <code>properties</code>, <code>plugins</code>, <code>pluginManagement</code>, <code>dependencyManagement</code>, <code>profiles</code>, from <code>across-application-parent</code>
+and all it&#8217;s parents.</p>
+</div>
+<div class="paragraph">
+<p>This means whe can cleanup a lot these definitions, we will do this below.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cleanup_versions_in_your_dependencies"><a class="anchor" href="#_cleanup_versions_in_your_dependencies"></a>Cleanup versions in your dependencies</h3>
+<div class="paragraph">
+<p>Next, remove all <code>&lt;version&gt;</code> tags of your <code>&lt;dependencies&gt;</code>.
+They are now managed by <code>across-application-parent</code>, <code>across-core-dependencies</code>,
+<code>spring-boot-dependencies</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you require a specific version, you can overwrite the property if it is defined in parent POMs or use the specific version directly.</p>
+</div>
+<div class="paragraph">
+<p>I recommend removing all <code>&lt;version&gt;</code> tags and see which imports fail.
+Then re-add these in the <code>&lt;dependencyManagement&gt;</code> section in your root POM if they are no part of the parent POMs.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cleanup_plugin_configurations"><a class="anchor" href="#_cleanup_plugin_configurations"></a>Cleanup plugin configurations</h3>
+<div class="paragraph">
+<p>Next, you can probably remove most of your <code>&lt;build&gt;&lt;plugins&gt;</code>.
+Most of if is managed by the parent POMs.</p>
+</div>
+<div class="paragraph">
+<p>Do not remove <code>&lt;build&gt;&lt;finalName&gt;&#8230;&#8203;&lt;/finalName&gt;&lt;/build&gt;</code> if you use it.</p>
+</div>
+<div class="paragraph">
+<p>You can probably remove:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>maven-release-plugin</p>
+</li>
+<li>
+<p>maven-compiler-plugin (if you don&#8217;t require source/target JDK11)</p>
+</li>
+<li>
+<p>maven-jar-plugin (most of it is handled by <code>across-application-parent</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You may need to keep the <code>spring-boot-maven-plugin</code>, but you can trim it down to:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;plugin&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+&lt;/plugin&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>version</code>, <code>executions</code> and <code>configuration</code> will be handled by the parent POMs for the <code>spring-boot-maven-plugin</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you are using Sonar and Jacoco, you should keep the <code>jacoco-maven-plugin</code> and <code>maven-failsafe-plugin</code> configuration, but you can remove the <code>version</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_resource_filtering_changes"><a class="anchor" href="#_resource_filtering_changes"></a>Resource filtering changes</h3>
+<div class="paragraph">
+<p>If you use a resource filtering configuration like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;resources&gt;
+    &lt;resource&gt;
+        &lt;directory&gt;src/main/resources&lt;/directory&gt;
+        &lt;filtering&gt;false&lt;/filtering&gt;
+        &lt;excludes&gt;
+            &lt;exclude&gt;build.properties&lt;/exclude&gt;
+        &lt;/excludes&gt;
+    &lt;/resource&gt;
+    &lt;resource&gt;
+        &lt;directory&gt;src/main/resources&lt;/directory&gt;
+        &lt;includes&gt;
+            &lt;include&gt;build.properties&lt;/include&gt;
+        &lt;/includes&gt;
+        &lt;targetPath&gt;.&lt;/targetPath&gt;
+        &lt;filtering&gt;true&lt;/filtering&gt;
+    &lt;/resource&gt;
+&lt;/resources&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can remove the whole block, resource filtering will be handled by <code>spring-boot-starter-parent</code>, which is the parent of <code>across-application-parent</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you use the <code>build.properties</code> you need to migrate these values into <code>application.yml</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml"># Processed by maven - leave as is
+build.number: '@build.revision@'
+applicationInfo.buildId: '@pom.version@-@build.revision@'
+applicationInfo.buildDate: '@timestamp@'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that variables which need to be replaced by resource filtering are delimited by <code>@property@</code> instead of <code>${property}</code>.
+This is a Spring Boot change to avoid clashes with SPeL.</p>
+</div>
+<div class="paragraph">
+<p>If you have any other properties that are replaced by resource filter, you need to change these to the new <code>@property@</code> notation as well.</p>
+</div>
+<div class="paragraph">
+<p>You can now remove your <code>build.properties</code> file and the <code>@PropertySource</code> for this file if you have any.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_migrating_from_standard_module_bom_to_across_module_parent"><a class="anchor" href="#_migrating_from_standard_module_bom_to_across_module_parent"></a>Migrating from <code>standard-module-bom</code> to <code>across-module-parent</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are using a <code>standard-module-bom</code> in a third party module, you can use the following parent POM:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;parent&gt;
+    &lt;groupId&gt;com.foreach.across&lt;/groupId&gt;
+    &lt;artifactId&gt;across-module-parent&lt;/artifactId&gt;
+    &lt;version&gt;5.0.1.RELEASE&lt;/version&gt;
+&lt;/parent&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>across-module-parent</code> does not contain any default <code>plugins</code>.
+You can however reuse (or overwrite via a property) the <code>version</code> of the <code>across-core-dependencies</code> and <code>spring-boot-dependencies</code>.</p>
+</div>
+<div class="paragraph">
+<p>This means you should be able to cleanup most of the <code>&lt;version&gt;</code> tags in your module.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_migrating_from_standard_module_bom_to_across_standard_module_parent"><a class="anchor" href="#_migrating_from_standard_module_bom_to_across_standard_module_parent"></a>Migrating from <code>standard-module-bom</code> to <code>across-standard-module-parent</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>across-standard-module-parent</code> is <strong>not</strong> supported for third party Across modules.
+It is not recommended for you to use it.
+Use <code>across-module-parent</code> instead.</p>
+</div>
+<div class="paragraph">
+<p>If you are migrating an Across Standard Module, do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Migrate any http links to https</p>
+</li>
+<li>
+<p>Migrate across.foreach.be domains to across.dev</p>
+</li>
+<li>
+<p>Switch to Maven CI friendly properties (see below)</p>
+</li>
+<li>
+<p>Remove the majority of &lt;plugins&gt; and their <code>version</code> tags</p>
+</li>
+<li>
+<p>Add the properties <code>&lt;maven.javadoc.skip&gt;false&lt;/maven.javadoc.skip&gt;</code> and <code>&lt;maven.deploy.skip&gt;false&lt;/maven.deploy.skip&gt;</code> to the module POM.
+The default is to skip javadoc, assembly and deployment for modules in the reactor build.</p>
+</li>
+<li>
+<p>Add the maven-flatten-plugin to the module POM only.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;!-- This defines how a specific module will be flattened --&gt;
+            &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+            &lt;artifactId&gt;flatten-maven-plugin&lt;/artifactId&gt;
+            &lt;executions&gt;
+                &lt;execution&gt;
+                    &lt;id&gt;flatten&lt;/id&gt;
+                    &lt;phase&gt;process-resources&lt;/phase&gt;
+                    &lt;goals&gt;
+                        &lt;goal&gt;flatten&lt;/goal&gt;
+                    &lt;/goals&gt;
+                &lt;/execution&gt;
+                &lt;execution&gt;
+                    &lt;id&gt;flatten.clean&lt;/id&gt;
+                    &lt;phase&gt;clean&lt;/phase&gt;
+                    &lt;goals&gt;
+                        &lt;goal&gt;clean&lt;/goal&gt;
+                    &lt;/goals&gt;
+                &lt;/execution&gt;
+            &lt;/executions&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Remove <code>&lt;scm&gt;&lt;connection&gt;</code> and <code>&lt;scm&gt;&lt;developerConnection&gt;</code> tags</p>
+</li>
+<li>
+<p>Change the site.xml assembly location to <code>&lt;directory&gt;target/site&lt;/directory&gt;</code> (it is now relative to the module project)</p>
+</li>
+<li>
+<p>Change the <code>repository</code> id to <code>across</code></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;across&lt;/id&gt;
+        &lt;name&gt;Across Repository&lt;/name&gt;
+        &lt;url&gt;https://repository.foreach.be/nexus/repository/public/&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_maven_ci_friendly_properties"><a class="anchor" href="#_maven_ci_friendly_properties"></a>Maven CI friendly properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We also introduced <a href="https://maven.apache.org/maven-ci-friendly.html">Maven CI friendly properties</a> in all our Across projects.</p>
+</div>
+<div class="paragraph">
+<p>It is recommended that you use this in your projects if you want to simplify versioning of your artifacts.</p>
+</div>
+<div class="paragraph">
+<p>To start, replace all your <code>&lt;version&gt;1.0.0-SNAPSHOT&lt;/version&gt;</code> with <code>&lt;version&gt;${revision}&lt;/version&gt;</code> for the module references in the project.</p>
+</div>
+<div class="paragraph">
+<p>After this define a <code>&lt;revision&gt;1.0.0-SNAPSHOT&lt;/revision&gt;</code> property in the root pom of your project.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The property name <strong>must</strong> be <code>revision</code> nothing else is accepted by Maven.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You should now be able to build a revision with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ mvn clean package</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or a custom ad-hoc revision with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ mvn clean package -Drevision=1.0.0-201909142334-SNAPSHOT</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are just using this revision in a multi-module project, which will not be deployed as an artifact to a Maven repository, you are done.</p>
+</div>
+<div class="paragraph">
+<p>If you are deploying artifacts to a Maven repository you will still need to <em>replace</em> the ${revision} in the POM which will be deployed.</p>
+</div>
+<div class="paragraph">
+<p>This is done by using the <a href="https://www.mojohaus.org/flatten-maven-plugin/"><code>maven-flatten-plugin</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>Add this plugin to the <code>&lt;build&gt;&lt;plugins&gt;</code> section of the artifact that will be deployed.</p>
+</div>
+<div class="paragraph">
+<p>A typical invocation looks like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>  &lt;build&gt;
+    &lt;plugins&gt;
+      ...
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+        &lt;artifactId&gt;flatten-maven-plugin&lt;/artifactId&gt;
+        &lt;configuration&gt;
+        &lt;/configuration&gt;
+        &lt;executions&gt;
+          &lt;!-- enable flattening --&gt;
+          &lt;execution&gt;
+            &lt;id&gt;flatten&lt;/id&gt;
+            &lt;phase&gt;process-resources&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;flatten&lt;/goal&gt;
+            &lt;/goals&gt;
+          &lt;/execution&gt;
+          &lt;!-- ensure proper cleanup --&gt;
+          &lt;execution&gt;
+            &lt;id&gt;flatten.clean&lt;/id&gt;
+            &lt;phase&gt;clean&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;clean&lt;/goal&gt;
+            &lt;/goals&gt;
+          &lt;/execution&gt;
+        &lt;/executions&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can use the <code>flattenMode</code> inside the <code>configuration</code> section to specify how the resulting POM will look like.</p>
+</div>
+<div class="paragraph">
+<p>Please see the <a href="https://www.mojohaus.org/flatten-maven-plugin/flatten-mojo.html">documentation</a> for which options are available.</p>
+</div>
+<div class="paragraph">
+<p>With the above configuration, Maven will generate a <code>.flattened-pom.xml</code> file alongside your <code>pom.xml</code> file in the <code>process-resources</code> phase.</p>
+</div>
+<div class="paragraph">
+<p>You can test the generation with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>$ mvn clean process-resources</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It may also be a good idea to add the .flattened-pom.xml` file to your .gitignore file.</p>
+</div>
+<div class="paragraph">
+<p>When using a <code>mvn clean deploy</code> the <code>.flattened-pom.xml</code> will be used instead of your pom.xml file.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_known_issues"><a class="anchor" href="#_known_issues"></a>Known issues</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_i_already_use_another_parent_in_my_project"><a class="anchor" href="#_i_already_use_another_parent_in_my_project"></a>I already use another <code>&lt;parent&gt;</code> in my project</h3>
+<div class="paragraph">
+<p>If you are already using another <code>&lt;parent&gt;</code> in your POM structure, you should still be able to use a BOM import like before.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencyManagement&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.foreach.across&lt;/groupId&gt;
+            &lt;artifactId&gt;across-application-parent&lt;/artifactId&gt;
+            &lt;version&gt;5.0.1.RELEASE&lt;/version&gt;
+            &lt;type&gt;pom&lt;/type&gt;
+            &lt;scope&gt;import&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/dependencyManagement&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Using a POM import will remove all abilities to re-use properties, plugins, &#8230;&#8203; inherited from <code>across-application-parent</code> and above.
+Only versions specified in the <code>dependencyManagement</code> sections from the parent POMs will be respected.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="index.html">&laquo; 2.1.x to 5.0.x</a>
+            <span class="article-footer-nav-current">Maven artifact changes</span>
+        <a class="article-footer-nav-next" href="application-runner.html">Across application runner &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

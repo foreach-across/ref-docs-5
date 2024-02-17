@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linking to entity views - Across</title>
+    <meta name="generator" content="Antora 1.0.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="https://across.foreach.be">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="https://across.foreach.be">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="entity-module" data-version="3.1.0">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Entity Management</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/3.x.html">3.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/2.x.html">2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration-properties.html">Configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-module-explained/index.html">EntityModule explained</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-module-explained/entity-configuration.html">Entity configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-module-explained/entity-configuration.html#entity-model">Entity model</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../entity-module-explained/entity-views.html">Entity views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../entity-module-explained/associations.html">Associations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../registering-entities/index.html">Registering entities</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../registering-entities/manual-registration.html">Adding an entity type manually</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../registering-entities/creating-an-entity-registrar.html">Creating an EntityRegistrar</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../registering-entities/enums-as-entities.html">Enums as entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../customizing-entities/index.html">Customizing entity configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/entity-model.html">Entity model</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/entity-properties.html">Properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/entity-views.html">Entity views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/entity-associations.html">Associations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Building entity views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="list-view.html">Creating a list view</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="form-view.html">Creating a form view</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="generic-view.html">Creating a custom view</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="linking-to-entity-views.html">Linking to entity views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="customizing-views.html">Customizing views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customizing-views.html#view-processors">View processors</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="localization.html">Localization &amp; text messages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security-and-permissions.html">Security and permissions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../property-controls/index.html">Entity property controls</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/autosuggest.html">Autosuggest</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/checkbox.html">Checkbox</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/datetime.html">Date/Time picker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/select.html">Drop-down select</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/fieldset.html">Fieldset</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/numeric.html">Numeric</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/radio.html">Radio button</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/value.html">Readonly property value</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/textbox.html">Textbox</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-query/index.html">EntityQuery infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-query/eql.html">EntityQuery Language (EQL)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-query/extending-eql.html">Extending EQL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../entity-query/filtering-list-views.html">Filtering list views</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration-with-other-modules.html">Integration with other modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../web-resources/index.html">Web resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../web-resources/javascript-plugins.html">Javascript plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/attributes-overview.html">Attributes overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/default-entityviewprocessors.html">Default EntityViewProcessors</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">General</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/adding-a-custom-property-to-an-entity.html">Creating a custom property</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/creating-custom-control-for-object-type.html">Creating a custom control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/registering-attributes-property-of-type.html">Registering attributes on properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">List views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/list-view/adding-a-custom-action-to-a-listview.html">Adding a row action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Form views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/form-view/creating-an-extension-form.html">Creating a custom form</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/form-view/creating-a-fileupload-form.html">Creating a file upload form</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Entity Management</span>
+    <span class="version">3.1.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/2.1.2-dev/index.html">2.1.2-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../guides/3.0.0-dev/index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../guides/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/3.0.0-dev/index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../migration/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/3.1.0-dev/index.html">3.1.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/0.0.2-dev/index.html">0.0.2-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../4.0.0-dev/index.html">4.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../3.2.0-dev/index.html">3.2.0-dev</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/1.2.0/index.html">1.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/2.0.1/index.html">2.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../web-cms-module/0.0.6-dev/index.html">0.0.6-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.5/index.html">0.0.5</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/2.1.1/index.html" class="home-link"></a>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Entity Management</a></li>
+    <li class="crumb"><a href="index.html">Building entity views</a></li>
+    <li class="crumb is-current"><a href="linking-to-entity-views.html">Linking to entity views</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">3.1.0</button>
+  <div class="versions-menu">
+    <a class="version" href="../../4.0.0-dev/building-views/linking-to-entity-views.html">4.0.0-dev</a>
+    <a class="version" href="../../3.2.0-dev/building-views/linking-to-entity-views.html">3.2.0-dev</a>
+    <a class="version is-current" href="linking-to-entity-views.html">3.1.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-entity-module/edit/master/docs/modules/ROOT/pages/building-views/linking-to-entity-views.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+<h1>Linking to entity views</h1>
+<div class="sect1">
+<h2 id="_default_views"><a class="anchor" href="#_default_views"></a>Default views</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If AdminWebModule is enabled and you have an auto-detected entity type (eg. from a Spring Data repository), the default views are usually enabled.
+Every view has a base URL path, see the chapter <a href="#default-views">default views</a> for more information on the view types.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Default view paths</caption>
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">View name</th>
+<th class="tableblock halign-left valign-top">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listView</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>view</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}/{id}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createView</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}/create</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateView</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}/{id}/update</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteView</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}/{id}/delete</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Not all paths work in all situations.
+The path structure is fixed, but it is only active if the corresponding view is also registered.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Association views</div>
+<p>The default view path for an association depends on the type of association.
+A <code>LINKED</code> association will use the same path as the target entity type, usually with the exception of the <code>listView</code>.
+An <code>EMBEDDED</code> association has a path structure nested below the source entity path.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Embedded association view paths</caption>
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">View name</th>
+<th class="tableblock halign-left valign-top">Path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listView</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}/{id}/associations/{associationName}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>view</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}/{id}/associations/{associationName}/{associationId}</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>createView</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}/{id}/associations/{associationName}/create</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>updateView</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}/{id}/associations/{associationName}/{assocationId}/update</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteView</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>@adminWeb:/entities/{entityName}/{id}/associations/{associationName}/{assocationId}/delete</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<div class="title">Custom view</div>
+<p>You can easily register a custom view for an entity type using an <code>EntityConfigurer</code>.
+Rendering that view can be done by calling the base entity type or association url, and specifying the <code>view</code> query string parameter.</p>
+</div>
+<div class="paragraph">
+<p>The path segments past the entity type root do not actually matter, you can use any of the default view paths as a base.
+The base type of view being rendered (eg. list view, form view) depends solely on how you defined the view itself.</p>
+</div>
+<div class="paragraph">
+<p>Suppose you created a custom update form view with name <code>myCustomView</code>.
+The following paths would render the exact same view:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@adminWeb:/entities/{entityName}/{id}?view=myCustomView</code></p>
+</li>
+<li>
+<p><code>@adminWeb:/entities/{entityName}/{id}/update?view=myCustomView</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_building_view_links"><a class="anchor" href="#_building_view_links"></a>Building view links</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>An <code>EntityViewLinks</code> component is available to generate links to entity views from anywhere in your code.
+This component will inspect the <code>EntityRegistry</code> to find corresponding configurations and determine how links should be built.</p>
+</div>
+<div class="listingblock">
+<div class="title">Using EntityViewLinks central component</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+EntityViewLinks links;
+
+// link to a list view
+links.linkTo( MyEntity.class ).toUriString();
+
+// Get the separate link builder
+EntityViewLinkBuilder linkBuilder = links.linkTo( MyEntity.class );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Apart from using the <code>EntityViewLinks</code> component globally to build links, the relevant <code>EntityViewLinkBuilder</code> for a particular entity type can often be accessed directly:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It is registered as an <code>EntityConfiguration</code> attribute of that entity type.
+You can retrieve it using <code>entityConfiguration.getAttribute( EntityViewLinkBuilder.class )</code>.</p>
+</li>
+<li>
+<p>When rendering an entity view, the builder is available as the <code>linkBuilder</code> property on the current <code>EntityViewContext</code>.</p>
+</li>
+<li>
+<p>The <code>EntityAdminMenuEvent</code> exposes the builder for the current entity type as a <code>linkBuilder</code> property, for direct access when building menus.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">EntityViewLinkBuilder examples</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String url;
+EntityViewContext entityViewContext;
+MyEntity entity;
+
+// -- Retrieving the link builder for the entity type
+EntityViewLinkBuilder linkBuilder = entityViewContext.getLinkBuilder();
+
+// -- Linking to the list view
+// url: /entities/myEntity
+url = linkBuilder.listView().toUriString();
+
+// -- Linking to the create view
+// url: /entities/myEntity/create
+url = linkBuilder.createView().toUriString();
+
+// -- Linking to the update view
+// url: /entities/myEntity/1/update
+url = linkBuilder.forInstance( entity ).updateView().toUriString();
+
+// -- Linking to a custom view
+// url: /entities/myEntity/1?view=customViewName
+url = linkBuilder.forInstance( entity )
+                 .withViewName( "customViewName" )
+                 .toUriString();
+
+// -- Linking to an association list view
+// url: /entities/myEntity/1/associations/associatedItems/
+url = linkBuilder.forInstance( entity )
+                 .association( AssociatedItem.class )
+                 .toUriString();
+
+// -- Linking to a single associated item update view
+// url: /entities/myEntity/1/associations/associatedItems/2/update
+url = linkBuilder.forInstance( entity )
+                 .association( associatedItem )
+                 .updateView()
+                 .toUriString();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>EntityViewLinkBuilder</code> has a fluent API that allows customizing the URL before converting it to a <code>String</code>.
+It also has some short-hand methods for commonly used entity view related parameters.
+Every method call results in a new instance being created, so you will not make inadvertent changes to an existing link builder.</p>
+</div>
+<div class="listingblock">
+<div class="title">Useful methods of EntityViewLinkBuilder</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// append a custom path segment
+.slash( String path )
+// append query parameter
+.withQueryParam( String param, Object... values )
+// set a from URL ('from' query parameter)
+.withFromUrl( String url )
+// set a partial fragment ('_partial' query parameter)
+.withPartial( String fragment )
+// set a custom view name ('view' query parameter)
+.withViewName( String viewName )
+
+// return the unprocessed URI (eg. '@adminWeb:/entities/myEntity')
+.toString()
+// return the processed URI (eg. '/admin/entities/myEntity')
+.toUriString()
+// create a new UriComponentsBuilder with the current settings
+.toUriComponentsBuilder()
+// return as URI
+.toUri()
+// return as UriComponents
+.toUriComponents()
+
+// return the original EntityViewLinks
+.root()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_common_url_parameters"><a class="anchor" href="#_common_url_parameters"></a>Common URL parameters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following is a list of query string parameters often used with entity views:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>from</code></dt>
+<dd>
+<p>Can hold a URL that should be used as a target when the new operation completes.
+Most often this is the target of the cancel link on a form view.
+See also <code>EntityViewLinkBuilder#withFromUrl(String)</code>.<br></p>
+<div class="paragraph">
+<p>When building association links, a default <code>from</code> value to navigate back to the original entity will usually be added.</p>
+</div>
+</dd>
+<dt class="hdlist1"><code>_partial</code></dt>
+<dd>
+<p>This can be the identifier of the only fragment of a page that should be rendered.
+Partial view rendering is part of the Across Web features.
+See also <code>EntityViewLinkBuilder#withPartial(String)</code>.</p>
+</dd>
+<dt class="hdlist1"><code>view</code></dt>
+<dd>
+<p>Name of the specific custom view that should be rendered.
+See also <code>EntityViewLinkBuilder#withViewName(String)</code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

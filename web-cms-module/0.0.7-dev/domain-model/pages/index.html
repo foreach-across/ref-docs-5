@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page model - Across</title>
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="https://across.foreach.be">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="https://across.foreach.be">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="web-cms-module" data-version="0.0.7-dev">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Module: Web CMS</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/0.0.x.html">0.0.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../configuration-properties.html">Configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../assets/index.html">Web CMS Asset model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../assets/endpoint-url.html">Endpoints &amp; URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="index.html">Web Pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../publication/index.html">Publications &amp; Articles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../images/index.html">Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../redirects/index.html">Redirects</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../menus/index.html">Menus</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../components/index.html">Web Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../components/component-types.html">Component types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../components/creating-a-component-type.html">Creating a custom component</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/content-markers.html">Content markers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../components/thymeleaf.html">Thymeleaf integration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../importing/index.html">Importing data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../importing/yaml-structure.html">YAML structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../multi-domain/index.html">Multi-domain support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../multi-domain/setup.html">Application configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../multi-domain/using-domains.html">Using domains</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../multi-domain/importing.html">Importing domain data</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../services-and-components/entitymodule-attributes.html">EntityModule attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../services-and-components/thymeleaf-dialect.html">Thymeleaf dialect</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../services-and-components/web-resources.html">Web resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../services-and-components/default-data.html">Default data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../performance-tuning/index.html">Performance tuning</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../guides/creating-a-custom-asset.html">Creating a custom asset type</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../guides/creating-a-site-template.html">Creating a website template</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Web CMS</span>
+    <span class="version">0.0.7-dev</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../across/2.1.4-dev/index.html">2.1.4-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../guides/3.0.0-dev/index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../../guides/2.1.2/index.html">2.1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../across-autoconfigure/1.0.2/index.html">1.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../migration/3.0.0-dev/index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../../migration/2.1.2/index.html">2.1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../bootstrap-ui-module/2.2.0/index.html">2.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../dynamic-forms-module/0.0.3-dev/index.html">0.0.3-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../entity-module/4.0.0-dev/index.html">4.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../../entity-module/3.3.0-dev/index.html">3.3.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../file-manager-module/1.3.1-dev/index.html">1.3.1-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../ldap-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../logging-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">0.0.7-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../../across/2.1.3/index.html" class="home-link"></a>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../../index.html">Module: Web CMS</a></li>
+    <li class="crumb is-current"><a href="index.html">Web Pages</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">0.0.7-dev</button>
+  <div class="versions-menu">
+    <a class="version is-current" href="index.html">0.0.7-dev</a>
+    <a class="version" href="../../../0.0.6/domain-model/pages/index.html">0.0.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-web-cms-module/edit/develop/docs/modules/ROOT/pages/domain-model/pages/index.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+<h1>Page model</h1>
+<div class="sect1">
+<h2 id="pages-web-cms-page-overview"><a class="anchor" href="#pages-web-cms-page-overview"></a>Overview</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <code>WebCmsPage</code> is a component that represents a single page in the application.
+It differs from an <a href="../publication/index.html" class="page">article&gt;</a>in that the page is stand-alone, i.e. you have more control regarding the layout and the components of the page.
+One can use this, for example, to create <em>about</em> or <em>faq</em> pages.
+It is related to the publication model in that an article is contained in a page: the data is contained in the article component, but how the article is rendered is handled by the page.</p>
+</div>
+<div class="sect2">
+<h3 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Mandatory</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page Type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#pages-web-cms-page-type-overview">Page Type</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the page type of a page. Can be set during page creation but can not be changed afterwards.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The title of the page.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Select</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent page of the page. Affects any generated URLs and (if auto-generated) the canonical path.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Template</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The thymeleaf template of the page. The filename of the page without the extension. If none is defined the one from the page type is used.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path Segment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The path segment of the page.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auto create menu items</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Checklist of menu names.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If checked, a menu item is generated for the checked menu(s).</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>There are two configurable subsections, one for URL settings and one for publication settings</p>
+</div>
+<div class="sect3">
+<h4 id="_url_settings"><a class="anchor" href="#_url_settings"></a>URL settings</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Mandatory</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path Segment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path (URL) of the page.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Canonical path</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FQDN of the page. Must be unique within the application.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Both of these can be generated manually or automatically, depending on the title and parent (and grandparent, and &#8230;&#8203;) of the page by checking the relevant checkboxes.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_publish_settings"><a class="anchor" href="#_publish_settings"></a>Publish settings</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 37.5%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Mandatory</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Published</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If the page is published (or not). Published pages are visible for regular, non-logged in users.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publication Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Date</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The page is only visible if the access date of the file is greater than the publication date.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Auto-create new menu items</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Boolean</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If checked, creates a new menu item after creation.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">False</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>When creating or updating the page, the following updates are done with regards to the associated URLs:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If the page object is saved, and the publication is in the future or not yet published, update the primary url.</p>
+</li>
+<li>
+<p>If the page object is saved and published but the publication date is in the past, no adjustments to the primary url will happen.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This, however, can be overridden by behaviour defined in <code>WebCmsMenu</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_page_template"><a class="anchor" href="#_page_template"></a>Page template</h4>
+<div class="paragraph">
+<p>A page can optionally specify a template that should be used for rendering.
+If the template is left empty, the <code>template</code> attribute of the <code>WebCmsPageType</code> will be used as template for rendering instead.
+If the <code>WebCmsPageType</code> does not specify a template either, the value of module setting <code>webCmsModule.pages.default-template</code> will be used.</p>
+</div>
+<div class="paragraph">
+<p>A page template will usually be resolved by the configured Spring MVC <code>ViewResolver</code> beans.
+By default page templates are expected to be Thymeleaf template files.</p>
+</div>
+<div class="paragraph">
+<p>At startup of the application, WebCmsModule will attempt to determine the default template path of the current application.
+Any relative template will then be automatically prefixed with the default template path.
+Only templates with a specified prefix (eg. <em>th/</em>) are considered absolute and will be left untouched.</p>
+</div>
+<div class="paragraph">
+<p>The default file extension <em>.html</em> does not need to be specified when setting the template value.</p>
+</div>
+<div class="paragraph">
+<p><em>Example:</em>
+<code>MyApplication</code> would resolve the default template path as <code>th/my/</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>template <code>my-template</code> would be resolved as <code>th/my/template</code></p>
+</li>
+<li>
+<p>template <code>th/other-module/my-template</code> would be resolved as <code>th/other-module/my-template</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can manually specify the default template prefix using property <code>webCmsModule.pages.template-prefix</code>.
+See the <a href="../../configuration-properties.html" class="page">module settings</a> for all options you can configure if you want to change the default template resolving behaviour.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_web_components"><a class="anchor" href="#_web_components"></a>Web Components</h3>
+<div class="paragraph">
+<p>A <code>WebCmsPage</code> can contain different <code>WebCmsComponent</code> assets.
+Those form the building blocks of the pages.
+For further information, please check the <a href="../../components/index.html" class="page">chapters on components</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_urls"><a class="anchor" href="#_urls"></a>URLs</h3>
+<div class="paragraph">
+<p>A <code>WebCmsPage</code> can be referred to by different URLs. Please see the respective <a href="#WebCmsUrl-pages">chapter</a> for more information.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="importing"><a class="anchor" href="#importing"></a>Importing a page</h3>
+<div class="paragraph">
+<p>One can import a page by using the import infrastructure provided by the import functionality of WebCmsModule.</p>
+</div>
+<div class="sect3">
+<h4 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h4>
+<div class="paragraph">
+<p><strong><em>Example page</em></strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">page:
+  - title: Always Created Page <i class="conum" data-value="1"></i><b>(1)</b>
+
+  - objectId: "wcm:asset:page:reference-simple"
+    title: Simple Page
+
+  - objectId: "wcm:asset:page:reference-simple-child"
+    title: Simple Child Page
+    parent: "wcm:asset:page:reference-simple" <i class="conum" data-value="2"></i><b>(2)</b>
+    published: true
+
+  - objectId: "wcm:asset:page:reference-fixed-path-segment"
+    title: Fixed Path Segment Page
+    parent: /simple-page <i class="conum" data-value="2"></i><b>(2)</b>
+    pathSegment: fixed
+    publicationDate: "2017-03-14"
+
+  - objectId: "wcm:asset:page:reference-faq"
+    title: Frequently Asked Questions
+    pathSegment: faq
+    wcm:menu-items: <i class="conum" data-value="3"></i><b>(3)</b>
+      - menu: sideNav
+      - menu: topNav
+        title: FAQ
+        path: /help/faq
+        sortIndex: 10</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Sensible defaults are used. Only title is mandatory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>One can refer to both the object id and the canonical path.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>You can use this notation to manipulate the associated menu items.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_properties_2"><a class="anchor" href="#_properties_2"></a>Properties</h4>
+<div class="sect4">
+<h5 id="_page_properties_that_can_be_imported"><a class="anchor" href="#_page_properties_that_can_be_imported"></a>Page properties that can be imported</h5>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">On UI</th>
+<th class="tableblock halign-left valign-top">Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Title</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">parent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Parent</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Should be the canonical path or the objectId</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pathSegment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Path segment</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pathSegmentGenerated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate path segment based on title</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">canonicalPath</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Canonical Path</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">canonicalPathGenerated</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generate canonical path based on title</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">template</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Template</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">pageType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Page type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only supported during creation; if you do an update where the type has been changed an exception will be thrown.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">objectId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">isPublished</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Published</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">publicationDate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Publication Date</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pages-web-cms-page-type-overview"><a class="anchor" href="#pages-web-cms-page-type-overview"></a>WebCmsPageType</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A WebCmsPageType is used for assigning a certain type of page to a <a href="#pages-web-cms-page-overview">WebCmsPage</a>. The default page type is controlled via the <code>webCmsModule.pages.default-page-type</code> parameter in the configuration.</p>
+</div>
+<div class="sect2">
+<h3 id="_properties_3"><a class="anchor" href="#_properties_3"></a>Properties</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Parameters</caption>
+<colgroup>
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 12.5%;">
+<col style="width: 50%;">
+<col style="width: 12.5%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Field</th>
+<th class="tableblock halign-left valign-top">Required</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Default Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">String</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the page type. Displayed in the drop down list when creating a new page.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attributes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#pages-web-cms-page-type-attributes">Attributes</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The attributes affecting the behaviour when rendering/creating the page. Specified as key-value pairs.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:components</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Components</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The components that are automatically generated when creating a page that uses this page type.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">None</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong><em>Attributes</em></strong> <a id="pages-web-cms-page-type-attributes"></a></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contentTemplate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the container component whose components should be cloned to every page of that type.
+If omitted, a component called <strong>contentTemplate</strong> will be searched for.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">defaultTemplate</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The thymeleaf page that is used if there has not been a page specified on the page itself.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">hasEndpoint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether or not an endpoint is defined for a page. If you disable this, the menu and URL functionality will be disabled on the front end.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">isPublishable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Whether or not the page can be published.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_importing_a_page_type"><a class="anchor" href="#_importing_a_page_type"></a>Importing a page type</h3>
+<div class="paragraph">
+<p>In the standard setup one can only manipulate the available page types via the import functionality. The default types are described further down. One can extrapolate any other needed page type from them.</p>
+</div>
+<div class="sect3">
+<h4 id="_default_page_types"><a class="anchor" href="#_default_page_types"></a>Default page types</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">types:
+  page:
+    default: <i class="conum" data-value="1"></i><b>(1)</b>
+      name: Default
+    template:
+      name: Template
+      attributes: <i class="conum" data-value="2"></i><b>(2)</b>
+        hasEndpoint: false
+        isPublishable: false</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The default page type. Notice that there are no attributes, so the default <a href="#pages-web-cms-page-type-attributes">attributes</a> specified are in effect for this type.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><a href="#pages-web-cms-page-type-attributes">Attributes</a> are defined as simple key-value pairs.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Another, more complex example. This page contains multiple nested containers that themselves have child components.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tabbed"><a class="anchor" href="#_tabbed"></a>Tabbed</h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">tabbed-page:
+  name: Tabbed page
+  attributes:
+    template: th/cfr/tabbed-page
+  wcm:components:
+    content:
+      componentType: container
+      sortIndex: 1
+      wcm:components:
+        code:
+          title: Code
+          componentType: container
+          wcm:components:
+            introduction:
+              title: introduction
+              componentType: html
+              sortIndex: 1 <i class="conum" data-value="2"></i><b>(2)</b>
+              content: | <i class="conum" data-value="1"></i><b>(1)</b>
+                &lt;section&gt;introduction&lt;/section&gt;
+            requirements:
+              title: requirements
+              componentType: html
+              sortIndex: 2
+              content: | <i class="conum" data-value="1"></i><b>(1)</b>
+                &lt;section&gt;requirements&lt;/section&gt;
+            browser-support:
+              title: browser support
+              componentType: html
+              sortIndex: 3
+              content: | <i class="conum" data-value="1"></i><b>(1)</b>
+                &lt;section&gt;browser support&lt;/section&gt;
+            further-reading:
+              title: further reading
+              componentType: html
+              sortIndex: 4
+              content: | <i class="conum" data-value="1"></i><b>(1)</b>
+                &lt;section&gt;further reading&lt;/section&gt;
+        documentation:
+          title: Documentation
+          componentType: html
+          sortIndex: 2
+        used-in:
+          title: Used in
+          componentType: html
+          sortIndex: 3</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Pre-filled content. When a page is created using this template, this data will be filled in (but can be changed by the user).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>You need to manually set the sort order, or otherwise the default value (i.e. 0) will be filled in.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="pages-page-web-model"><a class="anchor" href="#pages-page-web-model"></a>Web infrastructure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Any <code>WebCmsPage</code> will automatically create a <code>WebCmsAssetEndpoint</code> with generated URL values.</p>
+</div>
+<div class="sect2">
+<h3 id="_default_page_controller_model"><a class="anchor" href="#_default_page_controller_model"></a>Default page controller model</h3>
+<div class="paragraph">
+<p>When requesting a page endpoint a default model will be rendered:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the template rendered will be determined by the <code>template</code> property or by the <code>WebCmsPageType</code> if no <code>template</code> is set on the page itself</p>
+</li>
+<li>
+<p>the components attached to the page will be available as <strong>page</strong> scope</p>
+</li>
+<li>
+<p>the following model attributes will be registered:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>page</em>: <code>WebCmsPage</code> being rendered</p>
+</li>
+<li>
+<p><em>asset</em>: <code>WebCmsPage</code> being rendered (alias for <em>page</em>)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The default page model is loaded by the <code>WebCmsPageModelLoader</code> bean.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_custom_page_mapping"><a class="anchor" href="#_custom_page_mapping"></a>Custom page mapping</h3>
+<div class="paragraph">
+<p>You can create your own page handler by using <code>@WebCmsPageMapping</code> annotation.
+The <code>@WebCmsPageMapping</code> annotation can be combined with other <code>@RequestMapping</code> annotations to create a specific match.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WebCmsPageMapping(canonicalPath = "/my/page") <i class="conum" data-value="1"></i><b>(1)</b>
+public void extendSpecificPageModel( WebCmsPage page, Model model ) {
+    model.addAttribute( "extraData", ... );
+}
+
+@GetMapping <i class="conum" data-value="2"></i><b>(2)</b>
+@WebCmsPageMapping(pageType = "static") <i class="conum" data-value="2"></i><b>(2)</b>
+@IgnoreEndpointModel <i class="conum" data-value="3"></i><b>(3)</b>
+public String renderStaticPage( WebCmsPage page, Model model ) {
+    model.addAttribute( "page", page );
+    return "th/my-app/static-page";
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Handler method that will be used for the single page with the unique canonicalPath <em>/my/page</em>.
+The default page model will still be loaded, this handler only adds a model attribute.
+This handler method could optionally return a view, but since it does not, the view being rendered is still determined by the default model.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Handler method for a page of type <em>static</em>, provided the page is requested using the HTTP <em>GET</em> method.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The <code>@IgnoreEndpointModel</code> annotation suppresses the default page model from being loaded.
+The handler method should fully initialize the model required as well as return the view that should be rendered.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script src="../../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autosuggest control - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="entity-module" data-version="master">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Entity Management</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/4.x.html">4.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/3.x.html">3.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/2.x.html">2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration-properties.html">Configuration properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-module-explained/index.html">EntityModule explained</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-module-explained/entity-configuration.html">Entity configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Entity properties and controls</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-module-explained/entity-configuration.html#entity-model">Entity model</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-module-explained/entity-views.html">Entity views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-module-explained/associations.html">Associations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-module-explained/permissions.html">Permissions: allowable actions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">EntityQuery</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../registering-entities/index.html">Configuring entities</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/entity-properties.html">Configuring properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../registering-entities/manual-registration.html">Manually adding an entity type</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../registering-entities/entity-properties.html">Registering properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../customizing-entities/entity-model.html">Defining an entity model</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../customizing-entities/entity-views.html">Configuring entity views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../customizing-entities/entity-associations.html">Adding associations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../registering-entities/creating-an-entity-registrar.html">Automatic registration of entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/index.html">Customizing existing entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/entity-validation.html">Customizing entity validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../registering-entities/enums-as-entities.html">Using enums as entities</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../building-views/index.html">Building entity views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">How entity views work</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Creating views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">List views</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Form views</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Generic views</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../building-views/customizing-views/customizing-views.html">Customizing existing views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../building-views/customizing-views/list-view.html">List views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../building-views/customizing-views/form-view.html">CRUD views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../building-views/customizing-views/create-update-view.html">Create and update form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../building-views/customizing-views/detail-view.html">Read/detail view</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../building-views/customizing-views/delete-view.html">Delete form</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Common tasks</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building-views/association-views.html">Association views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building-views/linking-to-entity-views.html">Linking to entity views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building-views/localization.html">Localization &amp; text messages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building-views/styling.html">Styling views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building-views/security-and-permissions.html">Security and permissions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Admin Web menu</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Entity property controls</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Specifying a control type</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="creating-a-property-control/generating-controls-for-properties.html">Generating controls for properties</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Available controls</span>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="autosuggest.html">Autosuggest</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="checkbox.html">Checkbox</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="datetime.html">Date/Time picker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="select.html">Drop-down select</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="embedded-collection.html">Embedded collection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fieldset.html">Fieldset</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Form group</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Label</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Multi-value text</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="numeric.html">Numeric</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="radio.html">Radio button</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="value.html">Readonly property value</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sortable table</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="textbox.html">Textbox</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="creating-a-property-control/index.html">Creating a new property control</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Rendering with ViewElements</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Accessing entity and property data</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Registering a control type</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="creating-a-property-control/property-data-binding.html">Property data binding</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-query/index.html">EntityQuery infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-query/eql.html">EntityQuery Language (EQL)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-query/extending-eql.html">Extending EQL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../entity-query/filtering-list-views.html">Filtering list views</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../integration-with-other-modules.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Admin Web</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Spring Data</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Spring Security</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developer-tools.html">Developer tools</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../web-resources/index.html">Web resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../web-resources/javascript-plugins.html">Javascript plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/attributes-overview.html">Attributes overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/default-entityviewprocessors.html">Default EntityViewProcessors</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">General</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/adding-a-custom-property-to-an-entity.html">Creating a custom property</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/creating-custom-control-for-object-type.html">Creating a custom control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/registering-attributes-property-of-type.html">Registering attributes on properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/creating-an-entity-id-proxy-property.html">Mapping id properties to entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">List views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/list-view/adding-a-custom-action-to-a-listview.html">Adding a row action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Form views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/form-view/creating-an-extension-form.html">Creating a custom form</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/form-view/creating-a-fileupload-form.html">Creating a file upload form</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/form-view/customize-link-to-delete-view.html">Customize link to delete view</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Entity Management</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Entity Management</a></li>
+    <li class="crumb">Available controls</li>
+    <li class="crumb"><a href="autosuggest.html">Autosuggest</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">master</button>
+  <div class="versions-menu">
+    <a class="version is-current" href="autosuggest.html">master</a>
+    <a class="version" href="../3.4.0/property-controls/autosuggest.html">3.4.0</a>
+    <a class="version" href="../3.3.0/property-controls/autosuggest.html">3.3.0</a>
+    <a class="version" href="../3.2.0/property-controls/autosuggest.html">3.2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-entity-module/edit/master/docs/modules/ROOT/pages/property-controls/autosuggest.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Autosuggest control</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>EntityModule supports automatic rendering of an <a href="../../bootstrap-ui-module/components/form-controls/auto-suggest.html" class="page"><code>AutoSuggestFormElement</code> control</a> for properties.</p>
+</div>
+<div class="paragraph">
+<p>Apart from <a href="#custom">custom autosuggest controls</a>, configuration helpers are available for the common case of providing <a href="#entity">autosuggest for known entities</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="entity"><a class="anchor" href="#entity"></a>Configuring autosuggest for entities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Autosuggest controls are never rendered by default for any entity or property type.
+They must be activated manually by setting the <code>BootstrapUiElements.AUTO_SUGGEST</code> view element type on the corresponding modes.</p>
+</div>
+<div class="paragraph">
+<p>At minimum you must register the dataset that should be used for an autosuggest control.</p>
+</div>
+<div class="sect2">
+<h3 id="_registering_the_dataset"><a class="anchor" href="#_registering_the_dataset"></a>Registering the dataset</h3>
+<div class="paragraph">
+<p>You can use the <code>AutoSuggestDataAttributeRegistrar</code> component to register an autosuggest dataset for an entity type.
+It allows for several ways of configuring a dataset for a registered entity, based on the available entity configuration.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example activating autosuggest control for an entity</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private AutoSuggestDataAttributeRegistrar autoSuggestData;
+
+entities.withType( Author.class )
+        .attribute(
+            autoSuggestData.entityQuery( "name ilike '{0}%' order by name asc" ) <i class="conum" data-value="1"></i><b>(1)</b>
+                           .control( ctl -&gt; ctl.minLength( 2 ) ) <i class="conum" data-value="2"></i><b>(2)</b>
+        )
+        .viewElementType( ViewElementMode.CONTROL, BootstrapUiElements.AUTOSUGGEST ) <i class="conum" data-value="3"></i><b>(3)</b>
+        .viewElementType( ViewElementMode.FILTER_CONTROL, BootstrapUiElements.AUTOSUGGEST ) <i class="conum" data-value="3"></i><b>(3)</b>
+        .viewElementType( ViewElementMode.FILTER_CONTROL.forMultiple(), BootstrapUiElements.AUTOSUGGEST ); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Create an autosuggest dataset using an <a href="../entity-query/eql.html" class="page"><code>EQL statement</code></a>.
+The EQL statement represents the <code>EntityQuery</code> that should be executed to fetch the suggestions for the control.
+The parameter <code>{0}</code> will be replaced with the input from the user.
+This particular query will select all authors whose name starts with the input specified.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>In this case we also customize the control itself, configuring it so suggestions are only fetched when at least 2 characters have been provided.
+This is entirely optional, if we were to omit this a default control would be created which fetches suggestions as soon as a single character is present.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>We configure an autosuggest control to be rendered for the <code>CONTROL</code> and both single-value and multi-value <code>FILTER_CONTROL</code> modes.
+As we configure this directly on the <code>Author</code> entity, this will cause any property referencing this entity type to use the autosuggest control.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_entity_dataset_configuration"><a class="anchor" href="#_entity_dataset_configuration"></a>Entity dataset configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The above example is the easiest way to configure an autosuggest dataset by specifying only the EQL statement that should be executed for fetching suggestions.</p>
+</div>
+<div class="paragraph">
+<p>This will detect the target entity type (<code>Author</code>) based on the context and use the available <code>EntityQuery</code> infrastructure for actual retrieval of the results.
+Each result will then be transformed into a suggestion using the <code>EntityModel</code> registered for <code>Author</code>.This simple configuration also limits the number of results returned to 50, and that limit will also be taken into account when fetching the actual data.</p>
+</div>
+<div class="paragraph">
+<p>Every element of the dataset can be configured separately as well for more fine-grained control.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example customizing the dataset</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private AutoSuggestDataAttributeRegistrar autoSuggestData;
+
+@Autowired
+private AuthorRepository authorRepository;
+
+entities.withType( Author.class )
+        .attribute(
+            autoSuggestData.entityQuery(
+                    ds -&gt; ds.as( Author.class ) <i class="conum" data-value="1"></i><b>(1)</b>
+                            .suggestions( ( query, control ) -&gt; authorRepository.findAllByNameContaining( query ) ) <i class="conum" data-value="2"></i><b>(2)</b>
+                            .maximumResults( 10 ) <i class="conum" data-value="3"></i><b>(3)</b>
+                            .resultTransformer( author -&gt; new SimpleAutoSuggestDataSet.Result( author.getId(), author.getLogin() ) ) <i class="conum" data-value="4"></i><b>(4)</b>
+            )
+        )</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This simply downcasts the configuration consumer, avoiding explicit casting in the inner lambdas.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Fetch the possible suggestions manually using the repository.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Only transform and return the first 10 results as suggestions.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Instead of using the <code>EntityModel</code> convert the results using the specified lambda.</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_dataset_id"><a class="anchor" href="#_dataset_id"></a>Dataset id</h3>
+<div class="paragraph">
+<p>Every dataset will be registered automatically with a unique id in the <code>AutoSuggestDataEndpoint</code>.
+Unless you specify a dataset id manually, one will be generated based on the context.</p>
+</div>
+<div class="paragraph">
+<p>For example, the dataset registered directly on the <code>Author</code> entity will get a generated id <code>entity-author</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you want to re-use the same dataset you should manually assign a dataset id.
+Dataset ids are considered part of the endpoint for the suggestions and should remain the same across application instances and restarts.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_a_separate_dataset"><a class="anchor" href="#_using_a_separate_dataset"></a>Using a separate dataset</h3>
+<div class="paragraph">
+<p>You can also separately define and register datasets with the <code>AutoSuggestDataEndpoint</code>.
+To use a previously registered dataset simply configure its id as attribute.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example using a separate dataset</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private AutoSuggestDataEndpoint autoSuggestDataEndpoint;
+
+@Autowired
+private GroupRepository groupRepository;
+
+@Override
+public void configure( EntitiesConfigurationBuilder entities ) {
+    AutoSuggestDataSet.ResultTransformer groupToSuggestion = candidate -&gt; {
+        Group group = (Group) candidate;
+        return new SimpleAutoSuggestDataSet.Result( group.getId(), group.getName() );
+    };
+
+    autoSuggestDataEndpoint.registerDataSet( <i class="conum" data-value="1"></i><b>(1)</b>
+            "possible-groups",
+            SimpleAutoSuggestDataSet
+                    .builder()
+                    .suggestionsLoader(
+                            ( query, controlName ) -&gt; groupRepository.findByNameContaining( query, new PageRequest( 0, 15, new Sort( "name" ) ) )
+                                                                     .getContent()
+                                                                     .stream()
+                                                                     .map( groupToSuggestion::transformToResult )
+                                                                     .collect( Collectors.toList() ) )
+                    .build()
+    );
+
+    entities.withType( Group.class )
+            .attribute( AutoSuggestDataAttributeRegistrar.DATASET_ID, "possible-groups" ) <i class="conum" data-value="2"></i><b>(2)</b>
+            .attribute( AutoSuggestDataSet.ResultTransformer.class, groupToSuggestion ) <i class="conum" data-value="3"></i><b>(3)</b>
+            .viewElementType( ViewElementMode.CONTROL, BootstrapUiElements.AUTOSUGGEST );
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Manually register an <code>AutoSuggestDataSet</code> directly on the <code>AutoSuggestDataEndpoint</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Configure the same dataset to be used when rendering an autosuggest control for the <code>Group</code> entity.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Because the dataset registered does not directly implement <code>AutoSuggestDataSet.ResultTransformer</code>, manually specify the transformer that should be used.
+A result transformer is required for the control to be able to detect and preset the previously selected value server-side.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_property_configuration"><a class="anchor" href="#_property_configuration"></a>Property configuration</h3>
+<div class="paragraph">
+<p>An autosuggest configuration can be specified both on entity and property level (including view specific properties).
+You can set different autosuggest control settings for a single property, just like with other controls.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example using a alternative dataset for a property</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">entities.withType( Author.class )
+        .attribute( autoSuggestData.entityQuery( "name ilike '{0}%' order by name asc" ) );
+
+entities.withType( Book.class )
+        .properties(
+                props -&gt; props.property( "author" )
+                              .attribute( autoSuggestData.entityQuery( "name ilike '{0}%' and type = BOOKS order by name asc" ) )
+        );</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_customizing_the_control"><a class="anchor" href="#_customizing_the_control"></a>Customizing the control</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can customize the actual client-side control being generated by setting an <code>AutoSuggestFormElementConfiguration</code> attribute.</p>
+</div>
+<div class="paragraph">
+<p>If you do not specify a configuration manually, a default will be used which will:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>search suggestions as soon as a single character is entered</p>
+</li>
+<li>
+<p>show a hint of the best matching suggestion in the textbox</p>
+</li>
+<li>
+<p>highlight the input string in the suggestions</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Setting the AutoSuggestFormElementConfiguration</div>
+<p>Apart from creating a configuration manually and setting it as an attribute, <code>AutoSuggestDataAttributeRegistrar</code> provides a <code>control()</code> method which does just that and can be combined with dataset specification.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">props.property( "author" )
+     .attribute(
+         autoSuggestData.dataSetId( "authorSearch" ) <i class="conum" data-value="1"></i><b>(1)</b>
+                        .control( ctl -&gt; ctl.minLength( 3 ).showHint( false ) ) <i class="conum" data-value="2"></i><b>(2)</b>
+     );</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Specify the dataset by id, assuming it has been registered separately.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Configure the control that should be used.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Control configuration and dataset</div>
+<p>When setting an <code>AutoSuggestFormElementConfiguration</code> it is not strictly required to configure a dataset as attribute.
+If a dataset is configured (as in all previous examples) it will replace the default dataset which is set on the control configuration.
+If a dataset has not yet been configured for the current configuration, it must be configured on the <code>AutoSuggestFormElementConfiguration</code> instead.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you want to avoid the default dataset of your configuration to be replaced, explicitly specify an empty string as dataset id.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Using a ViewElementPostProcessor</div>
+<p>If you want to customize the control itself after it has been built, you can do so by adding a <code>ViewElementPostProcessor</code>.
+The actual control built will be of type <code>AutoSuggestFormElement</code> (for a single-value control) or <code>NodeViewElement</code> (which contains an <code>AutoSuggestFormElement</code> - for a multi-value control).</p>
+</div>
+<div class="listingblock">
+<div class="title">Example registering a post-processor for a single-value autosuggest control</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">entities.withType( Author.class )
+        .viewElementType( ViewElementMode.CONTROL, BootstrapUiElements.AUTOSUGGEST )
+        .&lt;AutoSuggestFormElement&gt;viewElementPostProcessor(
+                ViewElementMode.CONTROL, (builderContext, autosuggest) -&gt; /* customize the control */
+        );</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom"><a class="anchor" href="#custom"></a>Custom autosuggest control rendering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can render an autosuggest control for any property by either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>setting a fully configured <code>AutoSuggestFormElementConfiguration</code> attribute and a <code>AutoSuggestDataSet.ResultTransformer</code> attribute</p>
+</li>
+<li>
+<p>setting a dataset id of a dataset that implements <code>AutoSuggestDataSet.ResultTransformer</code> (eg. an <code>InitializingAutoSuggestDataSet</code>)</p>
+</li>
+<li>
+<p>setting a dataset id and a <code>AutoSuggestDataSet.ResultTransformer</code> attribute directly</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>AutoSuggestDataSet.ResultTransformer</code> is required for the control to be able to pre-select a previously selected property value (server-side).</p>
+</div>
+<div class="paragraph">
+<div class="title">Example custom registration of autosuggest control</div>
+<p>In this example a <code>User</code> has a list of addresses, where each <code>Address</code> has a city.
+The value of <code>city</code> is simply the city name - a <code>String</code>.
+This example configures autosuggest of some common cities, but allowing any value.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">List&lt;String&gt; cities = Arrays.asList( "Antwerp", "Brussels", "Ghent", "Kortrijk", "Hasselt" ); <i class="conum" data-value="1"></i><b>(1)</b>
+
+autoSuggestDataEndpoint.registerDataSet(
+        "cities",
+        AutoSuggestDataSet.forControl() <i class="conum" data-value="2"></i><b>(2)</b>
+                          .suggestionsLoader( ( query, controlName ) -&gt;
+                                                      cities.stream()
+                                                            .filter( candidate -&gt; StringUtils.containsIgnoreCase( candidate, query ) )
+                                                            .map( SimpleAutoSuggestDataSet.Result::of )
+                                                            .collect( Collectors.toList() ) )
+                          .resultTransformer( SimpleAutoSuggestDataSet.Result::of )
+                          .build()
+);
+
+entities.withType( User.class )
+        .properties(
+                props -&gt; props.property( "address[].city" ) <i class="conum" data-value="3"></i><b>(3)</b>
+                              .viewElementType( ViewElementMode.CONTROL, BootstrapUiElements.AUTOSUGGEST )
+                              .attribute( AutoSuggestDataAttributeRegistrar.DATASET_ID, "cities" )
+        );</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The list of city names to autosuggest.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Register an autosuggest dataset that searches for the user input anywhere in the city name.
+We create a dataset using <code>AutoSuggestDataSet.forControl()</code> which forces us to set a result transformer.
+In this case our transformer maps a city name to a suggestion result.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Configure the <code>city</code> property of each <code>address</code> to render as an autosuggest control using our dataset.
+Because our dataset implements <code>AutoSuggestDataSet.ResultTransformer</code>, setting only the dataset id attribute is sufficient.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_autosuggest_infrastructure"><a class="anchor" href="#_autosuggest_infrastructure"></a>Autosuggest infrastructure</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are looking to learn more, see the source code and javadoc of the following components:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Component</th>
+<th class="tableblock halign-left valign-top">Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AutoSuggestDataEndpoint</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Holds the datasets that can be accessed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AutoSuggestDataAttributeRegistrar</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Helper for fluent configuration of autosuggest controls on entities and properties.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AutoSuggestFormElementBuilderFactory</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Responsible for building autosuggest controls for type <code>BootstrapUiElements.AUTO_SUGGEST</code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="creating-a-property-control/generating-controls-for-properties.html">&laquo; Generating controls for properties</a>
+            <span class="article-footer-nav-current">Autosuggest</span>
+        <a class="article-footer-nav-next" href="checkbox.html">Checkbox &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

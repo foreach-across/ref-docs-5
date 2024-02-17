@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property data binding - Across</title>
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="entity-module" data-version="3.4.0-SNAPSHOT">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Module: Entity Management</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/3.x.html">3.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../releases/2.x.html">2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../configuration-properties.html">Configuration properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../entity-module-explained/index.html">EntityModule explained</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../entity-module-explained/entity-configuration.html">Entity configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Entity properties and controls</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../entity-module-explained/entity-configuration.html#entity-model">Entity model</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../entity-module-explained/entity-views.html">Entity views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../entity-module-explained/associations.html">Associations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../entity-module-explained/permissions.html">Permissions: allowable actions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">EntityQuery</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../registering-entities/index.html">Configuring entities</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../customizing-entities/entity-properties.html">Configuring properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../registering-entities/manual-registration.html">Manually adding an entity type</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../registering-entities/entity-properties.html">Registering properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../customizing-entities/entity-model.html">Defining an entity model</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../customizing-entities/entity-views.html">Configuring entity views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../customizing-entities/entity-associations.html">Adding associations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../registering-entities/creating-an-entity-registrar.html">Automatic registration of entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../customizing-entities/index.html">Customizing existing entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../customizing-entities/entity-validation.html">Customizing entity validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../registering-entities/enums-as-entities.html">Using enums as entities</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../building-views/index.html">Building entity views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">How entity views work</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Creating views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">List views</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Form views</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Generic views</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../building-views/customizing-views/customizing-views.html">Customizing existing views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../building-views/customizing-views/list-view.html">List views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../building-views/customizing-views/form-view.html">CRUD views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../building-views/customizing-views/create-update-view.html">Create and update form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../building-views/customizing-views/detail-view.html">Read/detail view</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../building-views/customizing-views/delete-view.html">Delete form</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Common tasks</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../building-views/association-views.html">Association views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../building-views/linking-to-entity-views.html">Linking to entity views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../building-views/localization.html">Localization &amp; text messages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../building-views/security-and-permissions.html">Security and permissions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Admin Web menu</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../index.html">Entity property controls</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Specifying a control type</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="generating-controls-for-properties.html">Generating controls for properties</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Available controls</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../autosuggest.html">Autosuggest</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../checkbox.html">Checkbox</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../datetime.html">Date/Time picker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../select.html">Drop-down select</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../embedded-collection.html">Embedded collection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../fieldset.html">Fieldset</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Form group</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Label</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Multi-value text</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../numeric.html">Numeric</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../radio.html">Radio button</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../value.html">Readonly property value</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sortable table</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../textbox.html">Textbox</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Creating a new property control</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Rendering with ViewElements</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Accessing entity and property data</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Registering a control type</span>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="property-data-binding.html">Property data binding</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../entity-query/index.html">EntityQuery infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../entity-query/eql.html">EntityQuery Language (EQL)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../entity-query/extending-eql.html">Extending EQL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../entity-query/filtering-list-views.html">Filtering list views</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../integration-with-other-modules.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Admin Web</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Spring Data</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Spring Security</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../developer-tools.html">Developer tools</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../web-resources/index.html">Web resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../web-resources/javascript-plugins.html">Javascript plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../services-and-components/attributes-overview.html">Attributes overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../services-and-components/default-entityviewprocessors.html">Default EntityViewProcessors</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">General</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../guides/general/adding-a-custom-property-to-an-entity.html">Creating a custom property</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../guides/general/creating-custom-control-for-object-type.html">Creating a custom control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../guides/general/registering-attributes-property-of-type.html">Registering attributes on properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../guides/general/creating-an-entity-id-proxy-property.html">Mapping id properties to entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">List views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../guides/list-view/adding-a-custom-action-to-a-listview.html">Adding a row action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Form views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../guides/form-view/creating-an-extension-form.html">Creating a custom form</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../guides/form-view/creating-a-fileupload-form.html">Creating a file upload form</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../guides/form-view/customize-link-to-delete-view.html">Customize link to delete view</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Entity Management</span>
+    <span class="version">3.4.0-SNAPSHOT</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../across/2.1.5-SNAPSHOT/index.html">2.1.5-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../guides/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../admin-web-module/3.2.0-SNAPSHOT/index.html">3.2.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../application-info-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-batch-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../bootstrap-ui-module/2.2.2-SNAPSHOT/index.html">2.2.2-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../ehcache-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../debug-web-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../4.0.0-SNAPSHOT/index.html">4.0.0-SNAPSHOT</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../index.html">3.4.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../ldap-module/2.0.0-SNAPSHOT/index.html">2.0.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../logging-module/2.0.0-SNAPSHOT/index.html">2.0.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-mobile-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../properties-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-security-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../spring-security-acl-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../oauth2-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../user-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../../index.html">Module: Entity Management</a></li>
+    <li class="crumb"><a href="index.html">Creating a new property control</a></li>
+    <li class="crumb"><a href="property-data-binding.html">Property data binding</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">3.4.0-SNAPSHOT</button>
+  <div class="versions-menu">
+    <a class="version" href="../../../property-controls/creating-a-property-control/property-data-binding.html">master</a>
+    <a class="version" href="../../../4.0.0-SNAPSHOT/property-controls/creating-a-property-control/property-data-binding.html">4.0.0-SNAPSHOT</a>
+    <a class="version is-current" href="property-data-binding.html">3.4.0-SNAPSHOT</a>
+    <a class="version" href="../../../3.2.0/property-controls/creating-a-property-control/property-data-binding.html">3.2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-entity-module/edit/develop/docs/modules/ROOT/pages/property-controls/creating-a-property-control/property-data-binding.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Property data binding</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+<div class="paragraph">
+<p>Data binding is the process of binding user input to the domain model of your application.
+This is usally done through a Spring <code>DataBinder</code> which wraps around a target bean.</p>
+</div>
+<div class="paragraph">
+<p>In an entity view, the target bean is usually the DTO of your entity.</p>
+</div>
+<div class="paragraph">
+<p>EntityModule provides an <code>EntityPropertiesBinder</code> abstraction that can be used to bind complex value structures, using an <code>EntityPropertyRegistry</code> instead of an actual bean <code>Class</code>.</p>
+</div>
+<div class="paragraph">
+<p>This section explains how you can use the <code>EntityPropertiesBinder</code> and how it behaves differently from regular data binding.</p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_data_binding_explained"><a class="anchor" href="#_basic_data_binding_explained"></a>Basic data binding explained</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_entitypropertiesbinder"><a class="anchor" href="#_entitypropertiesbinder"></a>EntityPropertiesBinder</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>behaves as a map
+does not automatically flush to the underlying entity, requires <code>bind()</code> to be called and uses `EntityPropertyController.applyValue()</p>
+</div>
+<div class="paragraph">
+<p>example caching the value read from a user:
+user.setName(X) &#8594; properties.getValue() == X &#8594; user.setName(Y) &#8594; properties.getValue() == X !
+the real power is that a property does not need to be an actual bean property</p>
+</div>
+<div class="paragraph">
+<p>To fully understand the possibilities of <code>EntityPropertiesBinder</code> you should have a good grasp on the <code>EntityPropertyRegistry</code>, <code>EntityPropertyDescriptor</code> and especially the <code>EntityPropertyController</code>.</p>
+</div>
+<div class="paragraph">
+<p>very powerful but can be a bit daunting to understand, hence the examples</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_different_property_types"><a class="anchor" href="#_different_property_types"></a>Different property types</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In order to correctly bind to different property types, it is a matter of generating the correct path to the property value.
+This is pretty straightforward when using regular <code>DataBinding</code> but requires you to know the intermediate segments when binding on a <code>EntityPropertiesBinder</code> target.</p>
+</div>
+<div class="paragraph">
+<p>The next chapters provide detailed examples for each type of property:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>single value property</p>
+</li>
+<li>
+<p>collection type property</p>
+</li>
+<li>
+<p>map type property</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All examples use the following classes:</p>
+</div>
+<div class="listingblock">
+<div class="title">Example classes used throughout the following chapters</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Getter
+@Setter
+class User {
+    private String name;
+    private Address address;
+    private List&lt;User&gt; children;
+}
+
+@Getter
+@Setter
+class Address {
+   private String street;
+   private int number;
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All the examples in the next chapters also imply that the actual binding happens on a custom binder target class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Getter
+@Setter
+class BinderTarget {
+    private User user;  <i class="conum" data-value="1"></i><b>(1)</b>
+    private EntityPropertiesBinder properties; <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Returns the direct entity for binding.
+Would not return <code>null</code> but would be intialized with a <code>User</code> instance.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Returns an <code>EntityPropertiesBinder</code> that wraps around the same <code>User</code> instance, but is initialized with the <code>EntityPropertyRegistry</code> you want to use.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the examples it is assumed the property registry is introspected entirely from the <code>User</code> class and contains the class property metadata.
+In this case the behaviour of the generated <code>EntityPropertyController</code> is most inline with accessing the properties of a bean directly.</p>
+</div>
+<div class="paragraph">
+<p>For the sake of brevity, all binding value examples are shown in a properties style:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">user.name=John Doe</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As HTML user input from a textbox, this is the equivalent of:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;input type="text" name="user.name" value="John Doe" /&gt;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_single_value_property"><a class="anchor" href="#_single_value_property"></a>Single value property</h3>
+<div class="paragraph">
+<p>Understanding single value property binding is important as it is the basis for more complex type binding.</p>
+</div>
+<div class="sect3">
+<h4 id="_binding_a_simple_type"><a class="anchor" href="#_binding_a_simple_type"></a>Binding a simple type</h4>
+<div class="paragraph">
+<p>Let&#8217;s start with the most simple example: binding a property value to a simple <code>String</code> property.</p>
+</div>
+<div class="paragraph">
+<p>With the <code>BinderTarget</code> defined, binding properties</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">user.name=John Doe</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will translate into</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">getUser().setName("John Doe")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And immediately after <code>getUser().getName()</code> would return <code>John Doe</code> as value.</p>
+</div>
+<div class="paragraph">
+<div class="title">Binding using the EntityPropertiesBinder</div>
+<p>Since the <code>EntityPropertiesBinder</code> returned by <code>BinderTarget.getProperties()</code> wraps around the same <code>User</code> instance, we can also update the same property using the binder.</p>
+</div>
+<div class="paragraph">
+<p>In that case we would update with:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">properties[name].value=John Doe</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is the equivalent of the following code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">getProperties().get("name") <i class="conum" data-value="1"></i><b>(1)</b>
+               .setValue("John Doe"); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>returns an <code>EntityPropertyBinder</code> for the target property, in this case an instance of <code>SingleEntityPropertyBinder</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>calls the <code>setValue()</code> method on the single property binder</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+Recall that the <code>EntityPropertiesBinder</code> does not automatically flush to the target bean.
+This means that after executing the above code, the result of <code>getUser().getName()</code> will still return whatever it was before the binding.<br>
+<br>
+It is only when calling <code>EntityPropertiesBinder.bind()</code> that the property values will be applied to the target by calling the corresponding <code>EntityPropertyController.applyValue()</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_type_conversion"><a class="anchor" href="#_type_conversion"></a>Type conversion</h4>
+<div class="paragraph">
+<p>Assume the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">user.address=My street 1
+properties[address].value=My street 1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>They are each others equivalent for binding a single value either directly or using the <code>EntityPropertiesBinder</code>.
+However in our example the <code>address</code> property returns an <code>Address</code> type, which is a complex type, and automatic casting from <code>String</code> to <code>Address</code> is not possible.</p>
+</div>
+<div class="paragraph">
+<p>In such a case, both approaches will perform type conversion using a <code>ConversionService</code> - if one is set.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Apart from a <code>ConversionService</code>, a <code>DataBinder</code> can also use <code>PropertyEditors</code> for type conversion.
+The <code>EntityPropertiesBinder</code> intentionally only supports the more recent <code>ConversionService</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_nested_properties"><a class="anchor" href="#_nested_properties"></a>Nested properties</h4>
+<div class="paragraph">
+<p>Binding to nested properties is also supported.
+Using bean data binding this looks like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">user.address.street=Some street
+user.address.number=3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Again these modifications would be applied instantaneously on the <code>Address</code> instance returned by <code>getUser().getAddress()</code>.</p>
+</div>
+<div class="paragraph">
+<p>For this type of binding to work, it is required that <code>getUser().getAddress()</code> does not return <code>null</code>.
+If <code>null</code> is returned, the Spring <code>DataBinder</code> will usually attempt to construct a new <code>Address</code> instance by calling a no-args constructor.
+If no instance can be created, an <code>Exception</code> will be thrown.</p>
+</div>
+<div class="sect4">
+<h5 id="_using_the_entitypropertiesbinder"><a class="anchor" href="#_using_the_entitypropertiesbinder"></a>Using the EntityPropertiesBinder</h5>
+<div class="paragraph">
+<p>There are no fewer than four different ways to bind to the same nested properties using the <code>EntityPropertiesBinder</code>, each having its own distinct behaviour.
+Each approach allows for a different level of control.
+The main difference is in when and how modifications are flushed to the target bean, and what the behaviour should be for creating default values.</p>
+</div>
+<div class="sect5">
+<h6 id="_approach_1_direct_binding_on_the_address_property_without_default_value"><a class="anchor" href="#_approach_1_direct_binding_on_the_address_property_without_default_value"></a>Approach 1: direct binding on the address property without default value</h6>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">properties[address].value.street=Some street
+properties[address].value.number=3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case <code>properties[address].value</code> returns the same <code>Address</code> instance as <code>getUser().getAddress()</code> and the <code>street</code> and <code>number</code> properties are bound directly on that instance.
+This means that in this particular case the changes will be immediately bound to the <code>User</code> instance, transitively.</p>
+</div>
+<div class="paragraph">
+<p>Even if <code>address.street</code> and <code>address.number</code> were to have their own <code>EntityPropertyDescriptor</code> and <code>EntityPropertyController</code>, these would be ignored as binding of those properties is done directly on the <code>Address</code> bean.</p>
+</div>
+<div class="paragraph">
+<p>A major difference with direct data binding, is the fact that <code>getValue()</code> will always return <code>null</code> if no <code>Address</code> is set on the <code>User</code>.
+If you want to automatically create a default value, you must use <code>getInitializedValue()</code> instead.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_approach_2_direct_binding_on_the_address_property_with_default_value"><a class="anchor" href="#_approach_2_direct_binding_on_the_address_property_with_default_value"></a>Approach 2: direct binding on the address property with default value</h6>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">properties[address].initializedValue.street=Some street
+properties[address].initializedValue.number=3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Binding of <code>street</code> and <code>number</code> is still done directly on the <code>Address</code> bean, but in this case a new <code>Address</code> instance will be created if there is none available yet.
+Creation will be done by calling <code>createValue()</code> on the <code>EntityPropertyController</code> for the <code>address</code> property.
+In our example case this would amount to the same creation strategy as with direct data binding: calling a visible no-args constructor.</p>
+</div>
+<div class="paragraph">
+<p>There is another subtle difference with direct data binding however:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>if <code>properties[address].initializedValue</code> returns an existing value, that existing value will immediately be updated, and the changes will be visible on the <code>User</code> instance</p>
+</li>
+<li>
+<p>if <code>properties[address].initializedValue</code> returns a new value, the <code>street</code> and <code>number</code> of the new value will be set, but the <code>address</code> on <code>User</code> will only be updated when <code>EntityPropertiesBinder.bind()</code> is called</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>If a <code>DataBinder</code> will attempt to automatically create a default property value depends on the value of the <code>autoGrowNestedPaths</code> property, which defaults to <code>true</code> (meaning it will create default values).</p>
+</div>
+<div class="paragraph">
+<p>Calling <code>EntityPropertyBinder.getValue()</code> however will <strong>never</strong> create a default value.
+The caller must use <code>getInitializedValue()</code> instead and as such clearly state the intention.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_approach_3_using_an_entitypropertiesbinder_for_the_street_and_number_properties"><a class="anchor" href="#_approach_3_using_an_entitypropertiesbinder_for_the_street_and_number_properties"></a>Approach 3: using an EntityPropertiesBinder for the street and number properties</h6>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">properties[address].properties[street].value=Some street
+properties[address].properties[number].value=3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case no properties are updated directly on the <code>User</code> or existing <code>Address</code> instance.
+They are only flushed when <code>EntityPropertiesBinder.bind()</code> is called.</p>
+</div>
+<div class="paragraph">
+<p>This approach will use the registered <code>EntityPropertyController</code> for <code>address.street</code> and <code>address.number</code>.</p>
+</div>
+<div class="paragraph">
+<p>With regards to default value creation, the behaviour is the same as if using <code>getInitializedValue()</code>: if no value is available, a default will get created.</p>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_approach_4_using_direct_property_descriptors_for_the_street_and_number_properties"><a class="anchor" href="#_approach_4_using_direct_property_descriptors_for_the_street_and_number_properties"></a>Approach 4: using direct property descriptors for the street and number properties</h6>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties">properties[address.street].value=Some street
+properties[address.number].value=3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case no properties are updated directly on the <code>Address</code> instance either, and the <code>EntityPropertyController</code> of the target properties will be used.</p>
+</div>
+<div class="paragraph">
+<p>This approach behaves the same as the first one regarding default values: an exception will be thrown if no <code>address</code> value is available.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_deleting_a_property"><a class="anchor" href="#_deleting_a_property"></a>Deleting a property</h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_collection_type_property"><a class="anchor" href="#_collection_type_property"></a>Collection type property</h3>
+
+</div>
+<div class="sect2">
+<h3 id="_map_type_property"><a class="anchor" href="#_map_type_property"></a>Map type property</h3>
+
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="index.html">&laquo; Creating a new property control</a>
+            <span class="article-footer-nav-current">Property data binding</span>
+        <a class="article-footer-nav-next" href="../../entity-query/index.html">EntityQuery infrastructure &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../../_/js/site.js"></script>
+<script src="../../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

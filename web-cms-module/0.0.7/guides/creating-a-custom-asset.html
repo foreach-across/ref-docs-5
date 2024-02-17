@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating a custom WebCmsAsset - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="web-cms-module" data-version="0.0.7">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Web CMS</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.0.x.html">0.0.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration-properties.html">Configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../domain-model/assets/index.html">Web CMS Asset model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../domain-model/assets/endpoint-url.html">Endpoints &amp; URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/pages/index.html">Web Pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/publication/index.html">Publications &amp; Articles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/images/index.html">Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/redirects/index.html">Redirects</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/menus/index.html">Menus</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../components/index.html">Web Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../components/component-types.html">Component types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../components/creating-a-component-type.html">Creating a custom component</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../components/content-markers.html">Content markers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../components/thymeleaf.html">Thymeleaf integration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../importing/index.html">Importing data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../importing/yaml-structure.html">YAML structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../multi-domain/index.html">Multi-domain support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/setup.html">Application configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/using-domains.html">Using domains</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/importing.html">Importing domain data</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/entitymodule-attributes.html">EntityModule attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/thymeleaf-dialect.html">Thymeleaf dialect</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/web-resources.html">Web resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/default-data.html">Default data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../performance-tuning/index.html">Performance tuning</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="creating-a-custom-asset.html">Creating a custom asset type</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Web CMS</span>
+    <span class="version">0.0.7</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Web CMS</a></li>
+    <li class="crumb"><a href="index.html">Guides &amp; How-tos</a></li>
+    <li class="crumb"><a href="creating-a-custom-asset.html">Creating a custom asset type</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">0.0.7</button>
+  <div class="versions-menu">
+    <a class="version" href="../../guides/creating-a-custom-asset.html">master</a>
+    <a class="version is-current" href="creating-a-custom-asset.html">0.0.7</a>
+    <a class="version" href="../../0.0.6/guides/creating-a-custom-asset.html">0.0.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-web-cms-module/blob/0.0.7/docs/modules/guides/pages/creating-a-custom-asset.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Creating a custom WebCmsAsset</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>To create a custom <code>WebCmsAsset</code>, we create a class which extends <code>WebCmsAsset</code>. `WebCmsAsset`has two superclasses which require a method to be implemented:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>WebCmsObjectInheritanceSuperClass</code> which defines <code>getObjectType()</code></p>
+</li>
+<li>
+<p><code>WebCmsObjectSuperClass</code> which defines <code>getObjectCollectionId()</code> with which every object id of the class will be prefixed with.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Aside of these two methods, WebCmsAsset defines an abstract method <code>getAssetType()</code>, which also needs to be implemented.</p>
+</div>
+<div class="paragraph">
+<p><code>WebCmsAsset</code> uses joined inheritance, so don&#8217;t forget to add a <code>@DiscriminatorValue</code> to the class, which typically is the same as the return value of <code>getObjectType()</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>getObjectCollectionId()</code> returns the prefix of the asset that defines to which collection it belongs. For example, the collection id for a <code>WebCmsPage</code> is <code>wcm:asset:page</code>. A typical collection id starts with <em>wcm:asset:</em> followed by the object type.</p>
+</div>
+<div class="paragraph">
+<p>Often, we create a <code>WebCmsAssetType</code> for our asset, which our asset will hold and which will be the return value of <code>getAssetType()</code>. However, it is not required to have an explicit asset type (unless you want to be able to import your custom asset through yaml imports and create several components by default from a template), in which case the method may return <code>null</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_creating_a_webcmsassettype"><a class="anchor" href="#_creating_a_webcmsassettype"></a>Creating a WebCmsAssetType</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <code>WebCmsAssetType</code> extends <code>WebCmsTypeSpecifier</code> - which in itself implements the two superclasses we&#8217;ve talked about earlier. This means that once again we have to implement a <code>getObjectType()</code> and <code>getObjectCollectionId()</code> method. By convention and to keep a clear overview, we advise you to use the same object type for both the custom asset and the custom asset type. The collection id is usually slightly different, as it represents a type, so it should not be in the same collection as our assets. If we once again take a look at <code>WebCmsPage</code> and its <code>WebCmsPageType</code>, we see that the collection id for <code>WebCmsPageType</code> is <code>wcm:type:page</code>. Typically the collection id for a WebCmsPage starts with <em>wcm:type:</em> followed by the collection id.</p>
+</div>
+<div class="paragraph">
+<p>Note: the prefix <em>wcm:</em> is mostly used by objects provided by WebCmsModule, so please check that there&#8217;s no WebCmsAsset defined with the same collection type. It would definitely be a good idea to have your own prefix within your project.</p>
+</div>
+<div class="paragraph">
+<p>An example <code>AuthorAssetType</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@NotThreadSafe
+@Entity
+@DiscriminatorValue(OBJECT_TYPE)
+@Table(name = "example_author_asset_type")
+@NoArgsConstructor
+@Getter
+@Setter
+public class AuthorAssetType extends WebCmsAssetType&lt;AuthorAssetType&gt;
+{
+
+    public static final String OBJECT_TYPE = "author";
+    public static final String COLLECTION_ID = "example:type:author";
+
+    @Override
+    public String getObjectType() {
+        return OBJECT_TYPE;
+    }
+
+    @Override
+    protected String getObjectCollectionId() {
+        return COLLECTION_ID;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For WebCmsModule to be able to use the WebCmsAssetType, we also need to register it to the WebCmsTypeRegistry. This usually happens as follows within an @Configuration class:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+public void registerDefaultTypes( WebCmsTypeRegistry typeRegistry ) {
+    typeRegistry.register( AuthorAssetType.OBJECT_TYPE, AuthorAssetType.class, AuthorAssetType::new );
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An example <code>AuthorAsset</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@NotThreadSafe
+@Entity
+@DiscriminatorValue(OBJECT_TYPE)
+@Table(name = "example_author_asset")
+@Getter
+@Setter
+@NoArgsConstructor
+public class AuthorAsset extends WebCmsAsset&lt;AuthorAsset&gt;
+{
+
+    /**
+     * Object type name (discriminator value).
+     */
+    public static final String OBJECT_TYPE = "author";
+
+    /**
+     * Prefix that all asset ids for an author should have.
+     */
+    public static final String COLLECTION_ID = "example:asset:author";
+
+    /**
+     * Name of the author.
+     */
+    @NotBlank
+    @Length(max = 255)
+    @Column(name = "name")
+    private String name;
+
+    /**
+     * The job title of the author.
+     */
+    @NotBlank
+    @Length(max = 255)
+    @Column(name = "job_title")
+    private String jobTitle;
+
+    @ManyToOne
+    @JoinColumn(name = "author_asset_type_id")
+    @NotNull
+    private AuthorAssetType authorType;
+
+    @Override
+    public WebCmsAssetType getAssetType() {
+        return authorType;
+    }
+
+    @Override
+    public String getObjectType() {
+        return OBJECT_TYPE;
+    }
+
+    @Override
+    protected String getObjectCollectionId() {
+        return COLLECTION_ID;
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Aside of creating our custom <code>WebCmsAsset</code> and its <code>WebCmsAssetType</code>, do not forget to create their repositories, which should extends <code>WebCmsObjectEntityRepository</code>.</p>
+</div>
+<div class="paragraph">
+<p>Now we&#8217;ve created a custom <code>WebCmsAsset</code> and <code>WebCmsAssetType</code> which can be managed from the backend, should EntityModule and AdminWebModule be present.
+However, managing the related components will not be possible from the administration interface. We simply need to enable the option:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+public void enableComponentViews( WebCmsObjectComponentViewsConfiguration componentViewsConfiguration ){
+    componentViewsConfiguration.enable(AuthorAsset.class);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_importing_a_custom_webcmsasset"><a class="anchor" href="#_importing_a_custom_webcmsasset"></a>Importing a custom WebCmsAsset</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To be able to import the custom asset we have just created we will require to create a custom importer, and should we want to create templates for our custom WebCmsAsset, we will also require an interceptor to copy the template to our asset.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s start by creating an importer for our <code>AuthorAsset</code>.
+We&#8217;ll create a class that extends <code>AbstractWebCmsAssetImporter</code>, which is a base class for importing a single asset type.
+<code>AbstractWebCmsDataImporter</code> extends <code>AbstractWebCmsDataImporter</code>, which is the base class that supports the imports of <code>WebCmsObject</code> s.
+Several methods required by AbstractWebCmsDataImporter have a default implementation provided by AbstractWebCmsAssetImporter, which can be used to further customize the imports of your assets.
+There is a single method left that has no default implementation, being <code>createDto( WebCmsDataEntry data, &lt;WebCmsAsset&gt; existing, WebCmsDataAction action, Map&lt;String, Object&gt; values )</code>.  All <code>createDto( &#8230;&#8203; )</code> is required to do is create a DTO object which can afterwards be used to set the imported properties, and be persisted to the database.</p>
+</div>
+<div class="paragraph">
+<p>By default, the unique key to find a WebCmsObject is its objectId, found in the top level of the data entry we are importing.
+Should you wish to use a different identifier for your asset in your imports, you can implement <code>getExistingEntity( String entryKey, WebCmsDataEntry entryData, WebCmsDomain domain )</code> to specify which keys can be allowed and what the entry key represents. (e.g. the canonical path can be used as an entrykey in the case of a <code>WebCmsPage</code>).</p>
+</div>
+<div class="paragraph">
+<p>Aside of that, we also need to provide a constructor, matching the one of <code>AbstractWebCmsAssetImporter</code> to where we define the data key that we want to use under one of the root keys.
+Several data keys already exist, so once again, double check whether your key is unique.</p>
+</div>
+<div class="paragraph">
+<p>Our base <code>AuthorAssetImporter</code> would require nothing more than the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+public class AuthorAssetImporter extends AbstractWebCmsAssetImporter&lt;AuthorAsset&gt;
+{
+    private AuthorAssetRepository authorRepository;
+
+    public AuthorAssetImporter() {
+        super( "author", AuthorAsset.class );
+    }
+
+    @Override
+    protected Author createDto( WebCmsDataEntry data,
+                                Author existing,
+                                WebCmsDataAction action,
+                                Map&lt;String, Object&gt; dataValues ) {
+        return existing != null ? existing.toDto() : new Author();
+    }
+
+    @Autowired
+    void setAuthorAssetRepository( AuthorAssetRepository authorAssetRepository ) {
+        this.authorAssetRepository = authorAssetRepository;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next up is our interceptor.
+When importing WebCmsObjects, we have several custom properties that can be imported, like <em>wcm:components</em>, <em>wcm:types</em>, &#8230;&#8203;
+We can also define a type (hence why we made <code>AuthorAssetType</code>) which defines a template for our asset.
+If we then import an asset with that type, the template will be copied over to our asset and the components will be created.
+For this we need an interceptor, which extends <code>EntityInterceptorAdaptor</code>, and where we tell the <code>WebCmsDefaultComponentsService</code> to copy the template after our asset has been created.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+@RequiredArgsConstructor
+public class AuthorInterceptor extends EntityInterceptorAdapter&lt;Author&gt;
+{
+	private final WebCmsDefaultComponentsService webCmsDefaultComponentsService;
+
+	@Override
+	public boolean handles( Class&lt;?&gt; entityClass ) {
+		return Author.class.isAssignableFrom( entityClass );
+	}
+
+	@Override
+	public void afterCreate( Author entity ) {
+		webCmsDefaultComponentsService.createDefaultComponents( entity, new HashMap&lt;&gt;() );
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="index.html">&laquo; Guides &amp; How-tos</a>
+            <span class="article-footer-nav-current">Creating a custom asset type</span>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

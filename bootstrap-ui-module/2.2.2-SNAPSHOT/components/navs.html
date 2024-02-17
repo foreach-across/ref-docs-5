@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendering menus - Across</title>
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="bootstrap-ui-module" data-version="2.2.2-SNAPSHOT">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Bootstrap UI</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/2.x.html">2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/1.x.html">1.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="alerts.html">Alerts</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="buttons.html">Buttons</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="breadcrumbs.html">Breadcrumbs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="forms.html">Forms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="form-controls/index.html">Form controls</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/auto-suggest.html">AutoSuggest</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/checkbox.html">Checkbox</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/datetime.html">Date/Time picker</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/fieldset.html">Fieldset</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/file-upload.html">File upload</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/form-group.html">Form group</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/hidden.html">Hidden field</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/input-group.html">Input group</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/label.html">Label</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/numeric.html">Numeric</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/options.html">Options builder</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/radio.html">Radio button</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/select.html">Select</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/textbox.html">Textbox</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="form-controls/static-control.html">Static control</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="grid-system.html">Grid system</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="favicon.html">Favicon</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glyphIcon.html">GlyphIcon</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="links.html">Links</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="navs.html">Navs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="panels-nav.html">Panels nav</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="script.html">Script elements</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tables.html">Tables</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="tooltips.html">Tooltips</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../control-adapters/index.html">Control adapters</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../control-adapters/basic-adapter.html">Basic adapter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../control-adapters/datetime-adapter.html">Datetime adapter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../control-adapters/select-adapter.html">Select adapter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../control-adapters/checkbox-radio-adapter.html">Checkbox/Radio adapter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../control-adapters/numeric-adapter.html">Numeric adapter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../control-adapters/autosuggest-adapter.html">Autosuggest adapter</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../control-adapters/container-adapter.html">Container adapter</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../utilities/index.html">Utilities</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../extending/index.html">Extending BootstrapUiModule</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extending/creating-your-own-component.html">Creating your own component</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extending/custom-component-rendering.html">Custom component rendering</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../web-resources/index.html">Web resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../web-resources/index.html#bootstrapui-javascript">Javascript plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../message-codes.html">Message codes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/customizing-a-datetimepicker.html">Customizing a Date picker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/prefixing-control-names.html">Prefixing control names</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/custom-control-adapter.html">Creating a custom control adapter</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Bootstrap UI</span>
+    <span class="version">2.2.2-SNAPSHOT</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.5-SNAPSHOT/index.html">2.1.5-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.2.0-SNAPSHOT/index.html">3.2.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">2.2.2-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/4.0.0-SNAPSHOT/index.html">4.0.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.4.0-SNAPSHOT/index.html">3.4.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/2.0.0-SNAPSHOT/index.html">2.0.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/2.0.0-SNAPSHOT/index.html">2.0.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Bootstrap UI</a></li>
+    <li class="crumb"><a href="index.html">Components</a></li>
+    <li class="crumb"><a href="navs.html">Navs</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">2.2.2-SNAPSHOT</button>
+  <div class="versions-menu">
+    <a class="version" href="../../components/navs.html">master</a>
+    <a class="version is-current" href="navs.html">2.2.2-SNAPSHOT</a>
+    <a class="version" href="../../2.1.1/components/navs.html">2.1.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-bootstrap-ui-module/edit/develop/docs/modules/ROOT/pages/components/navs.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Rendering menus</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 66.6668%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Builder class</th>
+<th class="tableblock halign-left valign-top">Factory method</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DefaultNavComponentBuilder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bootstrapUiComponentFactory.nav()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts a <code>Menu</code> component to a <a href="http://getbootstrap.com/components/#nav">Bootstrap nav</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PanelsNavComponentBuilder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bootstrapUiComponentFactory.panels()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts a <code>Menu</code> component to a HTML5 <code>nav</code> where every group of <code>Menu</code> items is rendered as a panel with a heading.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BreadcrumbNavComponentBuilder</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bootstrapUiComponentFactory.breadcrumb()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Generates a <a href="http://getbootstrap.com/components/#breadcrumbs">breadcrumb</a> for the selected items of a <code>Menu</code>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_example"><a class="anchor" href="#_example"></a>Example</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_an_example_of_generating_a_nav_structure_from_a_menu"><a class="anchor" href="#_an_example_of_generating_a_nav_structure_from_a_menu"></a>An example of generating a nav structure from a <code>Menu</code>.</h3>
+<div class="listingblock">
+<div class="title">Custom menu definition and rendering</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">PathBasedMenuBuilder menu = new PathBasedMenuBuilder();
+menu.item( "/one", "One", "#" ).order( 1 ).and()
+    .group( "/two", "Two" ).order( 2 ).and()
+    .item( "/two/one", "Sub item 1", "#" ).and()
+    .item( "/two/two", "Sub item 2", "#" );
+
+model.addAttribute(
+    "customNav",
+    bootstrapUiComponentFactory.nav( menu ).tabs().build( builderContext )
+);</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Thymeleaf template</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;nav&gt;
+    &lt;across:view element="${customNav}" /&gt;
+&lt;/nav&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">HTML output generated</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;nav&gt;
+    &lt;ul class="nav nav-tabs"&gt;
+        &lt;li&gt;&lt;a href="#" title="One"&gt;One&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="dropdown"&gt;
+            &lt;a data-toggle="dropdown" href="#" title="Two" class="dropdown-toggle"&gt;
+                Two &lt;span class="caret"&gt;&lt;/span&gt;
+            &lt;/a&gt;
+            &lt;ul class="dropdown-menu"&gt;
+                &lt;li&gt;&lt;a href="#" title="Sub item 1"&gt;Sub item 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" title="Sub item 2"&gt;Sub item 2&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_supported_nav_styles"><a class="anchor" href="#_supported_nav_styles"></a>Supported nav styles</h3>
+<div class="paragraph">
+<p>You can generate specific nav structures using the <code>DefaultNavComponentBuilder</code> by specifying a nav style.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 28.5714%;">
+<col style="width: 57.1429%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">CSS appended</th>
+<th class="tableblock halign-left valign-top">Remarks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>simple()</code></p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Default mode.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>navbar()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>navbar-nav</em></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>tabs()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav-tabs</em></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>pills()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav-pills</em></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>stacked()</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav-pills nav-stacked</em></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>All <code>NavComponentBuilder</code> implementations also support custom HTML attributes to be configured directly on the root element.</p>
+</div>
+<div class="sect3">
+<h4 id="_default_menu_conversion_behaviour"><a class="anchor" href="#_default_menu_conversion_behaviour"></a>Default menu conversion behaviour</h4>
+<div class="paragraph">
+<p>When mapping a <code>Menu</code> onto a nav, the following rules are followed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>only 3 levels of items/groups are supported in the <code>Menu</code></p>
+</li>
+<li>
+<p>an item is always rendered as a single item, even if it has children</p>
+</li>
+<li>
+<p>an item or group are only rendered if they are not disabled</p>
+</li>
+<li>
+<p>when an item is selected, the item itself as well as all its parent will have the <em>active</em> css class</p>
+</li>
+<li>
+<p>a group is only rendered if it has at least one non-disabled child</p>
+</li>
+<li>
+<p>a group is rendered as a dropdown</p>
+</li>
+<li>
+<p>a group inside a group is rendered as a labeled section in the dropdown</p>
+</li>
+<li>
+<p>a group having only a single item is rendered as that single item unless the attribute <em>nav:keepAsGroup</em> is set</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_menu_item_title"><a class="anchor" href="#_menu_item_title"></a>Menu item title</h4>
+<div class="paragraph">
+<p>All nav related builders support message code snippets in <code>Menu</code> titles.</p>
+</div>
+<div class="paragraph">
+<p>Putting for example <em>#{my.code=Item title}</em> as <code>title</code> property will be replaced by the <code>Locale</code> specific message for <em>my.code</em> or by <em>Item title</em> if that message code can&#8217;t be resolved</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_replacing_group_label_by_the_selected_item"><a class="anchor" href="#_replacing_group_label_by_the_selected_item"></a>Replacing group label by the selected item</h4>
+<div class="paragraph">
+<p>By default the label of a dropdown will always be the title of the group.
+If you want the label to be replaced by the label of the selected item, you should configure the <code>NavComponentBuilder</code> with <code>replaceGroupBySelectedItem</code>.</p>
+</div>
+<div class="paragraph">
+<p>With <code>replaceGroupBySelectedItem</code> <code>true</code>, if no item is selected in the group, the dropdown label will still be the title of the group.
+If an item is selected however, the dropdown label will be the item label, unless the group itself has the attribute <em>nav:keepGroupItem</em> set to <code>true</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_customizing_nav_rendering_through_the_menu"><a class="anchor" href="#_customizing_nav_rendering_through_the_menu"></a>Customizing nav rendering through the Menu</h4>
+<div class="paragraph">
+<p>You can influence the generated output by setting reserved attributes on the <code>Menu</code> items.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Attribute names mentioned here are available as constants on the <code>NavComponentBuilder</code> class.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following attributes are support on <code>Menu</code> items:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav:icon</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ViewElement</code> or <code>ViewElementBuilder</code> to be prepended to the item text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav:iconOnly</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only applicable on a group.
+If an icon is set, this will render the group itself as only the icon.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav:linkViewElement</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ViewElement</code> or <code>ViewElementBuilder</code> to use when rendering the link inside the list item.
+This will replace the standard link with the element generated.
+Note that any value for <strong>nav:icon</strong> will be ignored.</p>
+<p class="tableblock">Possible child items will still be rendered as a nested unordered list if the item is a group.
+A custom link should handle opening the dropdown in that case.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav:itemViewElement</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ViewElement</code> or <code>ViewElementBuilder</code> to use for rendering the entire list item of that <code>Menu</code>.
+The <code>ViewElement</code> should take care of the full rendering, including any possible children.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav:keepAsGroup</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only applicable on a group.
+If set to <code>true</code> the group will always be rendered as a group, even though there is only a single item in it.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav:keepGroupItem</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Only applicable on a group and if <code>replaceGroupBySelectedItem</code> is set to <code>true</code>.
+If so and <em>nav:keepGroupItem</em> is set to true, the replace action will be suppressed and the group label will always be rendered.</p>
+<p class="tableblock"><strong>NOTE</strong>: Attribute is only relevant for a <code>DefaultNavComponentBuilder</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav:panelStyle</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Holds the CSS class that determines the panel styling.
+If set, the default <em>panel-default</em> class will be omitted.
+Only applicable on group menu items that would result in a panel being rendered.</p>
+<p class="tableblock"><strong>NOTE</strong>: Attribute is only relevant for a <code>PanelsNavComponentBuilder</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>nav:renderAsPanel</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If set to <em>false</em> on an group menu item that would be rendered as a panel (a group on the top level), no panel will be rendered but a sidebar nav list will directly be rendered.
+Optionally a title will still be included if the group has one.  Non-panel lists do not support groups as items, these will be ignored.</p>
+<p class="tableblock"><strong>NOTE</strong>: Attribute is only relevant for a <code>PanelsNavComponentBuilder</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>html:*</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Any attribute with a name starting with <em>html:</em> will be added as html attribute to the list item.
+Name of the html attribute will be the menu attribute name without the <em>html:</em> prefix.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_viewelementbuilder_attribute_values"><a class="anchor" href="#_viewelementbuilder_attribute_values"></a>ViewElementBuilder attribute values</h5>
+<div class="paragraph">
+<p>Some attributes support a <code>ViewElementBuilder</code>.
+When rendering using a <code>ViewElementBuilder</code> the <code>ViewElementBuilderContext</code> will have an attribute <strong>NavComponentBuilder.currentMenuItem</strong> that contains the <code>Menu</code> the builder is rendering.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h4>
+<div class="sect4">
+<h5 id="_adding_an_icon"><a class="anchor" href="#_adding_an_icon"></a>Adding an icon</h5>
+<div class="paragraph">
+<p>Adding an icon to an item or group is easily done by setting the <em>nav:icon</em> attribute with a <code>ViewElement</code> or <code>ViewElementBuilder</code> value.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example adding an icon as attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">menu.item( "/dl", "Download", "#" )
+    .attribute( NavComponentBuilder.ATTR_ICON, new GlyphIcon( GlyphIcon.DOWNLOAD ) )
+    .order( 1 );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_an_icon_based_dropdown"><a class="anchor" href="#_an_icon_based_dropdown"></a>An icon based dropdown</h5>
+<div class="paragraph">
+<p>If you set attribute <em>nav:iconOnly</em> to <code>true</code>, the dropdown will only render the icon for the group.
+If there is no icon value set on the group item, the dropdown will render the group title.</p>
+</div>
+<div class="paragraph">
+<p>The children of the group (dropdown options) will always be rendered as full items.</p>
+</div>
+<div class="paragraph">
+<p>If however the dropdown label is replaced by an item or the group only contains a single item, the item will also be rendered as only an icon.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example creating a dropdown represented by a single icon</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">menu.group( "/options", "Options", "#" )
+    .attribute( NavComponentBuilder.ATTR_ICON, new GlyphIcon( GlyphIcon.COG ) )
+    .attribute( NavComponentBuilder.ATTR_ICON_ONLY, true )
+    .and()
+    .item( "/options/dl", "Download", "#" )
+    .attribute( NavComponentBuilder.ATTR_ICON, new GlyphIcon( GlyphIcon.DOWNLOAD ) );</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="links.html">&laquo; Links</a>
+            <span class="article-footer-nav-current">Navs</span>
+        <a class="article-footer-nav-next" href="panels-nav.html">Panels nav &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

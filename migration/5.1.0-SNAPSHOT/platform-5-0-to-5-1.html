@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration guide: platform 5.0.x to 5.1.x - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="migration" data-version="5.1.0-SNAPSHOT">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Migration guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="platform-2.1-to-5.0/index.html">2.1.x to 5.0.x</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="platform-2.1-to-5.0/maven-artifacts.html">Maven artifact changes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="platform-2.1-to-5.0/application-runner.html">Across application runner</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="platform-2.1-to-5.0/spring-boot-upgrade.html">Spring Boot upgrade</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="platform-2.1-to-5.0/across-core.html">Across core changes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="platform-2.1-to-5.0/across-hibernate-module.html">Across Hibernate Module</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="platform-2.1-to-5.0/view-elements.html">ViewElement infrastructure</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="platform-2.1-to-5.0/bootstrap-4.html">Bootstrap 4 upgrade</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="platform-2.1-to-5.0/standard-modules.html">Standard module changes</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="platform-2-0-to-2-1.html">2.0.x to 2.1.x</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Migration guides</span>
+    <span class="version">5.1.0-SNAPSHOT</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../across/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../guides/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across-autoconfigure/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../across-autoconfigure/3.0.0-SNAPSHOT/index.html">3.0.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../application-info-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-batch-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ehcache-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../debug-web-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../dynamic-forms-module/0.2.0-SNAPSHOT/index.html">0.2.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/2.2.0-SNAPSHOT/index.html">2.2.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../hibernate-jpa-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ldap-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../logging-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-mobile-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../properties-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-acl-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../oauth2-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.2.0-SNAPSHOT/index.html">0.2.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="index.html">Migration guides</a></li>
+    <li class="crumb"><a href="platform-5-0-to-5-1.html">Migration guide: platform 5.0.x to 5.1.x</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">5.1.0-SNAPSHOT</button>
+  <div class="versions-menu">
+    <a class="version is-missing" href="../index.html">master</a>
+    <a class="version is-current" href="platform-5-0-to-5-1.html">5.1.0-SNAPSHOT</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-platform/edit/develop-5.1.0/docs/migration/modules/ROOT/pages/platform-5-0-to-5-1.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Migration guide: platform 5.0.x to 5.1.x</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+<div class="paragraph">
+<p>Platform 5.1.0 is bound to Across 5.1.0.
+Upgrading to Platform 2.1.0 usually requires you to make some configuration and code changes to your applications.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This guide is not a full overview of all new features and changes in Across or any of its modules.
+It mainly focuses on upgrade related changes: usually breaking changes or new features that impact application/module configuration.
+</td>
+</tr>
+</table>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_across_platform"><a class="anchor" href="#_across_platform"></a>Across Platform</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_junit5"><a class="anchor" href="#_junit5"></a>JUnit5</h3>
+<div class="paragraph">
+<p>JUnit5 is now a first class dependency when you pull in <code>across-test</code>.
+You can still use JUnit4 in your project (or <code>junit-jupiter-vintage</code>) but it&#8217;s recommend to start switching towards JUnit5.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_across_core"><a class="anchor" href="#_across_core"></a>Across Core</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_deprecated_spring_boot_properties"><a class="anchor" href="#_deprecated_spring_boot_properties"></a>Deprecated Spring Boot properties</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Some Spring Boot properties have been removed in Spring Boot 2.2 and 2.3, if you still use them you should migrate them</p>
+<div class="ulist">
+<ul>
+<li>
+<p>`spring.http.encoding.* &#8594; `server.servlet.encoding.*</p>
+</li>
+<li>
+<p><code>spring.http.log-request-details</code> &#8594; <code>spring.mvc.log-request-details (Spring MVC) or `spring.codec.log-request-details</code> (Spring WebFlux)</p>
+</li>
+<li>
+<p><code>spring.http.converters.preferred-json-mapper</code> &#8594; <code>spring.mvc.converters.preferred-json-mapper</code></p>
+</li>
+<li>
+<p><code>spring.http.multipart.enabled</code> &#8594; <code>spring.servlet.multipart.enabled</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_deprecatedbumped_library_versions"><a class="anchor" href="#_deprecatedbumped_library_versions"></a>Deprecated/Bumped library versions</h3>
+<div class="paragraph">
+<p>Some deprecated/outdated libraries have been removed from <code>across-core-dependencies</code>.
+You can still use them but you will have to include them manually in your project.</p>
+</div>
+<div class="paragraph">
+<p>Removed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>cglib:cglib:3.1</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Updated:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>commons-collections4:4.4</p>
+</li>
+<li>
+<p>mysql:mysql-connector-java:8.0.21 (now follows <code>spring-boot-dependencies</code>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_httphiddenmethodfilter"><a class="anchor" href="#_httphiddenmethodfilter"></a>HttpHiddenMethodFilter</h3>
+<div class="paragraph">
+<p>If you are using the <code>HttpHiddenMethodFilter</code> in your project, you must manually reinclude it.
+It has been removed from Spring Boot 2.3 as a default inclusion.
+See <a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.2-Release-Notes" class="bare">https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.2-Release-Notes</a>)</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_empty_restcontroller_logic_change"><a class="anchor" href="#_empty_restcontroller_logic_change"></a>Empty @RestController logic change</h3>
+<div class="paragraph">
+<p>Since Spring Framework 5.2 a change has been made in how <code>@RestController()</code> (without explicit mapping) behaves.</p>
+</div>
+<div class="paragraph">
+<p>The following example might not behave like before:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>@RestController
+class PersonController {
+
+    @GetMapping
+    @ResponseBody
+    public String getPerson() {
+       return "Joe";
+    }
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Before Spring Framework 5.2 an empty <code>@RestController</code> would automatically match <code>**</code>.This has been change this Spring Framework 5.2 because it was behaving as default <code>@RequestMapping()</code> endpoint.The change was done in <a href="https://github.com/spring-projects/spring-framework/issues/22543" class="bare">https://github.com/spring-projects/spring-framework/issues/22543</a> and is a breaking change.</p>
+</div>
+<div class="paragraph">
+<p>You should scan occurences of empty <code>@RestController</code> annotations and explicitly match them with <code>@RequestMapping("<strong>*</strong>*")</code>.This is a common scenario if you are using <strong>CustomRequestMapping</strong> or <strong>RequestCondition</strong></p>
+</div>
+<div class="paragraph">
+<p>The above controller should look like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>@RestController
+@RequestMapping("**")
+class PersonController {
+
+    @GetMapping
+    @ResponseBody
+    public String getPerson() {
+        return "Joe";
+    }
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_across_autoconfigure"><a class="anchor" href="#_across_autoconfigure"></a>Across Autoconfigure</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_hateos_classes_have_been_renamed"><a class="anchor" href="#_hateos_classes_have_been_renamed"></a>Hateos classes have been renamed</h3>
+<div class="paragraph">
+<p>If you use hateos, this version has received an upgrade to 1.x and most classes like <code>ResourceSupport</code>, <code>Resource</code> have been renamed.</p>
+</div>
+<div class="paragraph">
+<p>The summary is:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ResourceSupport</code> is now <code>RepresentationModel</code></p>
+</li>
+<li>
+<p><code>Resource</code> is now <code>EntityModel</code></p>
+</li>
+<li>
+<p><code>Resources</code> is now <code>CollectionModel</code></p>
+</li>
+<li>
+<p><code>PagedResources</code> is now <code>PagedModel</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For the full set of changes see <a href="https://docs.spring.io/spring-hateoas/docs/current/reference/html/#migrate-to-1.0" class="bare">https://docs.spring.io/spring-hateoas/docs/current/reference/html/#migrate-to-1.0</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_changes_in_cassandra"><a class="anchor" href="#_changes_in_cassandra"></a>Changes in Cassandra</h3>
+<div class="paragraph">
+<p>If you use <code>cassandra-unit</code>, update the version from <code>3.3.x.x</code> to <code>4.3.1.0</code>.</p>
+</div>
+<div class="paragraph">
+<p>Cassandra has also switched to a new <code>driver-sync</code> dependency underneath.</p>
+</div>
+<div class="paragraph">
+<p>This means you might have to change <code>com.datastax.driver.core.Session</code> to <code>com.datastax.oss.driver.api.core.CqlSession</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_elasticsearch"><a class="anchor" href="#_elasticsearch"></a>Elasticsearch</h3>
+<div class="paragraph">
+<p>Switch to the Rest client if possible, the native elasticsearch template is being deprecated.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_spring_boot_admin"><a class="anchor" href="#_spring_boot_admin"></a>Spring Boot Admin</h3>
+<div class="paragraph">
+<p>Spring Boot Admin has been updated to version 2.3.0 to align with Spring Boot.
+If you are using a hardcoded version, please make sure you update it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_graphql"><a class="anchor" href="#_graphql"></a>GraphQL</h3>
+<div class="paragraph">
+<p>GrapQL has been updated to more recent versions</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>com.graphql-java-kickstart:graphql-spring-boot-starter:8.0.0</p>
+</li>
+<li>
+<p>com.graphql-java-kickstart:graphql-java-tools:6.2.0</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These dependencies have moved to a new package: <code>graphql.kickstart.tools</code> instead of <code>com.oembedler.moon.graphql</code>.
+The older dependencies may still work if you hardcode them, but it is recommended to switch to the new versions.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_across_hibernate_module"><a class="anchor" href="#_across_hibernate_module"></a>Across Hibernate Module</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_sort_by_and_pagerequest_of_changes"><a class="anchor" href="#_sort_by_and_pagerequest_of_changes"></a>Sort.by and PageRequest.of changes</h3>
+<div class="paragraph">
+<p>Spring Data Commons has deprecated the constructor calls for <code>Sort</code> and <code>PageRequest</code>.</p>
+</div>
+<div class="paragraph">
+<p>You should use the static methods <code>PageRequest.of()</code> and `Sort.by() instead.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_jpa_repositories_bootstrap_mode"><a class="anchor" href="#_jpa_repositories_bootstrap_mode"></a>JPA repositories Bootstrap Mode</h3>
+<div class="paragraph">
+<p>You can now use the <code>BootstrapMode</code> on <code>@EnableAcrossJpaRepositories</code> to use <code>DEFERRED</code> or <code>LAZY</code> repositories.</p>
+</div>
+<div class="paragraph">
+<p>Only JPA repositories scanned by the annotation will be lazy or deferred.</p>
+</div>
+<div class="paragraph">
+<p>You can also use the Spring Boot configuration property <code>spring.data.jpa.repositories.bootstrap-mode</code> to set this on all your repositories.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_basicrevisionbasedrepository"><a class="anchor" href="#_basicrevisionbasedrepository"></a>BasicRevisionBasedRepository</h3>
+<div class="paragraph">
+<p>Following the deprecation of <code>Session.createCriteria()</code>, <code>BasicRevisionBasedRepository</code> has been deprecated.</p>
+</div>
+<div class="paragraph">
+<p>It has been replaced by <code>BasicRevisionBasedJpaRepository</code> which uses JPA specifications.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_spring_security_module"><a class="anchor" href="#_spring_security_module"></a>Spring Security Module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are using <code>SwitchUserGrantedAuthority</code> in your code (unit test), the <code>Authentication</code> parameter cannot be <code>null</code> anymore.</p>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

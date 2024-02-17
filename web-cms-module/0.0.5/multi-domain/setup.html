@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuring multi-domain support in your application - Across</title>
+    <meta name="generator" content="Antora 1.0.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="https://across.foreach.be">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="https://across.foreach.be">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="web-cms-module" data-version="0.0.5">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Web CMS</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.0.x.html">0.0.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration-properties.html">Configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../domain-model/assets/index.html">Web CMS Asset model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../domain-model/assets/endpoint-url.html">Endpoints &amp; URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/pages/index.html">Web Pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/publication/index.html">Publications &amp; Articles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/images/index.html">Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/redirects/index.html">Redirects</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/menus/index.html">Menus</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../components/index.html">Web Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../components/component-types.html">Component types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../components/creating-a-component-type.html">Creating a custom component</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../components/content-markers.html">Content markers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../components/thymeleaf.html">Thymeleaf integration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../importing/index.html">Importing data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../importing/yaml-structure.html">YAML structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Multi-domain support</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="setup.html">Application configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="using-domains.html">Using domains</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="importing.html">Importing domain data</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/entitymodule-attributes.html">EntityModule attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/thymeleaf-dialect.html">Thymeleaf dialect</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/default-data.html">Default data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../performance-tuning/index.html">Performance tuning</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/creating-a-custom-asset.html">Creating a custom asset type</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/creating-a-site-template.html">Creating a website template</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Web CMS</span>
+    <span class="version">0.0.5</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/2.1.2-dev/index.html">2.1.2-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../guides/3.0.0-dev/index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../guides/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/3.0.0-dev/index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../migration/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/3.1.0-dev/index.html">3.1.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/0.0.2-dev/index.html">0.0.2-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/4.0.0-dev/index.html">4.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.2.0-dev/index.html">3.2.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/1.2.0/index.html">1.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/2.0.1/index.html">2.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../0.0.6-dev/index.html">0.0.6-dev</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">0.0.5</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/2.1.1/index.html" class="home-link"></a>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Web CMS</a></li>
+    <li class="crumb"><a href="index.html">Multi-domain support</a></li>
+    <li class="crumb is-current"><a href="setup.html">Application configuration</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">0.0.5</button>
+  <div class="versions-menu">
+    <a class="version" href="../../0.0.6-dev/multi-domain/setup.html">0.0.6-dev</a>
+    <a class="version is-current" href="setup.html">0.0.5</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-web-cms-module/edit/master/docs/modules/ROOT/pages/multi-domain/setup.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+<h1>Configuring multi-domain support in your application</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, multi-domain support is disabled entirely.  Entities will never be attached to a domain and - if the administration UI is active - you will not be offered any domain related management options.</p>
+</div>
+<div class="paragraph">
+<p>You can activate multi-domain support by providing a <code>WebCmsMultiDomainConfiguration</code> bean in your application.
+WebCmsModule will inspect the configuration bean and setup its basic infrastructure accordingly.
+This does not alter the database schema in any way, but it does configure a lot of default behaviour of your application.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example activating multi-domain support with default configuration</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public WebCmsMultiDomainConfiguration multiDomainConfiguration() {
+    return WebCmsMultiDomainConfiguration.managementPerDomain().build();
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Because a lot of configuration options are altered based on your <code>WebCmsMultiDomainConfiguration</code>, this bean should be available before the WebCmsModule bootstraps.
+You should either provide this bean on the application or AcrossContext level, or in a <code>@ModuleConfiguration</code> extension directly in the WebCmsModule.</p>
+</div>
+<div class="paragraph">
+<p>Once the application has been started, you can no longer modify the multi-domain configuration.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multi_domain_configuration_options"><a class="anchor" href="#_multi_domain_configuration_options"></a>Multi-domain configuration options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>WebCmsMultiDomainConfiguration</code> allows you to configure which entities are supposed to be domain-bound, and which are shared across domains.
+Any domain-bound entity will be linked to a specific <code>WebCmsDomain</code>, whereas shared entities will have a <code>null</code> value for their <code>WebCmsDomain</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_administration_ui_presets"><a class="anchor" href="#_administration_ui_presets"></a>Administration UI presets</h3>
+<div class="paragraph">
+<p>The <code>WebCmsMultiDomainConfiguration</code> has 2 configuration presets:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>managementPerDomain()</code> option will configure the EntityModule and administration UI so you select the specific domain you wish to manage. This is often the most practical use case where you never manually select the domain for an asset as it is determined by the context you are managing.</p>
+</li>
+<li>
+<p>The <code>managementPerEntity()</code> option will configure the administration UI to allow you to select the right domain per entity.  This is a much more complex configuration that allows the user to be very aware of how entities can be linked across domains.  Usually a lot more application specific configuration will be required for this option.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Either preset allows you to configure the domain bound entities in exactly the same way.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_domain_bound_entities"><a class="anchor" href="#_configuring_domain_bound_entities"></a>Configuring domain-bound entities</h3>
+<div class="paragraph">
+<p>You can configure exactly which entities are domain-bound and which are not.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a non-domain-bound entity only allows a <code>null</code> value for its <code>WebCmsDomain</code></p>
+</li>
+<li>
+<p>a domain-bound entity allows a specific value for its <code>WebCmsDomain</code> and - depending on the configuration - could possibly also allow a <code>null</code> value for its <code>WebCmsDomain</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In a management per domain configuration, non-domain-bound entities would be managed under the shared settings.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The default multi-domain configurations apply the following rules:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>any <code>WebCmsDomainBound</code> instance is configured as domain-bound and requiring a specific domain</p>
+</li>
+<li>
+<p>a <code>WebCmsTypeSpecifier</code> is configured as not-domain-bound - shared across all domains</p>
+</li>
+<li>
+<p>a <code>WebCmsComponent</code> is configured as domain-bound but no domain is required, allowing components to be set per domain or to be shared across all domains</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The more specific rules for <code>WebCmsTypeSpecifier</code> and <code>WebCmsComponent</code> overrule the initial <code>WebCmsDomainBound</code> rule.</p>
+</div>
+<div class="paragraph">
+<p>You can set configure domain-bound rules on the <code>WebCmsMultiDomainConfiguration</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>use <code>domainBoundTypes()</code> to specify types that should be domain bound</p>
+</li>
+<li>
+<p>use <code>domainIgnoredTypes(</code>\)  to specify non-domain-bound types</p>
+</li>
+<li>
+<p>use <code>noDomainAllowedTypes()</code> to specify for which domain-bound types the domain is optional</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you want to disable shared settings altogether, you can do so using the <code>noDomainAllowed()</code> option.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Example multi-domain configuration that shares the WebCmsImage asset across all domains</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public WebCmsMultiDomainConfiguration multiDomainConfiguration() {
+    return WebCmsMultiDomainConfiguration.managementPerEntity()
+                                         .domainIgnoredTypes( WebCmsImage.class )
+                                         .build();
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_domain_metadata_and_domain_filter"><a class="anchor" href="#_configuring_domain_metadata_and_domain_filter"></a>Configuring domain metadata and domain filter</h3>
+<div class="paragraph">
+<p>The <code>WebCmsMultiDomainConfiguration</code> also allows you to specify the type of domain metadata your application should use, as well as the Servlet filter that should be used to select the domain in the front-end.
+These options will apply regardless of</p>
+</div>
+<div class="paragraph">
+<p>The default domain metadata is implemented as <code>WebCmsSiteConfiguration</code> and represents a single website.
+The default domain filter is an implementation of <code>WebCmsSiteConfigurationFilter</code> that selects the domain based on the hostname of the incoming request.</p>
+</div>
+<div class="paragraph">
+<p>For more information on domain metadata, see the <a href="#multi-domain-domain-metadata">separate chapter</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_webcmsdomain_used_to_represent_no_domain"><a class="anchor" href="#_webcmsdomain_used_to_represent_no_domain"></a>WebCmsDomain used to represent "no-domain"</h3>
+<div class="paragraph">
+<p>If your application is configured in a single-domain, the actual <code>WebCmsDomain</code> used is the <code>null</code> value.  For programmatic purposes you can use the <code>WebCmsDomain.NONE</code> constant.</p>
+</div>
+<div class="paragraph">
+<p>In a multi-domain configuration,  <code>WebCmsDomain.NONE</code> (<code>null</code>) represents the items shared across all domains.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Switching from a single-domain to a multi-domain configuration (or vice versa) after data has been added to your application is not advised.
+It will usually require manual actions to ensure all data is still accessible and attached to the proper domain.</p>
+</div>
+<div class="paragraph">
+<p>If you switch from a multi-domain configuration to a single-domain configuration, you will only be able to access items that were not attached to a specific domain</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_entitymodule_auto_configuration"><a class="anchor" href="#_entitymodule_auto_configuration"></a>EntityModule auto-configuration</h3>
+<div class="paragraph">
+<p>WebCmsModule attempts to auto-configure the EntityModule entities if multi-domain support is active.  Depending on your multi-domain configuration the following entity configurations will be modified:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>list views of <code>EntityConfiguration</code> and <code>EntityAssociation</code> will be modified with domain aware base predicates (this ensures that you will only see entities bound to the domain your are managing)</p>
+</li>
+<li>
+<p>options queries of entities (<code>EntityAttributes.OPTIONS_ENTITY_QUERY</code>) will be modified so you can only select entities of the currently selectable domains</p>
+</li>
+<li>
+<p>the <code>EntityModel</code> of <code>WebCmsDomainBound</code> entities will be adjusted with a custom <code>EntityFactory</code> that will pre-set the currently selected domain</p>
+</li>
+<li>
+<p>the <code>EntityConfigurationAllowableActionsBuilder</code> of all entities will be wrapped with a domain-aware actions builder that will deny any action attempting to modify an entity on a domain it does not belong to</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In many cases the auto-configuration will be just what you need and there won&#8217;t be any need for tweaking.  However if you want to manually configure some of your entities, you can force the auto-configuration parts to be skipped.</p>
+</div>
+<div class="sect3">
+<h4 id="_auto_configuration_related_attributes"><a class="anchor" href="#_auto_configuration_related_attributes"></a>Auto-configuration related attributes</h4>
+<div class="paragraph">
+<p>Domain auto-configuration is performed during a post-processing of all entity configurations.
+Custom attributes allow you to skip parts of the auto-configuration or to tweak auto-configuration settings.
+For all WebCmsModule related entity attributes, see <a href="../services-and-components/entitymodule-attributes.html" class="page">separate chapter</a>.</p>
+</div>
+<div class="sect4">
+<h5 id="_skipping_automatic_list_view_adjustment"><a class="anchor" href="#_skipping_automatic_list_view_adjustment"></a>Skipping automatic list view adjustment</h5>
+<div class="paragraph">
+<p>When you manually configure a list view with a domain specific base predicate, you should set the attribute <code>WebCmsEntityAttributes.MultiDomainConfiguration.LIST_VIEW_ADJUSTED</code> to <code>true</code>.
+This attribute is supported on any <code>EntityConfiguration</code> or <code>EntityAssociation</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_skipping_automatic_options_query_adjustment"><a class="anchor" href="#_skipping_automatic_options_query_adjustment"></a>Skipping automatic options query adjustment</h5>
+<div class="paragraph">
+<p>When you manually configure the options filtering of an entity (e.g. by setting <code>EntityAttributes.OPTIONS_ENTITY_QUERY</code>) you should set the attribute <code>WebCmsEntityAttributes.MultiDomainConfiguration.OPTIONS_QUERY_ADJUSTED</code> to <code>true</code>.
+This attribute is supported on any <code>EntityConfiguration</code> or <code>EntityPropertyDescriptor</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_skipping_automatic_entitymodel_adjustment"><a class="anchor" href="#_skipping_automatic_entitymodel_adjustment"></a>Skipping automatic EntityModel adjustment</h5>
+<div class="paragraph">
+<p>If you don&#8217;t want the default <code>EntityFactory</code> to be modified, you should set the attribute <code>WebCmsEntityAttributes.MultiDomainConfiguration.ENTITY_MODEL_ADJUSTED</code> to <code>true</code> on the <code>EntityConfiguration</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_skipping_automatic_allowableactions_adjustment"><a class="anchor" href="#_skipping_automatic_allowableactions_adjustment"></a>Skipping automatic AllowableActions adjustment</h5>
+<div class="paragraph">
+<p>If you don&#8217;t want the default <code>EntityConfigurationAllowableActionsBuilder</code> to be modified, you should set the attribute <code>WebCmsEntityAttributes.MultiDomainConfiguration.ALLOWABLE_ACTIONS_ADJUSTED</code> to <code>true</code> on the <code>EntityConfiguration</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_skipping_auto_configuration_of_an_entity_entirely"><a class="anchor" href="#_skipping_auto_configuration_of_an_entity_entirely"></a>Skipping auto-configuration of an entity entirely</h5>
+<div class="paragraph">
+<p>If you want to skip the entire auto-configuration of an <code>EntityConfiguration</code> you should set the attribute <code>WebCmsEntityAttributes.MultiDomainConfiguration.FINISHED</code> to <code>true</code> on that <code>EntityConfiguration</code>.</p>
+</div>
+<div class="paragraph">
+<p>This will ensure no processing is done on the <code>EntityConfiguration</code> or any of its registered associations.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_setting_a_custom_property_representing_the_webcmsdomain"><a class="anchor" href="#_setting_a_custom_property_representing_the_webcmsdomain"></a>Setting a custom property representing the WebCmsDomain</h5>
+<div class="paragraph">
+<p>If you want to activate (partial) multi-domain auto-configuration for entities not implementing <code>WebCmsDomainBound</code>, you can specify an explicit property that links to the <code>WebCmsDomain</code> by setting <code>WebCmsEntityAttributes.DOMAIN_PROPERTY</code> on the <code>EntityConfiguration</code>.</p>
+</div>
+<div class="paragraph">
+<p><strong>An example:</strong></p>
+</div>
+<div class="paragraph">
+<p><code>WebCmsUrl</code> does not implement <code>WebCmsDomainBound</code>.
+But a <code>WebCmsUrl</code> is linked to a <code>WebCmsEndpoint</code> that does  implement <code>WebCmsDomainBound</code>, so an URL is also bound implicitly.
+  To auto-configure the domain-based filtering for <code>WebCmsUrl</code>: set <code>WebCmsEntityAttributes.DOMAIN_PROPERTY</code> to <strong>endpoint.domain</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_management_per_domain_options"><a class="anchor" href="#_management_per_domain_options"></a>Management per domain options</h3>
+<div class="paragraph">
+<p>This section explains some additional configuration options related to a management per domain setup.</p>
+</div>
+<div class="sect3">
+<h4 id="_domain_selector_menu"><a class="anchor" href="#_domain_selector_menu"></a>Domain selector menu</h4>
+<div class="paragraph">
+<p>In management per domain configuration, the administration ui will show a domain selector menu if the user can access more than one domain.
+If no-domain is allowed according to the configuration and the user has the ability to manage domains themselves, a <em>shared settings</em> option will be added.</p>
+</div>
+<div class="paragraph">
+<p>Customizing the default labels can be done through the following message codes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>webCmsModule.menu.domainNav.switchDomain</code>: label for the selector itself (default: <em>Switch domain</em>)</p>
+</li>
+<li>
+<p><code>webCmsModule.menu.domainNav.noDomain</code>: label for the shared settings (default <em>Shared settings</em>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_adding_a_shared_item_to_every_domain"><a class="anchor" href="#_adding_a_shared_item_to_every_domain"></a>Adding a shared item to every domain</h4>
+<div class="paragraph">
+<p>A non-domain-bound entity is by default only available on the shared settings.
+You can add a shared entity to every domain by setting the attribute <code>WebCmsEntityAttributes.ALLOW_PER_DOMAIN</code> to true on the corresponding <code>EntityConfiguration</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example sharing WebCmsImage asset across all domains and making them selectable from all domains</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public WebCmsMultiDomainConfiguration multiDomainConfiguration() {
+    return WebCmsMultiDomainConfiguration.managementPerEntity()
+                                         .domainIgnoredTypes( WebCmsImage.class )
+                                         .build();
+}
+
+/**
+ * Ensure that WebCmsImage will be shown on every domain,
+ * even though it is not domain-bound.
+ */
+@Configuration
+class AdminUiConfiguration implements EntityConfigurer
+{
+    @Override
+    public void configure( EntitiesConfigurationBuilder entities ) {
+        entities.withType( WebCmsImage.class )
+            .attribute( WebCmsEntityAttributes.ALLOW_PER_DOMAIN, true );
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="multi-domain-domain-metadata"><a class="anchor" href="#multi-domain-domain-metadata"></a>Domain metadata</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>WebCmsDomain</code> is a simple entity with support for an infinite number of String based attributes.
+Because this is usually not very efficient to work with, you can implement a custom metadata class that wraps around a <code>WebCmsDomain</code> providing strong-typed access to domain-related configuration properties.</p>
+</div>
+<div class="paragraph">
+<p>The default metadata implementation is <code>WebCmsSiteConfiguration</code>.</p>
+</div>
+<div class="paragraph">
+<p>Metadata will get created as beans and can wire additional beans or services.
+For example: the default <code>WebCmsSiteConfiguration</code> metadata uses the <code>WebCmsDataConversionService</code> to provide methods for strong-typed fetching of attributes.</p>
+</div>
+<div class="sect2">
+<h3 id="_webcmsdomainaware"><a class="anchor" href="#_webcmsdomainaware"></a>WebCmsDomainAware</h3>
+<div class="paragraph">
+<p>A metadata implementation does not require a link to the actual <code>WebCmsDomain</code> it is for, but implementing <code>WebCmsDomainAware</code> will ensure that the actual domain will be set when the metadata is being created.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_webcmsdomainurlconfigurer"><a class="anchor" href="#_webcmsdomainurlconfigurer"></a>WebCmsDomainUrlConfigurer</h3>
+<div class="paragraph">
+<p>The domain metadata can also implement the <code>WebCmsDomainUrlConfigurer</code> interface.
+This interface defines a URL prefix that should be applied to any link to an asset on that domain.
+When you use the <code>WebCmsUriComponentsService</code> to generate links to asset, these will automatically apply the correct domain settings.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_manually_adding_multi_domain_support_to_your_entities"><a class="anchor" href="#_manually_adding_multi_domain_support_to_your_entities"></a>Manually adding multi-domain support to your entities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The auto-configuration of multi-domain support attempts to setup your administration UI as good as possible.
+Default auto-configuration changes for domain-bound entities are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>customize the <code>EntityFactory</code> on the <code>EntityConfiguration</code></p>
+</li>
+<li>
+<p>default selection options for that type are set to match only the current domain</p>
+</li>
+<li>
+<p>list views are modified to only show the items attached to the current domain</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If auto-configuration is insufficient, you will need to manually add multi-domain support to your entities.  The following beans are available to help you:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the <code>WebCmsMultiDomainConfiguration</code> allows you to inquire the current configuration</p>
+</li>
+<li>
+<p>the <code>WebCmsMultiDomainService</code> provides access to all domains and there metadata, it also exposes the most frequently used <code>WebCmsMultiDomainConfiguration</code> data</p>
+</li>
+<li>
+<p>the <code>WebCmsMultiDomainAdminUiService</code> is available only if EntityModule is active and provides you with methods useful for filtering your administration UI</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_repositories_services"><a class="anchor" href="#_repositories_services"></a>Repositories &amp; services</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Repositories are usually used in the backend - especially if you want to support both multi-domain and no-domain configurations.
+Repository methods always require you to explicitly specify the domain as well.</p>
+</li>
+<li>
+<p>Services usually use the current domain to interact with the repository, making them very easy to use in frontend business logic.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See <a href="../services-and-components/index.html" class="page">services and components chapter</a> for an overview of the available repositories and services.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

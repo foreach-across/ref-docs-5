@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defining module dependencies - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="guides" data-version="5.1.0-SNAPSHOT">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Application Guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Building a modular monolith</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="1-creating-a-module.html">Applications and modules</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="2-module-dependencies.html">Module dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="3-using-module-components.html">Using module components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="4-working-with-events.html">Working with events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="5-dynamic-application-module.html">Dynamic application module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../security/oauth2-sso.html">Adding security</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../security/oauth2-sso.html">OAuth2 with Single-Sign On</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Application Guides</span>
+    <span class="version">5.1.0-SNAPSHOT</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Application Guides</a></li>
+    <li class="crumb"><a href="index.html">Building a modular monolith</a></li>
+    <li class="crumb"><a href="2-module-dependencies.html">Module dependencies</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-platform/edit/master/docs/guides/modules/ROOT/pages/modular-monoliths/2-module-dependencies.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Defining module dependencies</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+<div class="paragraph">
+<p>This section covers Across module dependencies, it shows how to:</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Define dependencies between components and Across modules</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Share components between modules by exposing them</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Test exposed beans and module dependencies</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This how-to is part of the <a href="index.html" class="page">Building a modular monolith</a> series.
+It continues directly from the previous how-to on <a href="1-creating-a-module.html" class="page">Application and modules</a>.</p>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_adding_a_second_module"><a class="anchor" href="#_adding_a_second_module"></a>Adding a second module</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Create a second package <code>modules.two</code> and more or less copy the configuration of <code>ModuleOne</code>: create an equivalent module descriptor and internal component.</p>
+</div>
+<div class="listingblock">
+<div class="title">/src/main/java/com/example/demo/modules/two/ModuleTwo.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.demo.modules.two;
+
+public class ModuleTwo extends AcrossModule
+{
+	@Override
+	public String getName() {
+		return "ModuleTwo";
+	}
+
+	@Override
+	protected void registerDefaultApplicationContextConfigurers( Set&lt;ApplicationContextConfigurer&gt; contextConfigurers ) {
+		contextConfigurers.add( ComponentScanConfigurer.forAcrossModule( ModuleTwo.class ) );
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">/src/main/java/com/example/demo/modules/two/InternalComponentTwo.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.demo.modules.two;
+
+@Component
+@Slf4j
+public class InternalComponentTwo
+{
+	public InternalComponentTwo() {
+		LOG.info( "Component created: {}", getClass() );
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your project structure now looks like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>com.example.demo/
+  modules/
+    one/
+      ModuleOne
+      InternalComponentOne
+    two/
+      ModuleTwo
+      InternalComponentTwo
+  DemoApplication</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add an integration test for the second module.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/test/java/test/TestModuleBootstrapScenarios.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+public void moduleTwoShouldBootstrap() {
+    try (AcrossTestContext ignore = AcrossTestBuilders.standard( false ).modules( new ModuleTwo() ).build()) {
+        LOG.trace( "Bootstrap successful." );
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You should be able to run this test successfully.</p>
+</div>
+<div class="sect2">
+<h3 id="_adding_a_component_dependency"><a class="anchor" href="#_adding_a_component_dependency"></a>Adding a component dependency</h3>
+<div class="paragraph">
+<p>Let&#8217;s add a component dependency on <code>InternalComponentTwo</code>.
+Add a constructor injection dependency to component <code>InternalComponentOne</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/com/example/demo/modules/two/InternalComponentTwo.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+@Slf4j
+public class InternalComponentTwo
+{
+    private final InternalComponentOne internalComponentOne;
+
+    public InternalComponentTwo(InternalComponentOne internalComponentOne) {
+        LOG.info("Component created: {} (using {})", getClass(), internalComponentOne);
+
+        this.internalComponentOne = internalComponentOne;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is a regular Spring bean dependency.
+This code compiles as <code>InternalComponentOne</code> is a public class, but if you run the test, it fails with exception:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>No qualifying bean of type 'com.example.demo.modules.one.InternalComponentOne' available</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which makes sense, as <code>InternalComponentOne</code> is a bean created in <code>ModuleOne</code> but our <code>ModuleTwo</code> does not have a dependency on <code>ModuleOne</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adding_a_module_dependency"><a class="anchor" href="#_adding_a_module_dependency"></a>Adding a module dependency</h3>
+<div class="paragraph">
+<p>In a module approach, a module can explicitly define a dependency on another module.
+You can do so using <code>@AcrossDepends</code> on the module descriptor.</p>
+</div>
+<div class="paragraph">
+<p>Change the <code>ModuleTwo</code> descriptor to add an explicit dependency on <code>ModuleOne</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.demo.modules.two;
+
+@AcrossDepends(required = "ModuleOne")
+public class ModuleTwo extends AcrossModule
+{
+    ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This dependency is <code>required</code>, meaning that the application must not start if the dependency is not met.
+We refer to the module we depend on by name, as a module name is expected to be unique.</p>
+</div>
+<div class="paragraph">
+<p>If you re-run the <code>moduleTwoShouldBootstrap()</code> test, it now fails with another, clear exception:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>com.foreach.across.core.context.bootstrap.ModuleDependencyMissingException: Unable to bootstrap AcrossContext as module ModuleTwo requires module ModuleOne. Module ModuleOne is not present in the context.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is expected behaviour.
+We have stipulated a dependency on <code>ModuleOne</code>, but have not added <code>ModuleOne</code> to our test configuration yet.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_cleaning_up_the_tests"><a class="anchor" href="#_cleaning_up_the_tests"></a>Cleaning up the tests</h3>
+<div class="paragraph">
+<p>Let&#8217;s split up our single test case into two separate tests:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>one that verifies bootstrapping fails if <code>ModuleOne</code> is not present</p>
+</li>
+<li>
+<p>one that verifies bootstrapping works if <code>ModuleOne</code> is present</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">src/test/java/test/TestModuleBootstrapScenarios.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test(expected = ModuleDependencyMissingException.class)
+public void moduleTwoRequiresModuleOne() {
+    try (AcrossTestContext ignore = AcrossTestBuilders.standard( false )
+                                                      .modules( new ModuleTwo() )
+                                                      .build()) {
+        fail( "Should not have bootstrapped." );
+    }
+}
+
+@Test
+public void moduleTwoBootstrapsIfOneIsPresent() {
+    try (AcrossTestContext ignore = AcrossTestBuilders.standard( false )
+                                                      .modules( new ModuleTwo(), new ModuleOne() )
+                                                      .build()) {
+        LOG.trace( "Bootstrap successful." );
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we run the tests, <code>moduleTwoRequiresModuleOne()</code> succeeds, but <code>moduleTwoBootstrapsIfOneIsPresent()</code> fails again with the original exception:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>No qualifying bean of type 'com.example.demo.modules.one.InternalComponentOne' available</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Even though in the console log we can see that <code>InternalComponentOne</code> gets created:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>: --- Starting module bootstrap
+:
+: 1 - ModuleOne [resources: ModuleOne]: class com.example.demo.modules.one.ModuleOne
+: Across development mode active: false
+: Component created: class com.example.demo.modules.one.InternalComponentOne
+:
+: 2 - ModuleTwo [resources: ModuleTwo]: class com.example.demo.modules.two.ModuleTwo
+: Exception encountered during context initialization</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>ModuleOne</code> starts up fine and creates <code>InternalComponentOne</code>, but bootstrapping <code>ModuleTwo</code> fails when it tries to resolve the <code>InternalComponentOne</code> dependency.</p>
+</div>
+<div class="paragraph">
+<p>So what is going on here?</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_exposing_beans"><a class="anchor" href="#_exposing_beans"></a>Exposing beans</h3>
+<div class="paragraph">
+<p>In a modular approach with Across, all beans are contained within their module unless otherwise <em>exposed</em>.
+This means that even though <code>InternalComponentOne</code> is a publicly accessible class, and there is a singleton bean created for it, that bean can only be accessed from within <code>ModuleOne</code>.
+For <code>ModuleTwo</code> there is no component <code>InternalComponentOne</code> available.</p>
+</div>
+<div class="paragraph">
+<p>To fix this, we can <em>expose</em> <code>InternalComponentOne</code> by annotating it with <code>@Exposed</code>.
+Instead of exposing the internal component however, let&#8217;s create a separate exposed component and use that one as a dependency in <code>InternalComponentTwo</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/com/example/demo/modules/one/ExposedComponentOne.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package com.example.demo.modules.one;
+
+@Component
+@Exposed
+public class ExposedComponentOne implements Supplier&lt;String&gt;
+{
+	@Override
+	public String get() {
+		return "hello from module one";
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">src/main/java/com/example/demo/modules/two/InternalComponentTwo.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+@Slf4j
+public class InternalComponentTwo
+{
+	private final ExposedComponentOne exposedComponentOne;
+
+	public InternalComponentTwo( ExposedComponentOne exposedComponentOne ) {
+		LOG.info( "Component created: {} (using {})", getClass(), exposedComponentOne );
+
+		this.exposedComponentOne = exposedComponentOne;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your project structure should look like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>com.example.demo/
+  modules/
+    one/
+      ModuleOne
+      InternalComponentOne
+      ExposedComponentOne
+    two/
+      ModuleTwo
+      InternalComponentTwo
+  DemoApplication</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All tests should be green.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_verifying_exposed_beans"><a class="anchor" href="#_verifying_exposed_beans"></a>Verifying exposed beans</h3>
+<div class="paragraph">
+<p>Our integration test for <code>ModuleTwo</code> indirectly tests that <code>ModuleOne</code> exposes the correct component.
+Often you also want to test in the scope of your module which beans it exposed.
+Let&#8217;s update the module one test accordingly:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/test/java/test/TestModuleBootstrapScenarios.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+public void moduleOneShouldBootstrapInIsolation() {
+    try (AcrossTestContext context = AcrossTestBuilders.standard(false)
+            .modules(new ModuleOne())
+            .build()) {
+        assertNotNull(context.getBeanOfType(ExposedComponentOne.class));
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We use the <code>AcrossTestContext</code> to retrieve the exposed bean.
+If you comment or remove <code>@Exposed</code> on <code>ExposedComponentOne</code>, this test will fail.</p>
+</div>
+<div class="paragraph">
+<p>As we&#8217;ll see in another example below, there are other ways to expose beans.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_module_ordering"><a class="anchor" href="#_module_ordering"></a>Module ordering</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In a regular Spring application, beans often know which other beans exist even before those other beans have been created.
+In an Across application this works differently: a bean can only know which beans another module provides once that other module has started.
+This means that even though <code>ExposedComponentOne</code> is exposed, it is required that <code>ModuleOne</code> is fully bootstrapped before <code>ModuleTwo</code> attempts to retrieve the exposed bean.</p>
+</div>
+<div class="paragraph">
+<p>It is the correct use of <code>@AcrossDepends</code> that ensures this: <code>ModuleTwo</code> explicitly depends on <code>ModuleOne</code>, which means <code>ModuleOne</code> will be guaranteed to have been started before <code>ModuleTwo</code>.
+This also means that all components that make up <code>ModuleOne</code> will have been created.
+This type of ordering is fundamentally different from regular Spring applications, in which it is quite difficult to ensure the creation order of an entire group of beans, without depending on each one of them separately.</p>
+</div>
+<div class="paragraph">
+<p>This type of reliable bootstrap ordering also means that cyclic dependencies are not possible: having a cyclic dependency between 2 modules (direct or indirect) will not allow your application to start.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s put it to the test.</p>
+</div>
+<div class="sect2">
+<h3 id="_non_deterministic_bootstrap_order"><a class="anchor" href="#_non_deterministic_bootstrap_order"></a>Non-deterministic bootstrap order</h3>
+<div class="paragraph">
+<p>Put the <code>@AcrossDepends(required = "ModuleOne")</code> annotation on <code>ModuleTwo</code> in comments.</p>
+</div>
+<div class="paragraph">
+<p>Now let&#8217;s look at our test method:</p>
+</div>
+<div class="listingblock">
+<div class="title">src/test/java/test/TestModuleBootstrapScenarios.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+public void moduleTwoBootstrapsIfOneIsPresent() {
+    try (AcrossTestContext ignore = AcrossTestBuilders.standard(false)
+            .modules(new ModuleTwo(), new ModuleOne())
+            .build()) {
+        LOG.trace("Bootstrap successful.");
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We no longer have defined a dependency between <code>ModuleOne</code> and <code>ModuleTwo</code>, this means <em>they don&#8217;t care about each other</em>.
+In our test configuration example, we register them with <code>.modules(new ModuleTwo(), new ModuleOne())</code>: <code>ModuleTwo</code> is registered before <code>ModuleOne</code>.
+Since there is no dependency based ordering, the registration order will be kept, causing the test to fail.</p>
+</div>
+<div class="paragraph">
+<p>Play around with reversing the registration order, in the console output you can clearly see its impact on the bootstrap order:</p>
+</div>
+<div class="listingblock">
+<div class="title">Test console output excerpt</div>
+<div class="content">
+<pre class="highlightjs highlight"><code>: AcrossContext: AcrossContext-1 (AcrossContext-1)
+: Bootstrapping 3 modules in the following order:
+: 1 - ModuleTwo [resources: ModuleTwo]: class com.example.demo.modules.two.ModuleTwo
+: 2 - ModuleOne [resources: ModuleOne]: class com.example.demo.modules.one.ModuleOne
+: 3 - AcrossContextPostProcessorModule [resources: AcrossContextPostProcessorModule]: class com.foreach.across.core.AcrossContextConfigurationModule
+: ---</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This illustrates the importance of clearly defining your module dependencies.
+The reliable implicit ordering resulting from it is one of the foremost features for building modular applications.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s see how that ordering propagates throughout the application.
+Make sure you have uncommented the <code>@AcrossDepends</code> on <code>ModuleTwo</code> again before continuing.</p>
+</div>
+<div class="paragraph">
+<p>Continue to <a href="3-using-module-components.html" class="page">Using module components</a>.</p>
+</div>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="1-creating-a-module.html">&laquo; Applications and modules</a>
+            <span class="article-footer-nav-current">Module dependencies</span>
+        <a class="article-footer-nav-next" href="3-using-module-components.html">Using module components &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

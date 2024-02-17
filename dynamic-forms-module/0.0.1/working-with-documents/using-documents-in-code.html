@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using documents in code - Across</title>
+    <meta name="generator" content="Antora 1.0.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="https://across.foreach.be">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="https://across.foreach.be">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="dynamic-forms-module" data-version="0.0.1">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Documents &amp; Forms</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/0.0.x.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.0.x.html#0-0-1">0.0.1</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../document-definitions.html">Designing a document</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../definitions/creating-a-dataset.html">Creating a definition dataset</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../definitions/creating-a-document-definition.html">Creating a document definition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../definitions/creating-a-view-definition.html">Creating a view definition</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../definitions/definition-versions.html">Definition versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../field-types/index.html">Dynamic field types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../field-types/string.html">Strings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../field-types/number.html">Numbers &amp; Currency</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../field-types/boolean.html">Booleans</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../field-types/date.html">Dates and Times</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../field-types/fieldset.html">Fieldsets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../field-types/enumeration.html">Fixed value fields</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../field-types/linked-entity.html">Linked entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../field-types/linked-document.html">Linked documents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../field-types/calculation.html">Calculated fields</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../definitions/creating-a-type-definition.html">Creating a custom type</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../validators/index.html">Dynamic field validators</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../validators/creating-a-field-validator.html">Creating a custom field validator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Working with documents</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="using-documents-in-code.html">Using documents in code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="document-versions.html">Document versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../import-export/index.html">Import and export</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../import-export/importing-definitions.html">Importing definitions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../import-export/importing-documents.html">Importing documents</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../extending-definition-types.html">Extending definition types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../services-and-components.html">Services and components</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">General</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/creating-a-simple-frontend-form.html">Creating a simple frontend form</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Documents &amp; Forms</span>
+    <span class="version">0.0.1</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/2.1.2-dev/index.html">2.1.2-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/dev/index.html">dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../guides/3.0.0-dev/index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../guides/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/3.0.0-dev/index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../migration/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/3.1.0-dev/index.html">3.1.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../0.0.2-dev/index.html">0.0.2-dev</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/4.0.0-dev/index.html">4.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.2.0-dev/index.html">3.2.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/1.2.0/index.html">1.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/2.0.1/index.html">2.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../web-cms-module/0.0.6-dev/index.html">0.0.6-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.5/index.html">0.0.5</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/2.1.1/index.html" class="home-link"></a>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Documents & Forms</a></li>
+    <li class="crumb"><a href="index.html">Working with documents</a></li>
+    <li class="crumb is-current"><a href="using-documents-in-code.html">Using documents in code</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">0.0.1</button>
+  <div class="versions-menu">
+    <a class="version" href="../../0.0.2-dev/working-with-documents/using-documents-in-code.html">0.0.2-dev</a>
+    <a class="version is-current" href="using-documents-in-code.html">0.0.1</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-dynamic-forms-module/edit/master/docs/modules/ROOT/pages/working-with-documents/using-documents-in-code.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+<h1>Using documents in code</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When working with dynamic documents directly from code, the main component you need to use is a <code>DynamicDocumentWorkspace</code>.
+It manages a single document, and allows you to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>load a specific version of the document</p>
+</li>
+<li>
+<p>create a new version</p>
+</li>
+<li>
+<p>work with individual fields of the current document version</p>
+</li>
+<li>
+<p>change the definition for the document version</p>
+</li>
+<li>
+<p>import data from other documents</p>
+</li>
+<li>
+<p>validating a document version</p>
+</li>
+<li>
+<p>save the document version</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You create a <code>DynamicDocumentWorkspace</code> component using the <code>DynamicDocumentService</code>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<code>DynamicDocumentWorkspace</code> instances are stateful and not thread-safe, do not share or cache them.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_new_document"><a class="anchor" href="#_create_a_new_document"></a>Create a new document</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You create a new document by creating a workspace from either a <code>DynamicDefinition</code> or <code>DynamicDefinitionVersion</code> for the document type.
+If you use a <code>DynamicDefinition</code>, the attached latest version will be used for creating your document.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private DynamicDocumentService documentService;
+
+DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( documentType ); <i class="conum" data-value="1"></i><b>(1)</b>
+workspace.setDocumentName( "My document" ); <i class="conum" data-value="2"></i><b>(2)</b>
+workspace.setFieldValue( "some.field", 123 ); <i class="conum" data-value="3"></i><b>(3)</b>
+
+DynamicDocumentVersion documentVersion = workspace.save(); <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Create a new document workspace for the document definition</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Set a custom name for your document, a random string will be assigned if you do not set a name manually</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Modify document fields, the value you provide must match with the specific Java type of the field</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Call <code>save()</code> on the workspace to persist the document in the database, the return value is the <code>DynamicDocumentVersion</code> that has been created</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reading_document_fields"><a class="anchor" href="#_reading_document_fields"></a>Reading document fields</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use the workspace to read values from a document, optionally with type conversion.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( document ); <i class="conum" data-value="1"></i><b>(1)</b>
+String number = workspace.getFieldValue( "number.as.string" ); <i class="conum" data-value="2"></i><b>(2)</b>
+long count = workspace.getFieldValue( "number.as.string", Long.class ); <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Create a new workspace for the document, this will load the latest document version in the workspace</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Retrieve field values.
+If you do not specify a second type parameter, the return type will be the exact java type from the document definition.
+If you do specify a type parameter, a <code>ConversionService</code> will be used to convert from the source type to your desired output type.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_update_a_document"><a class="anchor" href="#_update_a_document"></a>Update a document</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Updating a document is done by creating a new version of that document.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( document ); <i class="conum" data-value="1"></i><b>(1)</b>
+workspace.createNewVersion( true ); <i class="conum" data-value="2"></i><b>(2)</b>
+workspace.setFieldValue( "some.field", 123 );
+
+DynamicDocumentVersion newDocumentversion = document.save();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Create a new workspace for the document (or specific document version)</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Initialize a new document version, keeping the current field values.
+In this example the new version will use the latest document definition.
+If we had supplied <code>false</code> as method argument, a new document version would be created using the same definition version as the currently loaded document version.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_update_an_existing_document_version"><a class="anchor" href="#_update_an_existing_document_version"></a>Update an existing document version</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default an exception will be thrown if you attempt to call <code>save()</code> on an already saved document version.
+This is a safeguard for accidentally re-writing version history.</p>
+</div>
+<div class="paragraph">
+<p>If you want to update an existing document version, you must tell the workspace to allow it.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( documentVersion ); <i class="conum" data-value="1"></i><b>(1)</b>
+workspace.setAllowVersionUpdates( true ); <i class="conum" data-value="2"></i><b>(2)</b>
+workspace.setFieldValue( "some.field", 123 );
+DynamicDocumentVersion updateVersion = document.save(); <i class="conum" data-value="3"></i><b>(3)</b>
+workspace.setAllowVersionUpdates( false ); <i class="conum" data-value="4"></i><b>(4)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Create a new workspace based on the specific document version</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Configure the workspace to allow saving the current - existing - version</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>The <code>save()</code> method will now return the same, but updated document version</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Reset the workspace behaviour if you want to keep using it</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_calculated_fields"><a class="anchor" href="#_using_calculated_fields"></a>Using calculated fields</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>DynamicFormsModule supports the use of <a href="../field-types/calculation.html" class="page">calculated fields</a>, which are read-only fields whose value depends on the specified formula.
+These fields will by default only be updated when the document itself is saved.</p>
+</div>
+<div class="paragraph">
+<p>Aside of updating calculated fields when the value is saved, those fields can immediately be recalculated for the entire document or be calculated whenever the field is fetched.</p>
+</div>
+<div class="paragraph">
+<p>In the following example, we&#8217;ll assume our definition has the following fields:</p>
+</div>
+<div class="listingblock">
+<div class="title">Fields present in the definition</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">content:
+- id: price
+  type: number
+- id: priceWithPaxes
+  type: currency(EUR, 2)
+  formula: $(price) * 1.25</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Fetching a calculated field</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( definition );
+
+// set the value of the field that we have used in our formula
+workspace.setFieldValue( "price", 100 );
+// fetch the calculated field, no value will be present.
+workspace.getFieldValue( "priceWithTaxes", BigDecimal.class );
+
+// update all calculated fields in the document
+workspace.updateCalculatedFields();
+// fetch the calculated field, the value will be 125.
+workspace.getFieldValue( "priceWithTaxes", BigDecimal.class );
+
+// always calculate the value when a calculated field is retrieved
+workspace.setCalculatedFieldsEnabled( true );
+
+workspace.setFieldValue( "price", 200 );
+// fetch the calculated value, the value will be 250.
+workspace.getFieldValue( "priceWithTaxes", BigDecimal.class );</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="validation"><a class="anchor" href="#validation"></a>Validating a document</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Validating a document is done by calling the <code>validate()</code> method on the <code>DynamicDocumentWorkspace</code>.
+Validation will execute the different field validators and report violations in an <code>Errors</code> object.</p>
+</div>
+<div class="paragraph">
+<p>Validation is always a manual step, how possible errors are handled afterwards is up to the caller.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( documentVersion );
+Errors validationErrors = workspace.validate();
+
+if ( !validationErrors.hasErrors() ) {
+    // save if the document data is valid
+    workspace.save();
+}
+else {
+    // report violations back to the user
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In a web scenario where you are using a <code>DynamicDocumentWorkspace</code> as a <code>WebDataBinder</code> target, you can also call <code>validate()</code> with an existing <code>BindingResult</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ModelAttribute
+DynamicDocumentWorkspace document() {
+  return documentService.createDocumentWorkspace( ... );
+}
+
+@RequestMapping
+String updateDocument( @ModelAttribute DynamicDocumentWorkspace document, BindingResult bindingResult ) {
+  document.validate( bindingResult );
+
+  if ( !bindingResult.hasErrors() ) {
+   ...
+  }
+
+  ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_importing_document_data"><a class="anchor" href="#_importing_document_data"></a>Importing document data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>DynamicDocumentWorkspace</code> has several methods that allow bulk setting of field values on a document.
+Bulk modifying methods do not throw exceptions, but return a <code>DynamicDocumentDataLoader.Report</code> object instead.
+The latter holds a list of all fields that have been updated, as well as the list of field errors that have occurred.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( document );
+workspace.createNewVersion( true );
+DynamicDocumentDataLoader.Report report = workspace.importFields( dataToImport );
+
+if ( report.hasErrors() ) {
+    // the report object will contain an entry for every field that could not be set
+    // containing details like the full path to the field, reason for failure and value that was set
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are several <code>importFieldsXX</code> methods available on a <code>DynamicDocumentWorkspace</code>.
+Please investigate the API for all options.</p>
+</div>
+<div class="sect2">
+<h3 id="_using_a_data_loader"><a class="anchor" href="#_using_a_data_loader"></a>Using a data loader</h3>
+<div class="paragraph">
+<p>If you want to perform multiple document updates, with possible type conversion, you can also use a <code>DynamicDocumentDataLoader</code>.
+This helper allows you to perform multiple actions sequentially, and retrieve the report separately when done.
+Additionally it allows for some configuration options regarding error reporting and type conversion.</p>
+</div>
+<div class="listingblock">
+<div class="title">Creating a data loader for your current document version</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( document );
+DynamicDocumentDataLoader dataLoader = workspace.createDataLoader(); <i class="conum" data-value="1"></i><b>(1)</b>
+dataLoader.setFieldValue( "user.name", "john.doe" ); <i class="conum" data-value="2"></i><b>(2)</b>
+dataLoader.setFieldValue( "user.email", "john.doe@domain.com" );
+
+DynamicDocumentDataLoader.Report report = dataLoader.getReport(); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Create a data loader preconfigured for the current document version.
+Type conversion will be applied using a <code>ConversionService</code> and all errors will be added to the report instead of throwing the exceptions.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Perform document updates using the data loader.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>When done, get the report and determine next steps.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_exporting_document_data"><a class="anchor" href="#_exporting_document_data"></a>Exporting document data</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can convert a single document version to another format by calling the <code>exportFields()</code> method on the workspace.
+This will convert the actual fields data of the document version to the format you&#8217;ve specified.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The export method signature is <code>exportFields( String format )</code>.
+For exports to work there must be a <code>DynamicDocumentDataMapper</code> registered for that format in the <code>DynamicDocumentDataMapperFactory</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( document );
+String json = workspace.exportFields( DynamicDataObjectMapper.JSON ); <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Export the fields in the format specified.
+The return value depends on the format you used.
+In case of <code>JSON</code> we get a <code>String</code> returned.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_re_using_a_workspace"><a class="anchor" href="#_re_using_a_workspace"></a>Re-using a workspace</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <code>DynamicDocumentWorkspace</code> is always attached to a single document (version) at any point in time.
+You can change the document loaded or create a new document using the same workspace however.
+This will re-initialize the workspace for the new configuration.</p>
+</div>
+<div class="paragraph">
+<p>Re-using the same workspace is a good solution when you want to perform sequential processing of multiple documents (eg. exports).
+A workspace uses a definition cache by default.
+Loading a new document in the same workspace often has better performance than creating a new workspace.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DynamicDocumentWorkspace workspace = documentService.createDocumentWorkspace( documentDefinition );
+
+for ( DynamicDocumentVersion document : documents ) {
+  workspace.loadDocument( document );
+  String json = workspace.exportFields( DynamicDataObjectMapper.JSON );
+  // write the json data to file
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_performing_bulk_operations_on_documents"><a class="anchor" href="#_performing_bulk_operations_on_documents"></a>Performing bulk operations on documents</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>DynamicDocumentWorkspace</code> s are always created through the <code>DynamicDocumentService</code>.
+These workspaces have their own definition cache, so that if a workspace is reused for various documents, a performance boost may occur for documents that use the same definition.
+When performing bulk operations on documents, sequential processing will become insufficient and using more than one workspace will require additional fetching and conversion of the same definitions.</p>
+</div>
+<div class="paragraph">
+<p>Through the <code>DynamicDocumentService</code>, it is possible to create a <code>CachingDynamicDocumentWorkspaceFactory</code>, which has it&#8217;s own cache for definitions.
+All workspaces created through the caching workspace factory will then reuse that same cache, and as such cause a significant performance boost when creating multiple workspaces for documents with the same definition.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CachingDynamicDocumentWorkspaceFactory workspaceFactory = documentService.createCachingDocumentWorkspaceFactory();
+
+documents.stream()
+    .map(workspaceFacory::createDocumentWorkspace) <i class="conum" data-value="1"></i><b>(1)</b>
+    .forEach(ws -&gt; {
+        ws.exportFields(DynamicDataObjectMapper.JSON);
+        // write the json data to file
+        }
+    )
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Each document is converted to a workspace by the workspace factory.
+Definitions that are reused by various workspaces are converted once to a <code>DynamicDocumentDefinition</code>, instead of for every workspace that is created.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

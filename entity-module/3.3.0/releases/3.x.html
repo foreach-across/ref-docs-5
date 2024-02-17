@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.x.x release notes - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="entity-module" data-version="3.3.0">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Entity Management</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="3.x.html">3.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="2.x.html">2.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration-properties.html">Configuration properties</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-module-explained/index.html">EntityModule explained</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-module-explained/entity-configuration.html">Entity configuration</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Entity properties and controls</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-module-explained/entity-configuration.html#entity-model">Entity model</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-module-explained/entity-views.html">Entity views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-module-explained/associations.html">Associations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-module-explained/permissions.html">Permissions: allowable actions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">EntityQuery</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../registering-entities/index.html">Configuring entities</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/entity-properties.html">Configuring properties</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../registering-entities/manual-registration.html">Manually adding an entity type</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../registering-entities/entity-properties.html">Registering properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../customizing-entities/entity-model.html">Defining an entity model</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../customizing-entities/entity-views.html">Configuring entity views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../customizing-entities/entity-associations.html">Adding associations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../registering-entities/creating-an-entity-registrar.html">Automatic registration of entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/index.html">Customizing existing entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../customizing-entities/entity-validation.html">Customizing entity validation</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../registering-entities/enums-as-entities.html">Using enums as entities</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../building-views/index.html">Building entity views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">How entity views work</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Creating views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">List views</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Form views</span>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Generic views</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../building-views/customizing-views/customizing-views.html">Customizing existing views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../building-views/customizing-views/list-view.html">List views</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../building-views/customizing-views/form-view.html">CRUD views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../building-views/customizing-views/create-update-view.html">Create and update form</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../building-views/customizing-views/detail-view.html">Read/detail view</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../building-views/customizing-views/delete-view.html">Delete form</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">Common tasks</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building-views/association-views.html">Association views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building-views/linking-to-entity-views.html">Linking to entity views</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building-views/localization.html">Localization &amp; text messages</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../building-views/security-and-permissions.html">Security and permissions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Admin Web menu</span>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../property-controls/index.html">Entity property controls</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Specifying a control type</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/creating-a-property-control/generating-controls-for-properties.html">Generating controls for properties</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Available controls</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/autosuggest.html">Autosuggest</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/checkbox.html">Checkbox</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/datetime.html">Date/Time picker</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/select.html">Drop-down select</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/embedded-collection.html">Embedded collection</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/fieldset.html">Fieldset</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Form group</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Label</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Multi-value text</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/numeric.html">Numeric</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/radio.html">Radio button</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/value.html">Readonly property value</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Sortable table</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/textbox.html">Textbox</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../property-controls/creating-a-property-control/index.html">Creating a new property control</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Rendering with ViewElements</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Accessing entity and property data</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Registering a control type</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../property-controls/creating-a-property-control/property-data-binding.html">Property data binding</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-query/index.html">EntityQuery infrastructure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../entity-query/eql.html">EntityQuery Language (EQL)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../entity-query/extending-eql.html">Extending EQL</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../entity-query/filtering-list-views.html">Filtering list views</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../integration-with-other-modules.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Admin Web</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Spring Data</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Spring Security</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../developer-tools.html">Developer tools</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../glossary.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../web-resources/index.html">Web resources</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../web-resources/javascript-plugins.html">Javascript plugins</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/attributes-overview.html">Attributes overview</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/default-entityviewprocessors.html">Default EntityViewProcessors</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">General</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/adding-a-custom-property-to-an-entity.html">Creating a custom property</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/creating-custom-control-for-object-type.html">Creating a custom control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/registering-attributes-property-of-type.html">Registering attributes on properties</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/general/creating-an-entity-id-proxy-property.html">Mapping id properties to entities</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">List views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/list-view/adding-a-custom-action-to-a-listview.html">Adding a row action</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Form views</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/form-view/creating-an-extension-form.html">Creating a custom form</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/form-view/creating-a-fileupload-form.html">Creating a file upload form</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../guides/form-view/customize-link-to-delete-view.html">Customize link to delete view</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Entity Management</span>
+    <span class="version">3.3.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Entity Management</a></li>
+    <li class="crumb"><a href="index.html">Releases</a></li>
+    <li class="crumb"><a href="3.x.html">3.x</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">3.3.0</button>
+  <div class="versions-menu">
+    <a class="version" href="../../releases/3.x.html">master</a>
+    <a class="version" href="../../3.4.0/releases/3.x.html">3.4.0</a>
+    <a class="version is-current" href="3.x.html">3.3.0</a>
+    <a class="version" href="../../3.2.0/releases/3.x.html">3.2.0</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-entity-module/blob/3.3.0/docs/modules/ROOT/pages/releases/3.x.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>3.x.x release notes</h1>
+    <div class="sect1">
+<h2 id="3-3-0"><a class="anchor" href="#3-3-0"></a>3.3.0.RELEASE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>EntityQuery</code> infrastructure changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CollectionEntityQueryExecutor</code> now supports a <code>Supplier</code> for the collection</p>
+</li>
+<li>
+<p>an <code>EntityQueryExecutor</code> will now be registered automatically for any Spring Data <code>CrudRepository</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>the default implementation is a <code>CollectionEntityQueryExecutor</code> using the repository to fetch all items</p>
+</li>
+<li>
+<p>previously only <code>JpaSpecificationExecutor</code> and <code>QueryDslPredicateExecutor</code> would register an <code>EntityQueryExecutor</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>EQL predicate <code>property IS EMPTY</code> will now check for empty string or null value when dealing with a string (text) property</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>New features:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>it is now possible to <a href="../property-controls/embedded-collection.html#template-values" class="page">specify default values for the template controls of embedded collections</a></p>
+</li>
+<li>
+<p>an <code>EntityPropertyRegistrationHelper</code> component is now available which allows you to easily <a href="../guides/general/creating-an-entity-id-proxy-property.html" class="page">map an id property to its target entity</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>this can be especially helpful when building a UI for entities spanning multiple datasources or from webservice APIs</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>a valid <code>EntityQueryExecutor</code> is now automatically registered when creating a manual association</p>
+<div class="ulist">
+<ul>
+<li>
+<p>this removes the need to provide a custom <code>AssociatedEntityQueryExecutor</code> for manually defined associations</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Bug-fixes and minor improvements:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>fixed bug where list actions were added to table header row on a list view</p>
+</li>
+<li>
+<p>uncaught exceptions are now registered as global validation errors on CRUD views</p>
+</li>
+<li>
+<p>association tabs are now hidden if the user does not have the required <code>AllowableAction</code> on the target entity configuration</p>
+</li>
+<li>
+<p>simple value types (eg a domain-specific id type like <code>AuthorId</code>) will now render a textbox as control</p>
+<div class="ulist">
+<ul>
+<li>
+<p>general rule is that any custom type without readable/writable properties will yield a textbox control</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>fixed some issues where the <code>ConversionService</code> was being ignored when working with custom id types</p>
+</li>
+<li>
+<p>EQL related:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>fixed bug where a <code>NullPointerException</code> was thrown if an invalid EQL expression was entered in an advanced filter</p>
+</li>
+<li>
+<p>Java 8 time types are now supported for <code>now()</code> and <code>today()</code> functions</p>
+</li>
+<li>
+<p>custom textbox types (eg <code>email</code>) are now supported for basic filtering</p>
+<div class="ulist">
+<ul>
+<li>
+<p>this fixes a bug where a property marked with an <code>@Email</code> validator could not be used in basic filtering</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-2-0"><a class="anchor" href="#3-2-0"></a>3.2.0.RELEASE</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This release contains a lot of internal changes, specifically related to the addition of the <code>EntityPropertyController</code> and the <code>EntityPropertiesBinder</code>.
+Overall upgrading from the previous version should be seamless for most applications.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>addition of <code>EntityAttributes.FORM_ENCTYPE</code> that can be specified as <code>EntityViewFactory</code> or <code>EntityPropertyDescriptor</code> attribute</p>
+<div class="ulist">
+<ul>
+<li>
+<p>its value should be the actual enctype that should be used for submitting the form of a form view, eg <code>FormViewElement.ENC_MULTIPART</code></p>
+</li>
+<li>
+<p>this is especially useful to change the form enctype based on the presence of property descriptors (for example a file property)</p>
+</li>
+<li>
+<p>the attribute on a <code>EntityViewFactory</code> will take precedence, property descriptors will only be inspected if it is missing</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>more options are now available for <a href="../property-controls/fieldset.html" class="page">fieldset property controls</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>a fieldset can now be rendered either as a HTML <code>FieldsetFormElement</code> or using a custom template</p>
+</li>
+<li>
+<p>a custom template can be configured on a property using the <code>ViewElementFieldset.TEMPLATE</code> attribute</p>
+</li>
+<li>
+<p>several default templates have been provided with default styling for common form layouts in Admin Web</p>
+</li>
+<li>
+<p>if no property selector is specified, a fieldset property will select all child properties as its members</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>added support for <a href="../building-views/customizing-views/list-view.html#filter-by-access" class="page">filtering a list view based on <code>AllowableAction</code></a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>this can be used to hide items from a list view if the user does not have the correct permissions</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>addition of the <a href="../building-views/customizing-views/form-view.html#detail-view" class="page">detail view</a> which offers a readonly view for entities.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>it&#8217;s possible to configure an entity to link to the detail view instead of the update view by default</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>link to the delete view (delete button) has moved from the tab menu (<code>EntityAdminMenu</code>) to the detail and update view</p>
+<div class="ulist">
+<ul>
+<li>
+<p>see the <a href="../guides/form-view/customize-link-to-delete-view.html" class="page">customize link to delete view</a> guide to revert to the previous behaviour.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>embedded association views now include an inner page (tab) title and menu</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the sub-menu is only rendered if there are at least 2 menu items</p>
+</li>
+<li>
+<p>this allows an additional level of menu items for managing embedded associations</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>addition of the <code>EntityPropertiesBinder</code> which allows more advanced binding of custom properties</p>
+<div class="ulist">
+<ul>
+<li>
+<p>each property is now backed by an <code>EntityPropertyController</code> which can be used to set behaviour (data fetching, writing) on a single property level</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>collections of embedded objects (eg <code>List&lt;Address&gt;</code>) are now fully supported and a default UI control will be generated</p>
+</li>
+<li>
+<p>several bugfixes and minor improvements:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>fixed some issues with using <code>UUID</code> or other custom types as id for entities</p>
+</li>
+<li>
+<p>added default control support for <code>ZonedDateTime</code> and <code>Duration</code></p>
+</li>
+<li>
+<p>added EQL support for <code>CONTAINS NULL</code> as an alternative to <code>IS EMPTY</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>this can be used in combination with groups: <code>CONTAINS (NULL,1)</code> is the equivalent or <code>CONTAINS 1 or IS EMPTY</code></p>
+</li>
+<li>
+<p>this also fixes some issues when using a collection type property in a  basic EQL filter</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>improved EQL support for negative operands: <code>NOT CONTAINS (1,2)</code> now expands to <code>NOT CONTAINS 1 AND NOT CONTAINS 2</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-1-0"><a class="anchor" href="#3-1-0"></a>3.1.0.RELEASE</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>if an <code>EntityAssociation</code> has a custom <code>EntityFactory</code> attribute, that factory will be used for both new instance and DTO creation</p>
+<div class="ulist">
+<ul>
+<li>
+<p>previously it was only used for new instance creation</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>EntityModule now uses <code>evo-inflector</code> to auto-generate plural forms, this should yield better results in English</p>
+</li>
+<li>
+<p>the <code>String</code> formats of auditable properties can now be customized using global <a href="../services-and-components/message-codes.html" class="page">message codes</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Auditable.createdDate</code></p>
+</li>
+<li>
+<p><code>Auditable.created</code></p>
+</li>
+<li>
+<p><code>Auditable.lastModifiedDate</code></p>
+</li>
+<li>
+<p><code>Auditable.lastModified</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>several minor issues with EQL filtering have been fixed</p>
+</li>
+<li>
+<p><code>EntityQuery</code> condition translation is now done recursively as long as the result is modified</p>
+</li>
+<li>
+<p>a <code>CollectionEntityQueryExecutor</code> implementation has been added that can be used to query a collection of objects if there is an <code>EntityPropertyRegistry</code> which provides the property metadata of the collection members</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="3-0-1"><a class="anchor" href="#3-0-1"></a>3.0.1.RELEASE</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>the module dependencies for EntityModule have been optimized for re-use</p>
+<div class="ulist">
+<ul>
+<li>
+<p>as a result EntityModule no longer transitively pulls in BootstrapUiModule or AdminWebModule</p>
+</li>
+<li>
+<p>when used without BootstrapUiModule, no default <code>ViewElement</code> rendering infrastructure will be available</p>
+</li>
+<li>
+<p>when used with BootstrapUiModule but without AdminWebModule, the default views for an entity will never get created and view support (<code>EntityViewFactory</code>) will be disabled</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>added support for <code>LocalDate</code>, <code>LocalTime</code> and <code>LocalDateTime</code> to be rendered using <code>DateTimeFormElement</code></p>
+</li>
+<li>
+<p>it is now possible to configure default view element modes (eg. control or readonly rendering) on an <code>EntityConfiguration</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>these will be used in all cases where no specific configuration has been configured on property level</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>configuration &amp; view builders support <code>AttributeRegistrar</code> for registering or removing attributes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>using <code>AttributeRegistrar</code> is useful if you want to use the owner of the attribute collection (eg. the <code>EntityConfiguration</code>)</p>
+</li>
+<li>
+<p>common default registrars can be found in the <code>EntityAttributeRegistrars</code> utility class</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>entity views can now have a <a href="../services-and-components/attributes-overview.html#appendix-entity-view-factory-attributes" class="page">collection of configuration attributes</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p>attributes can be used to influence or extend default behaviour, new attributes are available for permission checking and admin menu rendering</p>
+</li>
+<li>
+<p>during view rendering attributes are accessible (and can be modified) using <code>EntityViewRequest.getConfigurationAttributes()</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>improvements to view configuration</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>EntityViewFactoryAttributes.ADMIN_MENU</code> attribute can be used to specify if a view should have an admin menu item added</p>
+</li>
+<li>
+<p><code>EntityViewFactoryAttributes.ACCESS_VALIDATOR</code> attribute can be used to determine how access to the view should be validated</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>added an <code>ExtensionViewProcessorAdapter</code> base class for easily creating a view for a custom extension class (see <a href="../guides/form-view/creating-an-extension-form.html" class="page">how-to</a>)</p>
+</li>
+<li>
+<p>added <code>EntityViewCustomizers</code> utility class providing some helpers for customizing <code>EntityViewFactoryBuilder</code> in a chainable fashion</p>
+</li>
+<li>
+<p>EntityModule no longer creates its own <code>Validator</code> instance, the <code>registerForMvc</code> related settings have been removed</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the validator used by EntityModule is the default MVC validator</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>it&#8217;s now possible to <a href="../services-and-components/message-codes.html#customizing-message-code-prefix" class="page">define a different message code prefix</a> for module entities using properties</p>
+</li>
+<li>
+<p>you can now force the required status of a control by setting the <code>EntityAttributes.REQUIRED_PROPERTY</code> attribute to <code>true</code> or <code>false</code> on an <code>EntityPropertyDescriptor</code></p>
+</li>
+<li>
+<p>message codes for form groups and fieldsets have been extended, apart from <code>[description]</code>, there is now also built-in support for <code>[help]</code> and <code>[tooltip]</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>this constitutes a minor breaking change in that <code>[description]</code> content is now always rendered above the control of a form group.
+Previously this could be different depending on the type of control inside the form group.</p>
+</li>
+<li>
+<p>see the section <a href="../building-views/customizing-views/form-view.html#configuring-form-text" class="page">configuring form controls text</a> for a full explanation of the new message codes</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>the behaviour of when controls are prefixed with <code>entity.</code> has been changed</p>
+<div class="ulist">
+<ul>
+<li>
+<p>when using <code>EntityViewCommand</code> all property controls of the base entity will should be prefixed with <code>entity.</code> in order to map on the <code>EntityViewCommand.entity</code> values</p>
+</li>
+<li>
+<p>previously this was done always when an <code>EntityViewCommand</code> was found on the <code>ViewElementBuilderContext</code></p>
+</li>
+<li>
+<p>in the new version this is only done if there is also an attribute <code>EntityPropertyControlNamePostProcessor.PREFIX_CONTROL_NAMES</code> explicitly set to <code>true</code> on the builder context</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the latter is done automatically by the <code>PropertyRenderingViewProcessor</code> when building the initial controls</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>though not intentionally breaking, this change can have side effects with controls no longer being prefixed, developers are encouraged to test the custom forms they have</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>new components for linking to entity views have been introduced</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the old <code>EntityLinkBuilder</code> interface and attributes are deprecated, but should still work as before</p>
+</li>
+<li>
+<p>see the chapter on <a href="../building-views/linking-to-entity-views.html" class="page">linking to entity views</a> for an overview of the new components</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="index.html">&laquo; Releases</a>
+            <span class="article-footer-nav-current">3.x</span>
+        <a class="article-footer-nav-next" href="2.x.html">2.x &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting started - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="dynamic-forms-module" data-version="0.0.3">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Module: Documents &amp; Forms</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="releases/0.0.x.html#0-0-x">0.0.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="document-definitions.html">Designing a document</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="definitions/creating-a-dataset.html">Creating a definition dataset</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="definitions/creating-a-document-definition.html">Creating a document definition</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="definitions/messages-and-labels.html">Messages and translations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="definitions/defining-views.html">Defining document views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="definitions/list-view.html">List view</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="definitions/list-summary-view.html">List summary view</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="definitions/definition-versions.html">Definition versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="field-types/index.html">Dynamic field types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/string.html">Strings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/number.html">Numbers &amp; Currency</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/boolean.html">Booleans</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/date.html">Dates and Times</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/fieldset.html">Fieldsets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/file.html">Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/enumeration.html">Fixed value fields</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/linked-entity.html">Linked entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/linked-document.html">Linked documents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="field-types/calculation.html">Calculated fields</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="field-types/calculation-context.html">Customizing the field evaluation context</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="definitions/creating-a-type-definition.html">Creating a custom type</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="validators/index.html">Dynamic field validators</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="validators/creating-a-field-validator.html">Creating a custom field validator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="working-with-documents/index.html">Working with documents</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="working-with-documents/using-documents-in-code.html">Using documents in code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="working-with-documents/document-versions.html">Document versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Security</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security/customizing-allowable-actions.html">Customizing allowable actions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="import-export/index.html">Import and export</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="import-export/importing-definitions.html">Importing definitions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="import-export/importing-documents.html">Importing documents</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="extending-definition-types.html">Extending definition types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="services-and-components.html">Services and components</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cheat-sheet.html">Cheat sheet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">General</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="guides/general/creating-a-simple-frontend-form.html">Creating a simple frontend form</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Documents &amp; Forms</span>
+    <span class="version">0.0.3</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../index.html">master</a>
+        </li>
+        <li class="version is-current">
+          <a href="index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="index.html">Module: Documents & Forms</a></li>
+    <li class="crumb"><a href="quick-start.html">Quick start</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">0.0.3</button>
+  <div class="versions-menu">
+    <a class="version" href="../quick-start.html">master</a>
+    <a class="version is-current" href="quick-start.html">0.0.3</a>
+    <a class="version" href="../0.0.2/quick-start.html">0.0.2</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-dynamic-forms-module/blob/0.0.3/docs/modules/ROOT/pages/quick-start.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Getting started</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document provides a quick introduction to using Dynamic Documents in your application.</p>
+</div>
+<div class="paragraph">
+<p>What we&#8217;ll do:</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Create a simple application with DynamicFormsModule</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Design a new document type and put it in a dataset</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Create a document instance of that type, using the built-in admin UI</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_new_web_application"><a class="anchor" href="#_create_a_new_web_application"></a>Create a new web application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To create an application with the use of <code>DynamicFormsModule</code>, generate an across application through the <a href="https://start.across.dev/">Across Initializr</a>.
+In the following sections, we&#8217;ll be using an application generated with <a href="../../across/releases/platform/2.1.1.html" class="page">Across 2.1.1.RELEASE</a> and the following modules:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AcrossWebModule</code></p>
+</li>
+<li>
+<p><code>AdminWebModule</code></p>
+</li>
+<li>
+<p><code>AcrossHibernateJpaModule</code></p>
+</li>
+<li>
+<p><code>UserModule</code></p>
+</li>
+<li>
+<p><code>EntityModule</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_the_dynamicformsmodule"><a class="anchor" href="#_add_the_dynamicformsmodule"></a>Add the DynamicFormsModule</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that we have a sample application, we still need to add DynamicFormsModule.
+This is done by adding the dependency for the module and specifying it in the application descriptor.</p>
+</div>
+<div class="listingblock">
+<div class="title">Add the maven dependency</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+     &lt;groupId&gt;com.foreach.across.modules&lt;/groupId&gt;
+     &lt;artifactId&gt;dynamic-forms-module&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Bootstrap the module when starting the application</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@AcrossApplication(
+		modules = {
+				AcrossWebModule.NAME,
+				AdminWebModule.NAME,
+				AcrossHibernateJpaModule.NAME,
+				UserModule.NAME,
+				EntityModule.NAME,
+				DynamicFormsModule.NAME <i class="conum" data-value="1"></i><b>(1)</b>
+		}
+)
+public class DemoApplication
+{
+	public static void main( String[] args ) {
+		SpringApplication.run( DemoApplication.class, args );
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Add <code>DynamicFormsModule</code> to the bootstrapped modules.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If we&#8217;d now start up the application, we can see that <code>DynamicFormsModule</code> is bootstrapped.</p>
+</div>
+<div class="listingblock">
+<div class="title">Abbreviated start-up log</div>
+<div class="content">
+<pre>INFO --- [ost-startStop-1] c.f.a.c.c.bootstrap.AcrossBootstrapper   : AcrossContext: DemoApplication (AcrossContext-1)
+...
+INFO --- [ost-startStop-1] c.f.a.c.c.bootstrap.AcrossBootstrapper   : 9 - DynamicFormsModule [resources: DynamicFormsModule]: class com.foreach.across.modules.dynamicforms.DynamicFormsModule
+INFO --- [ost-startStop-1] c.f.a.c.c.bootstrap.AcrossBootstrapper   : 10 - DemoApplicationModule [resources: demo]: class com.foreach.across.core.DynamicAcrossModule$DynamicApplicationModule
+INFO --- [ost-startStop-1] c.f.a.c.c.bootstrap.AcrossBootstrapper   : 11 - SpringSecurityModule [resources: SpringSecurityModule]: class com.foreach.across.modules.spring.security.SpringSecurityModule
+INFO --- [ost-startStop-1] c.f.a.c.c.bootstrap.AcrossBootstrapper   : 12 - AcrossContextPostProcessorModule [resources: AcrossContextPostProcessorModule]: class com.foreach.across.core.AcrossContextConfigurationModule
+INFO --- [ost-startStop-1] c.f.a.c.c.bootstrap.AcrossBootstrapper   : ---</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_designing_our_document"><a class="anchor" href="#_designing_our_document"></a>Designing our document</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that the module is present in the application, we can start using it&#8217;s functionality.
+The core of the module is the creation of dynamic documents, e.g. storing content in a dynamically configurable structure.</p>
+</div>
+<div class="paragraph">
+<p>Before we can store content, we need to create the structure for storing that data, which is done by creating a definition.
+Different types of definitions exist for a different purpose.
+Currently, two types are used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>document</code>: documents definitions hold the structures of our document content.
+Using these definitions, groups of fields can be declared to store data.</p>
+</li>
+<li>
+<p><code>view</code>: <code>DynamicFormsModule</code> integrates with <code>EntityModule</code> through which various views can be defined to render data.
+View definitions allow these views to be modified, for example which properties should be rendered.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_create_a_dataset"><a class="anchor" href="#_create_a_dataset"></a>Create a dataset</h3>
+<div class="paragraph">
+<p>The first step to create a document, is to create a dataset.
+Datasets are logical groups of definitions, for example a dataset <code>Job application</code> could hold definitions for job, applicants, job titles&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s start off by creating a data set.
+To do so, we&#8217;ll navigate to the menu item <code>Data sets &amp; definitions</code>.
+There we can create a new data set with a specific name and key, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>name: Job application
+key: job-application</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/creating-a-dataset.png" alt="Creating a dataset">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_create_the_document_definition"><a class="anchor" href="#_create_the_document_definition"></a>Create the document definition</h3>
+<div class="paragraph">
+<p>Definitions can define various structures, such as the content structure for a document and the configuration of a view.
+In this example, we&#8217;ll be creating a <code>document</code> for an Applicant, to define which information we would like to store.</p>
+</div>
+<div class="paragraph">
+<p>To create a definition, we navigate to the tab <code>Definitions</code> on a dataset, where we can start creating new definitions.
+Before we can define the structure for the <code>Applicant</code> documents, we must create a definition of the correct type:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>name: Applicant
+key: applicant
+type: document <i class="conum" data-value="1"></i><b>(1)</b></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We create a definition of the type <code>document</code> which allows us to define the document structure as a combination of various fields.</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/creating-a-definition.png" alt="Creating a definition">
+</div>
+</div>
+<div class="paragraph">
+<p>Now, we can further modify the definition and add fields to store information.</p>
+</div>
+<div class="paragraph">
+<p>For each applicant, we&#8217;d like to store the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The applicant&#8217;s date of birth</p>
+</li>
+<li>
+<p>The address of the applicant; being a combination of the street (name + house number), zipcode and city.</p>
+</li>
+<li>
+<p>Expected monthly salary (in EUR)</p>
+</li>
+<li>
+<p>The applicant&#8217;s motivation</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When we transform this into a definition, we end up with the following structure:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">document-definition: <i class="conum" data-value="1"></i><b>(1)</b>
+  name: Applicant
+  content: <i class="conum" data-value="2"></i><b>(2)</b>
+  - id: date-of-birth <i class="conum" data-value="3"></i><b>(3)</b>
+    type: date <i class="conum" data-value="4"></i><b>(4)</b>
+  - id: address
+    type: fieldset <i class="conum" data-value="4"></i><b>(4)</b>
+    fields:
+    - id: street
+      type: string
+    - id: zip-code
+      type: number
+    - id: city
+      type: string
+  - id: expected-salary
+    type: currency(EUR) <i class="conum" data-value="4"></i><b>(4)</b>
+  - id: motivation
+    type: text</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Definitions always have a root element.
+In this case, we&#8217;re creating the structure for a document, for which the root element is <code>document-definition</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>A definition has fields which will make up the structure of the document.
+These are defined in the <code>content</code> element of the definition.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Every field has an <code>id</code> which makes up the key under which the information will be stored.
+The key for a field is a combination of the ids of field itself and its parents, with fields under the <code>content</code> element as root items.
+In this definition, the following are examples of full keys: <code>date-of-birth</code>, <code>address.zip-code</code> and <code>expected-salary</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Various types of fields are used to represent data.</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/creating-definition-structure.png" alt="Creating a definition structure">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>In the above image, we can also notice the <code>published</code> and <code>current/new version</code> fields.
+Modifying a definition by using the default UI will always result in a new version with the applied modifications:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>published modifications: The modifications are gathered in a fixed version.
+Documents that are updated or created will be using the most recently published version.</p>
+</li>
+<li>
+<p>non-published modifications: A draft version is created and further non-published modifications will modify the draft version.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_add_a_document"><a class="anchor" href="#_add_a_document"></a>Add a document</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that a definition is present, a menu item for our definition is automatically generated through which we can create documents for that definition.
+Every document for the aforementioned definition will have the structure we&#8217;ve defined, so, let&#8217;s create a document with the following information:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>Name: Nancy Thompson
+Date of birth: 1971/12/28
+Street: Elm Street, 1428
+Zip code: 8972
+City: SpringWood
+Expected salary: 2134</pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/creating-a-document.png" alt="Creating an applicant">
+</div>
+</div>
+<div class="paragraph">
+<p>Depending on the fields we&#8217;ve defined in the <code>Applicant</code> definition, various fields were generated based on their field type e.g. a date control, a fieldset (to group other fields), a currency control&#8230;&#8203;
+The order in which they are defined, is also kept during the rendering process.
+If you would reorder the fields in the definition, the new order would be applied to the document as well.</p>
+</div>
+<div class="paragraph">
+<p>Aside of the rendering of fields, basic validation is applied as well, should you for example, attempt to submit plain text in the <code>zip-code</code> control or not fill in the name of the document, validation errors will occur.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/basic-validation.png" alt="Example of basic validation">
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+One of the fields on the document was not defined in the definition structure.
+This is the field <code>Name</code>, which will be the <code>name</code> of the document itself.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_new_document_version"><a class="anchor" href="#_create_a_new_document_version"></a>Create a new document version</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Documents are also <a href="working-with-documents/document-versions.html" class="page">versioned</a>.
+As soon as we had created our document, a <code>History</code> tab appeared.
+The history tab provides a list of all document versions of a single document.</p>
+</div>
+<div class="paragraph">
+<p>To illustrate a new version being created, let&#8217;s modify the expected salary from <code>€ 2134</code> to <code>€ 3140</code>.
+By updating the content of the document, a new version will be created with the original data and our changes.</p>
+</div>
+<div class="paragraph">
+<p>Upon navigating to the history tab, two versions will be available, of which the details can be viewed by clicking on the eye-icon.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/document-history-tab.png" alt="Document version history">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_whats_next"><a class="anchor" href="#_whats_next"></a>What&#8217;s next?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The above are the basics of how to work with definitions and documents.
+To learn more about how to use documents, see the chapters on <a href="document-definitions.html" class="page">Designing a document</a> and <a href="working-with-documents/index.html" class="page">Working with documents</a>.
+For more details on configuring the fields for a definition, take a look at the <a href="field-types/index.html" class="page">field types</a> and <a href="validators/index.html" class="page">validators</a>.</p>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+            <span class="article-footer-nav-current">Quick start</span>
+        <a class="article-footer-nav-next" href="releases/index.html">Releases &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

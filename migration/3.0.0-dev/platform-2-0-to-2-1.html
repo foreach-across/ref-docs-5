@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migration guide: platform 2.0.x to 2.1.x - Across</title>
+    <meta name="generator" content="Antora 2.0.0">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="https://across.foreach.be">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="https://across.foreach.be">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="migration" data-version="3.0.0-dev">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Migration guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="platform-2-0-to-2-1.html">2.0.x to 2.1.x</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="platform-2-1-to-3-0.html">2.1.x to 3.0.x</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Migration guides</span>
+    <span class="version">3.0.0-dev</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across/2.1.4-dev/index.html">2.1.4-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../guides/3.0.0-dev/index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../guides/2.1.2/index.html">2.1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../across-autoconfigure/1.0.2/index.html">1.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">3.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../2.1.2/index.html">2.1.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../bootstrap-ui-module/2.2.0/index.html">2.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../dynamic-forms-module/0.0.3-dev/index.html">0.0.3-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../entity-module/4.0.0-dev/index.html">4.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.3.0-dev/index.html">3.3.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../file-manager-module/1.3.1-dev/index.html">1.3.1-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ldap-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../logging-module/2.0.0-dev/index.html">2.0.0-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../web-cms-module/0.0.7-dev/index.html">0.0.7-dev</a>
+        </li>
+        <li class="version">
+          <a href="../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../across/2.1.3/index.html" class="home-link"></a>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="index.html">Migration guides</a></li>
+    <li class="crumb is-current"><a href="platform-2-0-to-2-1.html">2.0.x to 2.1.x</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">3.0.0-dev</button>
+  <div class="versions-menu">
+    <a class="version is-current" href="platform-2-0-to-2-1.html">3.0.0-dev</a>
+    <a class="version" href="../2.1.2/platform-2-0-to-2-1.html">2.1.2</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-platform/edit/develop-3.0.0/docs/migration/modules/ROOT/pages/platform-2-0-to-2-1.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+<h1>Migration guide: platform 2.0.x to 2.1.x</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="quoteblock abstract">
+<blockquote>
+<div class="paragraph">
+<p>Platform 2.1.0 is bound to Across 3.0.0, which is the first release with the <code>across-autoconfigure</code> artifact and builds more on top of Spring Boot.
+Upgrading to Platform 2.1.0 usually requires you to make some configuration and code changes to your applications.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This guide is not a full overview of all new features and changes in Across or any of its modules.
+It mainly focuses on upgrade related changes: usually breaking changes or new features that impact application/module configuration.
+</td>
+</tr>
+</table>
+</div>
+</blockquote>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_across_core"><a class="anchor" href="#_across_core"></a>Across Core</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_auto_configuration_support"><a class="anchor" href="#_auto_configuration_support"></a>Auto-configuration support</h3>
+<div class="sect3">
+<h4 id="_add_autoconfigure_artifact"><a class="anchor" href="#_add_autoconfigure_artifact"></a>Add autoconfigure artifact</h4>
+<div class="paragraph">
+<p>When upgrading your applications (built with <code>@AcrossApplication</code>), the first step is to add the new <code>across-autoconfigure</code> artifact to your project.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.foreach.across&lt;/groupId&gt;
+        &lt;artifactId&gt;across-autoconfigure&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The new autoconfigure artifact contains compatibility configuration for many Spring Boot starters.
+Adding it to your project allows you to rely more on the starters and to remove some previously required configuration imports.</p>
+</div>
+<div class="paragraph">
+<p>Please see the <a href="../../across-autoconfigure/1.0.2/index.html#spring-boot" class="page">Spring Boot compatibility documentation</a> for a detailed list of starters that are now supported.</p>
+</div>
+<div class="paragraph">
+<p>Some useful additions now available without additional configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Websocket support (built-in with AcrossWebModule)</p>
+</li>
+<li>
+<p>Spring Data web support</p>
+</li>
+<li>
+<p>Actuator support</p>
+</li>
+<li>
+<p>Spring Boot Admin (&amp; client) support</p>
+</li>
+<li>
+<p>Spring Session support</p>
+</li>
+<li>
+<p>Swagger2 support</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When adding the across autoconfigurate artifact to your application, Spring Data Web support is enabled, which causes all repositories to be exposed as well.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_cleanup_acrossapplication"><a class="anchor" href="#_cleanup_acrossapplication"></a>Cleanup @AcrossApplication</h4>
+<div class="paragraph">
+<p>Review the release notes and Spring Boot compatibility documentation and remove imports and annotations from your <code>@AcrossApplication</code> class.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example @AcrossApplication configuration cleanup</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Across Platform 2.0.x
+@AcrossApplication(
+    modules = { ... },
+    modulePackages = { "my.custom.modules" },
+    modulePackageClasses = { AcrossPlatform.class } <i class="conum" data-value="1"></i><b>(1)</b>
+)
+@EnableSpringDataWebSupport <i class="conum" data-value="2"></i><b>(2)</b>
+@Import( DataSourceAutoConfiguration.class )
+public class MyApplication
+{
+}
+
+// Across Platform 2.1.x - with across-autoconfigure
+@AcrossApplication( modules = { ... } )
+public class MyApplication
+{
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>It is no longer necessary to include the default Across standard modules packages when you want to add your own packages for module scanning.
+The default standard modules package will always be included.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Several annotations and configuration imports can simply be dropped as <code>across-autoconfigure</code> takes care of the configuration now.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you have any of the following annotations in any of your modules or on your application class, they can just be removed when you have the right starters on the classpath:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@EnableSpringDataWebSupport</code></p>
+</li>
+<li>
+<p><code>@EnableWebSocket</code></p>
+</li>
+<li>
+<p><code>@EnableWebSocketMessageBroker</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_meta_infacross_configuration"><a class="anchor" href="#_meta_infacross_configuration"></a>META-INF/across.configuration</h4>
+<div class="paragraph">
+<p>Across 3.0.0 externalizes some of its configuration in a <code>META-INF/across.configuration</code> properties file.
+This is especially used for auto-configuration and configuration validation settings.</p>
+</div>
+<div class="paragraph">
+<p>Please see the <a href="../../across-autoconfigure/1.0.2/index.html#across-configuration" class="page">Across reference documentation section</a> for a full description of the configuration file and what you can do with it.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuration_validation"><a class="anchor" href="#_configuration_validation"></a>Configuration validation</h3>
+<div class="paragraph">
+<p>Across now attempts to validate your configuration when starting.
+It will check for the presence of configuration classes in places where they should not be.
+This could be using a configuration class on either the application level or in a module, where a different module already handles that particular bit of configuration.</p>
+</div>
+<div class="paragraph">
+<p>Bootstrapping your application with a bad configuration will fail.</p>
+</div>
+<div class="paragraph">
+<div class="title">Better error messages</div>
+<p>One of the additions in Across 3.0.0 is the new failure analyzers.
+When you are using <code>@AcrossApplication</code> and executing as a Spring Boot application, you should receive a more readable error messages with specific information on the problem.</p>
+</div>
+<div class="paragraph">
+<div class="title">@ComponentScan on your application configuration</div>
+<p>An example is that bootstrapping will fail if a <code>@ComponentScan</code> is detected on your <code>@AcrossApplication</code> class, where that component scan would conflict with the application module package.
+It is possible that in certain applications this would not cause an actual problem, it is however still considered a bad practice and an invalid configuration.</p>
+</div>
+<div class="paragraph">
+<div class="title">Disabling configuration validation</div>
+<p>You can disable configuration validation - for example in production - by setting the property <code>across.configuration.validate</code> to <code>false</code>.
+We strongly advise you to leave it on during development mode as it can help you avoid common configuration mistakes.</p>
+</div>
+<div class="paragraph">
+<div class="title">Adding configuration validation</div>
+<p>It&#8217;s possible to configure your own illegal configurations in the <code>META-INF/across.configuration</code> file.
+This is especially useful for shared modules that activate application-level features.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_multiple_datasources"><a class="anchor" href="#_multiple_datasources"></a>Multiple datasources</h3>
+<div class="paragraph">
+<p>If your application has multiple datasources, it is now required that one of them is marked as <code>@Primary</code>.
+It is best to have a specific datasoure named <code>acrossDataSource</code> as well to mark the datasource that should be used for the core Across schema and the standard modules.</p>
+</div>
+<div class="paragraph">
+<p>Though not strictly required, you usually want to mark the <code>acrossDataSource</code> as the <code>@Primary</code> datasource.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example multiple datasource configuration with Spring Boot</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+@Primary
+@ConfigurationProperties("app.datasource.across")
+public DataSourceProperties acrossDataSourceProperties() {
+    return new DataSourceProperties();
+}
+
+@Bean
+@Primary
+@ConfigurationProperties("app.datasource.across")
+public DataSource acrossDataSource() {
+    return acrossDataSourceProperties().initializeDataSourceBuilder().build();
+}
+
+@Bean
+@ConfigurationProperties("app.datasource.bar")
+public DataSourceProperties barDataSourceProperties() {
+    return new DataSourceProperties();
+}
+
+@Bean
+@ConfigurationProperties("app.datasource.bar")
+public DataSource barDataSource() {
+    return barDataSourceProperties().initializeDataSourceBuilder().build();
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_event_handling"><a class="anchor" href="#_new_event_handling"></a>New event handling</h3>
+<div class="paragraph">
+<p>The internal event handling system has been entirely rewritten and now builds on top of the default Spring Framework event handling infrastructure.
+Instead of the Across-specific <code>@Event</code>, the Spring Framework <code>@EventListener</code> should now be used.</p>
+</div>
+<div class="paragraph">
+<p>Apart from how events are treated internally, there is no difference anymore in handling Across specific or regular Spring Framework events.</p>
+</div>
+<div class="paragraph">
+<p>Most old event related classes have simply been deprecated, and breaking changes have been kept as limited as possible.
+In simple applications no changes would be required for this release.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example @Event to @EventListener</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Across Platform 2.0.x
+@Event
+public void handle( @EventName("eventName") MyEvent myEvent ) {
+}
+
+// Across Platform 2.1.x
+@EventListener(condition = "#myEvent.eventName == 'myEvent'")
+public void handle( MyEvent myEvent ) {
+    // Called if the event is of type MyEvent
+    // and property 'eventName' has the value 'myEvent'
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the <a href="#deprecations">deprecations</a> section for a list of the event-related deprecations and how to replace them.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Generic event types are handled differently with the new system, where in the past <code>SomeEvent&lt;Object&gt;</code> would have worked, the only working (and more correct) signature is now <code>SomeEvent&lt;? extends Object&gt;</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">New available features</div>
+<p>Due to this refactoring some new features are now also available:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>using <code>@TransactionalEventListener</code></p>
+</li>
+<li>
+<p>explicitly order individual event handler methods using <code>@Order</code> or <code>@OrderInModule</code></p>
+</li>
+<li>
+<p>event listener methods can have a return value which will be published as a new event</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Please read the <a href="../../across/2.1.4-dev/developing-modules/events.html" class="page">Across reference documentation section</a> for a full overview of all features.</p>
+</div>
+<div class="paragraph">
+<div class="title">Removal of MBassador dependency</div>
+<p>The MBassador dependency - responsible for the previous event bus implementation - has been removed entirely.
+Any listener methods that were directly using MBassador annotations will have to be rewritten as an <code>@EventListener</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="_across_bootstrap_events"><a class="anchor" href="#_across_bootstrap_events"></a>Across bootstrap events</h4>
+<div class="paragraph">
+<p>One of the breaking changes with the new event handling infrastructure is that it is no longer possible to use regular <code>@Event</code> (or <code>@EventListener</code>) to intercept Across bootstrap related events from the parent application class.
+If you want to handle bootstrap related events from a parent <code>ApplicationContext</code>, you should do so in a component implementing the <code>AcrossLifecycleListener</code> interface.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Using <code>AcrossLifecycleListener</code> to modify the Across context configuration from a parent <code>ApplicationContext</code> (eg the <code>@AcrossApplication</code> class) is not required.
+Instead you can use the <code>AcrossBootstrapConfigurer</code> interface on one ore more of your components, which was introduced especially for this purpose.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_moduleconfiguration"><a class="anchor" href="#_moduleconfiguration"></a>@ModuleConfiguration</h3>
+<div class="paragraph">
+<p>The internal processing of <code>@ModuleConfiguration</code> classes - module extensions provided by other modules - has been changed.
+This was necessary to fix issues with incorrect handling of conditionals on these <code>@ModuleConfiguration</code> classes.</p>
+</div>
+<div class="paragraph">
+<p>This introduces some possibly breaking changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@ModuleConfiguration</code> classes are now always <code>@Configuration</code> classes as well, this means they would also be processed by regular component scans, where in the past they might not have been</p>
+</li>
+<li>
+<p><code>@ModuleConfiguration</code> classes are only scanned for in the <code>extensions</code> package, any <code>@ModuleConfiguration</code> class in a <code>config</code> package will now be loaded in the original module, instead of correctly treated as a module configuration extension</p>
+</li>
+<li>
+<p>import order has changed: module extensions will now always be imported before any other annotated classes (and before any injected Spring Boot auto-configuration classes)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_new_conditionals"><a class="anchor" href="#_new_conditionals"></a>New conditionals</h3>
+<div class="paragraph">
+<p>Across 3.0.0 introduces some new conditionals:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>@ConditionalOnAcrossModule</code></dt>
+<dd>
+<p>Use this annotation when you want to check for the presence or absence of a specific Across module.
+This replaces the use of <code>@AcrossDepends</code> on regular components.
+<code>@AcrossDepends</code> should now only be used on module descriptors, and you will see a warning printed when it is used on components.</p>
+</dd>
+<dt class="hdlist1"><code>@ConditionalOnAutoConfiguration</code></dt>
+<dd>
+<p>Use this conditional if you want to check if an auto-configuration class has been loaded anywhere in the Across application.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_acrossmodule_component_scan"><a class="anchor" href="#_acrossmodule_component_scan"></a>AcrossModule component scan</h3>
+<div class="paragraph">
+<p>The default <code>AcrossModule</code> still only scans the <code>config</code> package by default.
+However, a very common case is the behaviour of the dynamic modules: all child packages are scanned for components, with the exception of <code>extensions</code> and <code>installers</code>.
+The former contains components for module extensions, the latter installers and related components.</p>
+</div>
+<div class="paragraph">
+<p>A new helper method has been added to quickly configure an Across module with this behaviour.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example AcrossModule scanning all child packages</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MyModule extends AcrossModule {
+    public static final String NAME = "MyModule";
+
+    @Override
+    public String getName() {
+        return NAME;
+    }
+
+    @Override
+    protected void registerDefaultApplicationContextConfigurers( Set&lt;ApplicationContextConfigurer&gt; contextConfigurers ) {
+        contextConfigurers.add( ComponentScanConfigurer.forAcrossModule( MyModule.class ) );
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deprecations"><a class="anchor" href="#deprecations"></a>Deprecations</h3>
+<div class="paragraph">
+<p>The following is a list of classes that have been deprecated in Across 3.0.0:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>StringToDateConverter</code></dt>
+<dd>
+<p>A replacement implementation <code>StringToDateTimeConverter</code> is available that also supports the Java 8 time implementations.</p>
+</dd>
+<dt class="hdlist1"><code>AcrossEvent</code></dt>
+<dd>
+<p>It is not required anymore for an event type to implement this marker interface.</p>
+</dd>
+<dt class="hdlist1"><code>@Event</code></dt>
+<dd>
+<p>Use the Spring Framework <code>@EventListener</code> instead.</p>
+</dd>
+<dt class="hdlist1"><code>@EventName</code></dt>
+<dd>
+<p>Use a <code>conditional</code> attribute on your <code>@EventListener</code> instead.</p>
+</dd>
+<dt class="hdlist1"><code>ParameterizedAcrossEvent</code></dt>
+<dd>
+<p>Implement the Spring Framework <code>ResolvableTypeProvider</code> interface instead.</p>
+</dd>
+<dt class="hdlist1"><code>AcrossEventPublisher</code></dt>
+<dd>
+<p>Use the Spring Framework <code>ApplicationEventPublisher</code> instead.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_across_web"><a class="anchor" href="#_across_web"></a>Across Web</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This chapter lists some important - possibly breaking - changes in Across Web support (provided by AcrossWebModule).</p>
+</div>
+<div class="sect2">
+<h3 id="_interceptor_configuration"><a class="anchor" href="#_interceptor_configuration"></a>Interceptor configuration</h3>
+<div class="paragraph">
+<p><code>PrefixingHandlerMappingConfigurer</code> can no longer be applied to the default AcrossWebModule, use a regular <code>WebMvcConfigurer</code> to add interceptors instead.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>different prefixed handler mappings (eg. AdminWebModule) still require the use of <code>PrefixingHandlerMappingConfigurer</code> for adding interceptors</p>
+</li>
+<li>
+<p>if you want to add an interceptor to all controllers, you should implement both <code>WebMvcConfigurer</code> and <code>PrefixingHandlerMappingConfigurer</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_menu_building"><a class="anchor" href="#_menu_building"></a>Menu building</h3>
+<div class="paragraph">
+<p>The menu infrastructure support has been optimized to fix some technical and functional issues with the moving of path based menu items.
+Some code has been deprecated and still works as before, alongside the addition of new improved features.</p>
+</div>
+<div class="paragraph">
+<p>Most important (breaking) changes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>MenuSelector</code> factory methods have been moved from the <code>Menu</code> to <code>MenuSelector</code> class</p>
+</li>
+<li>
+<p>some rarely used methods on <code>PathBasedMenuBuilder</code>, <code>PathBasedMenuItemBuilder</code> and <code>BuildMenuEvent</code> have been removed</p>
+</li>
+<li>
+<p><code>BuildMenuFinishedEvent</code> has been removed, modules requiring this functionality should now register a <code>Menu</code> post-processor on the <code>BuildMenuEvent</code> instead</p>
+</li>
+<li>
+<p>renamed methods on <code>BuildMenuEvent</code>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>setSelector()</code> &#8594; <code>setMenuSelector()</code>, <code>getSelector()</code> &#8594; <code>getMenuSelector()</code></p>
+</li>
+<li>
+<p><code>forMenu()</code> &#8594; <code>isForMenuOfType()</code></p>
+</li>
+<li>
+<p>the unreliable <code>move()</code> method for menu items has been deprecated, use the new <code>changeItemPath()</code> or <code>item().changePathTo()</code> instead</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <a href="../../across/2.1.4-dev/across-web/web-views/working-with-menus.html" class="page">reference documentation regarding menu building</a> has been rewritten completely, we strongly advise you to read the documentation and update your code accordingly.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_multipart_uploads"><a class="anchor" href="#_multipart_uploads"></a>Multipart uploads</h3>
+<div class="paragraph">
+<p>The <code>MultipartProperties</code> from Spring Boot are now being used for multipart configuration.
+This means different property names should be used for custom configuration.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>replace <code>acrossWebModule.multipart.auto-configure</code> with <code>spring.http.multipart.enabled</code></p>
+</li>
+<li>
+<p>replace <code>acrossWebModule.multipart.settings.*</code> with the equivalent <code>spring.http.multipart.*</code> properties</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Some default settings - for example maximum file size - might have changed as well.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example changing the maximum multipart file size</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">spring:
+  http:
+    multipart:
+      max-file-size: 10MB</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_across_standard_modules"><a class="anchor" href="#_across_standard_modules"></a>Across Standard Modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following section applies to the breaking changes in the standard modules.
+These instructions are only relevant if you use these modules in your applications.</p>
+</div>
+<div class="sect2">
+<h3 id="_acrosshibernatejpamodule"><a class="anchor" href="#_acrosshibernatejpamodule"></a>AcrossHibernateJpaModule</h3>
+<div class="paragraph">
+<p>The module has undergone significant changes to increase compatibility with the Spring Data JPA starter.
+When plugging a single AcrossHibernateJpaModule in an application it will now transparently take over the starter JPA support on the application module.</p>
+</div>
+<div class="paragraph">
+<p>Most important changes include:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the default physical naming strategy being used by Hibernate has changed from a Hibernate default to a Spring Boot default</p>
+<div class="ulist">
+<ul>
+<li>
+<p>this can cause generated queries to be wrong (for example when having a reserved keyword as a table name)</p>
+</li>
+<li>
+<p>in case of problems, you can revert to the old strategy by setting <code>acrossHibernate.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>a <code>PlatformTransactionManager</code> is now always created</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the configuration property to disable the <code>PlatformTransactionManager</code> has been removed</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>in addition a <code>TransactionTemplate</code> bean is now also created and exposed</p>
+</li>
+<li>
+<p>it’s now also possible to specify packages to scan for entities by injecting an <code>@EntityScan</code> annotated class into the AcrossHibernateJpaModule</p>
+</li>
+<li>
+<p>the default AcrossHibernateJpaModule will expose its relevant beans as primary unless specified otherwise</p>
+<div class="ulist">
+<ul>
+<li>
+<p>any module can take over the primary role by setting <code>acrossHibernate.primary=false</code> and <code>myModule.primary=true</code></p>
+</li>
+<li>
+<p>the primary module will also create a <code>transactionManager</code> and <code>transationTemplate</code> alias for the corresponding beans it exposes</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See the <a href="../../hibernate-jpa-module/3.0.0/index.html#_3_0_0_release" class="page">AcrossHibernateJpaModule documentation</a> for a full list of release notes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_springsecuritymodule"><a class="anchor" href="#_springsecuritymodule"></a>SpringSecurityModule</h3>
+<div class="paragraph">
+<p>SpringSecurityModule now re-uses Spring Boot security configuration and inspects <code>SecurityProperties</code> for default settings.
+As a result, additional security might be activated in your application, where previously it was not (see below).</p>
+</div>
+<div class="paragraph">
+<p>There are now more security filters applied, possibly with a different ordering than before.
+It is advised to review and test the security configuration of your applications, to ensure it still works as expected.</p>
+</div>
+<div class="paragraph">
+<div class="title">Basic authentication</div>
+<p>It is now possible to activate basic authentication for an entire application by setting <code>security.basic.enabled</code> to <code>true</code>.
+Unlike a standard Spring Boot application, this is not enabled by default in an Across application.
+The main reason for the latter is to ensure backwards compatibility with previous releases.</p>
+</div>
+<div class="paragraph">
+<p>The different <code>SecurityProperties</code> allow you to configure a default user, password and role.</p>
+</div>
+<div class="paragraph">
+<div class="title">Global AuthenticationManager</div>
+<p>Any class wanting to change the <code>AuthenticationManagerBuilder</code> must now be annotated with <code>@EnableGlobalAuthentication</code>.
+Configuration registered as module extension in SpringSecurityModule and simply auto-wiring the <code>AuthenticationManagerBuilder</code> will no longer work.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example global authentication manager customization</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ModuleConfiguration(SpringSecurityModule.NAME)
+@EnableGlobalAuthentication                     // required
+public class AuthenticationConfiguration
+{
+	@Autowired
+	public void configureGlobal( AuthenticationManagerBuilder auth ) throws Exception {
+		auth.inMemoryAuthentication()
+		    .withUser( "admin" ).password( "admin" )
+		    .authorities( new SimpleGrantedAuthority( "access administration" ) );
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<div class="title">Integration with Actuator</div>
+<p>Actuator endpoints are now always secured by default, unless you explicitly set <code>management.security.enabled</code> to <code>false</code>.
+Previously the security configuration for Actuator was simply ignored, whereas now it should be applied as expected.</p>
+</div>
+<div class="paragraph">
+<div class="title">Integration with H2 Console</div>
+<p>The H2 Web Console (usually <code>/h2-console</code>) will now be secured by default, unless you explicitly set <code>security.basic.enabled</code> to <code>false</code>.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="../../spring-security-module/3.0.2/index.html#_3_0_0_release" class="page">SpringSecurityModule documentation</a> for a full list of release notes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_bootstrapuimodule"><a class="anchor" href="#_bootstrapuimodule"></a>BootstrapUiModule</h3>
+<div class="paragraph">
+<p>BootstrapUiModule has mainly been updated with new features.
+The following are the most important updates from a migration point of view:</p>
+</div>
+<div class="paragraph">
+<div class="title">BootstrapUiFactory</div>
+<p>Direct use of <code>BootstrapUiFactory</code> or <code>BootstrapUiComponentFactory</code> is now discouraged, these interfaces have been deprecated.
+Use the stateless <code>BootstrapUiBuilders</code> facade instead.</p>
+</div>
+<div class="paragraph">
+<div class="title">FormGroupElement</div>
+<p><code>FormGroupElement</code> has been refactored to support more descriptions:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>tooltip</code> can be set which will be added to the label - after the label text and required indicator</p>
+</li>
+<li>
+<p>a <code>descriptionBlock</code> can be set which will be added to the group before the control</p>
+</li>
+<li>
+<p>a <code>helpBlock</code> can be set which will be added to the group after the control</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The property <code>renderHelpBlockBeforeControl</code> has been removed as the <code>descriptionBlock</code> is always rendered before the control, and the <code>helpBlock</code> always after the control.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="../../bootstrap-ui-module/2.2.0/releases/2.x.html#2-0-1" class="page">BootstrapUiModule documentation</a> for a full list of release notes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_adminwebmodule"><a class="anchor" href="#_adminwebmodule"></a>AdminWebModule</h3>
+<div class="paragraph">
+<p><code>EntityAdminMenu</code> and <code>EntityAdminMenuEvent</code> have been deprecated.
+These classes were never supposed to be in the AdminWebModule package space, as they belong to EntityModule functionality.
+To migrate, simply rename the import package from <code>com.foreach.across.modules.adminweb.menu</code> to <code>com.foreach.across.modules.entity.views.menu</code>.</p>
+</div>
+<div class="paragraph">
+<p>New implementations have been added to EntityModule.
+Migration is strongly advised, though no code changes are required in this release.</p>
+</div>
+<div class="paragraph">
+<p>See the <a href="../../admin-web-module/3.1.0/index.html#_3_0_1_release" class="page">AdminWebModule documentation</a> for a full list of release notes.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_entitymodule"><a class="anchor" href="#_entitymodule"></a>EntityModule</h3>
+<div class="paragraph">
+<p>EntityModule has mainly been updated with new features.
+See the <a href="../../entity-module/4.0.0-dev/releases/3.x.html#3-0-1" class="page">EntityModule documentation</a> for a full list of release notes.</p>
+</div>
+<div class="paragraph">
+<p>The following are the most important updates from a migration point of view:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>the module classpath dependencies have been reworked, allowing EntityModule to be used without either AdminWebModule or BootstrapUiModule (with limited feature availability)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>as a result those dependencies are no longer pulled in transitively, this might require you to add them manually to existing applications</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>EntityModule no longer creates its own <code>Validator</code> instance, the <code>registerForMvc</code> related settings have been removed.
+The validator used by EntityModule is always the default MVC validator.</p>
+</li>
+<li>
+<p>New implementations of <code>EntityAdminMenu</code> and <code>EntityAdminMenuEvent</code> to replace the equivalent classes from AdminWebModule.
+You may consider this mostly a package rename for these classes.</p>
+</li>
+<li>
+<p>The <code>descriptionBlock</code> of a <code>FormGroupElement</code> for a property is now always rendered before the control, in accordance with the changes in BootstrapUiModule.
+New message codes have been added to support both <code>tooltip</code> and <code>helpBlock</code> for a property.
+The same message codes are also available for a <code>FieldsetFormElement</code>.</p>
+</li>
+<li>
+<p>By default <code>descriptionBlock</code>, <code>helpBlock</code> and <code>tooltip</code> are only added to a <code>FormGroupElement</code> or <code>FieldsetFormElement</code> in <code>ViewElementMode.FORM_WRITE</code>.</p>
+</li>
+<li>
+<p>The behaviour for control name prefixing when using an <code>EntityViewCommand</code> has changed.
+Controls are prefixed with <code>entity.</code> only if there is an additional builder context attribute set to <code>true</code> (attribute name <code>EntityPropertyControlNamePostProcessor.PREFIX_CONTROL_NAMES</code>).
+This only done by default in the <code>PropertyRenderingViewProcessor</code>, used by the default entity views.
+This change can cause side effects in existing custom forms, developers are encouraged to review those.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_linking_to_entity_views"><a class="anchor" href="#_linking_to_entity_views"></a>Linking to entity views</h4>
+<div class="paragraph">
+<p>The new version introduces a new approach for linking to entity views, which might result in breaking changes in some application.
+The <code>EntityLinkBuilder</code> implementation has been deprecated.
+A new <code>EntityViewLinks</code> component has been added as an entry point for building links to entity views.</p>
+</div>
+<div class="paragraph">
+<p>An <code>EntityConfiguration</code> contains an <code>EntityViewLinkBuilder</code> attribute that returns a link builder for that particular entity type.
+The older <code>EntityLinkBuilder</code> attribute is also kept for backwards compatibility, but returns the same instance of the newer implementation.</p>
+</div>
+<div class="paragraph">
+<p>It is best to review your code and make changes accordingly, even though the new implementation has been kept as backwards compatible as possible.</p>
+</div>
+<div class="paragraph">
+<p>Within the context of rendering an entity view, you can make the following changes:</p>
+</div>
+<div class="listingblock">
+<div class="title">Comparing old and new link building</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String url;
+EntityViewContext entityViewContext;
+MyEntity entity;
+
+// -- Retrieving the link builder for the entity type
+EntityLinkBuilder oldBuilder = entityViewContext.getLinkBuilder();      // OLD
+EntityViewLinkBuilder newBuilder = entityViewContext.getLinkBuilder();  // NEW
+
+// -- Linking to the list view
+// url: /entities/myEntity
+url = oldBuilder.overview();                                            // OLD
+url = newBuilder.listView().toUriString();                              // NEW
+
+// -- Linking to the create view
+// url: /entities/myEntity/create
+url = oldBuilder.create();                                              // OLD
+url = newBuilder.createView().toUriString();                            // NEW
+
+// -- Linking to the update view
+// url: /entities/myEntity/1/update
+url = oldBuilder.update( entity );                                      // OLD
+url = newBuilder.forInstance( entity ).updateView().toUriString();      // NEW
+
+// -- Linking to a custom view
+// url: /entities/myEntity/1?view=customViewName
+url = UriComponentsBuilder.fromUriString( oldBuilder.view( entity ) )
+                          .queryParam( "view", "customViewName" )
+                          .toUriString();                               // OLD
+
+url = newBuilder.forInstance( entity )
+                .withViewName( "customViewName" )
+                .toUriString();                                         // NEW
+
+// -- Linking to an association list view
+// url: /entities/myEntity/1/associations/associatedItems/
+url = association.getTargetEntityConfiguration()
+                 .getAttribute( EntityLinkBuilder.class )
+                 .asAssociationFor( oldBuilder, entity )
+                 .overview();                                           // OLD
+
+url = newBuilder.forInstance( entity )
+                .association( AssociatedItem.class )
+                .toUriString();                                         // NEW
+
+// -- Linking to a single associated item update view
+// url: /entities/myEntity/1/associations/associatedItems/2/update
+url = association.getTargetEntityConfiguration()
+                 .getAttribute( EntityLinkBuilder.class )
+                 .asAssociationFor( oldBuilder, entity )
+                 .update( associatedItem );                             // OLD
+
+url = newBuilder.forInstance( entity )
+                .association( associatedItem )
+                .updateView()
+                .toUriString();                                         // NEW</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The new <code>EntityViewLinkBuilder</code> has a more fluent API that allows customizing the URL before converting it to a <code>String</code>.
+It also has some short-hand methods for commonly used entity view related parameters.
+Every method call results in a new instance being created, so you will not make inadvertent changes to an existing link builder.</p>
+</div>
+<div class="listingblock">
+<div class="title">Useful methods of the new EntityViewLinkBuilder</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// append a custom path segment
+.slash( String path )
+// append query parameter
+.withQueryParam( String param, Object... values )
+// set a from URL ('from' query parameter)
+.withFromUrl( String url )
+// set a partial fragment ('_partial' query parameter)
+.withPartial( String fragment )
+// set a custom view name ('view' query parameter)
+.withViewName( String viewName )
+
+// return the unprocessed URI (eg. '@adminWeb:/entities/myEntity')
+.toString()
+// returning the processed URI (eg. '/admin/entities/myEntity')
+.toUriString()
+// create a new UriComponentsBuilder with the settings
+.toUriComponentsBuilder()
+// return as URI
+.toUri()
+// return as UriComponents
+.toUriComponents()
+
+// return the original EntityViewLinks
+.root()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A new <code>EntityViewLinks</code> component is also available to generate links to entity views from anywhere in your code.</p>
+</div>
+<div class="listingblock">
+<div class="title">Using EntityViewLinks central component</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+EntityViewLinks links;
+
+// link to a list view
+links.linkTo( MyEntity.class ).toUriString();
+
+// link to single entity view
+links.linkTo( MyEntity.class ).forInstance( myEntity ).toUriString();
+links.linkTo( MyEntity.class ).withId( 1 ).toUriString();
+// or shorter...
+links.linkTo( myEntity ).toUriString();
+links.linkTo( myEntity ).updateView().toUriString();
+
+// link to associations
+links.linkTo( myEntity ).association( AssociatedEntity.class ).toUriString();
+links.linkTo( myEntity ).association( associatedItem ).toUriString();</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contributed_modules"><a class="anchor" href="#_contributed_modules"></a>Contributed Modules</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Adding additional spring and auto-configuration compatibility potentially incurs issues with contributed/older modules.
+In the next sections, known issues will be listed.</p>
+</div>
+<div class="sect2">
+<h3 id="_imageserver"><a class="anchor" href="#_imageserver"></a>ImageServer</h3>
+<div class="paragraph">
+<p>The following section lists migration issues with the current version of ImageServer.</p>
+</div>
+<div class="sect3">
+<h4 id="_handler_mapping"><a class="anchor" href="#_handler_mapping"></a>Handler mapping</h4>
+<div class="paragraph">
+<p>ImageServer specific paths are registered but can no longer be resolved.
+This is because an additional path resolver (<code>/**</code>) has been added through spring compatibility, which accepts <em>any</em> path and has a higher precedence than the ImageServer handler mappings.
+This will be fixed in a later release.</p>
+</div>
+<div class="paragraph">
+<p>To work around the issue, the wildcard static resources path must be removed by setting the property:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-properties hljs" data-lang="properties"># Manually specify a static resource path (remove the default /**)
+spring.mvc.static-path-pattern=</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_missing_database_columns"><a class="anchor" href="#_missing_database_columns"></a>Missing database columns</h4>
+<div class="paragraph">
+<p>ImageServer requires that the Hibernate default naming strategy is used.
+You must manually force your application to use the compatible physical naming strategy.
+Please see the <a href="#_acrosshibernatejpamodule">changes to AcrossHibernateModule</a> for all details.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../_/js/site.js"></script>
+<script src="../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

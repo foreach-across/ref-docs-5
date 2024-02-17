@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Documents &amp;amp; Forms Module - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="dynamic-forms-module" data-version="master">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Module: Documents &amp; Forms</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="releases/0.2.x.html#0-2-x">0.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="releases/0.1.x.html#0-1-x">0.1.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="releases/0.0.x.html#0-0-x">0.0.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="document-definitions.html">Designing a document</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="definitions/creating-a-dataset.html">Creating a definition dataset</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="definitions/creating-a-document-definition.html">Creating a document definition</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="definitions/messages-and-labels.html">Messages and translations</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="definitions/defining-views.html">Defining document views</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="definitions/list-view.html">List view</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="definitions/list-summary-view.html">List summary view</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="definitions/definition-versions.html">Definition versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="field-types/index.html">Dynamic field types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/string.html">Strings</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/number.html">Numbers &amp; Currency</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/boolean.html">Booleans</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/date.html">Dates and Times</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/fieldset.html">Fieldsets</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/file.html">Files</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/enumeration.html">Fixed value fields</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/linked-entity.html">Linked entities</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="field-types/linked-document.html">Linked documents</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="field-types/calculation.html">Calculated fields</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="field-types/calculation-context.html">Customizing the field evaluation context</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="definitions/creating-a-type-definition.html">Creating a custom type</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="validators/index.html">Dynamic field validators</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="validators/creating-a-field-validator.html">Creating a custom field validator</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="working-with-documents/index.html">Working with documents</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="working-with-documents/using-documents-in-code.html">Using documents in code</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="working-with-documents/document-versions.html">Document versions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">Security</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="security/customizing-allowable-actions.html">Customizing allowable actions</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="import-export/index.html">Import and export</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="import-export/importing-definitions.html">Importing definitions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="import-export/importing-documents.html">Importing documents</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="extending-definition-types.html">Extending definition types</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="services-and-components.html">Services and components</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cheat-sheet.html">Cheat sheet</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <span class="nav-text">General</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="guides/general/creating-a-simple-frontend-form.html">Creating a simple frontend form</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Documents &amp; Forms</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="index.html">Module: Documents & Forms</a></li>
+    <li class="crumb"><a href="index.html">Dynamic Documents &amp; Forms Module</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">master</button>
+  <div class="versions-menu">
+    <a class="version is-current" href="index.html">master</a>
+    <a class="version" href="0.0.3/index.html">0.0.3</a>
+    <a class="version" href="0.0.2/index.html">0.0.2</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-dynamic-forms-module/edit/master/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Dynamic Documents &amp; Forms Module</h1>
+    <div class="sect1">
+<h2 id="_general_information"><a class="anchor" href="#_general_information"></a>General information</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_artifact"><a class="anchor" href="#_artifact"></a>.1. Artifact</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;com.foreach.across.modules&lt;/groupId&gt;
+		&lt;artifactId&gt;dynamic-forms-module&lt;/artifactId&gt;
+		&lt;version&gt;0.0.2.RELEASE&lt;/version&gt;
+	&lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_module_dependencies"><a class="anchor" href="#_module_dependencies"></a>.2. Module dependencies</h3>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Module dependencies</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Module</th>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>EntityModule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">required</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enables the ability to define and render custom forms.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>AcrossHibernateJpaModule</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">required</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Required for the JPA domain model.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_about_the_dynamicformsmodule"><a class="anchor" href="#_about_the_dynamicformsmodule"></a>About the DynamicFormsModule</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>DynamicFormsModule</code> enables users to manage custom documents, which can be used to create a custom form, or add additional fields to an existing form.</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">It is useful for</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>defining documents at runtime</p>
+</li>
+<li>
+<p>quickly changing data models</p>
+</li>
+<li>
+<p>adding metadata to entities</p>
+</li>
+<li>
+<p>little code interaction is required for documents that are defined</p>
+<div class="ulist">
+<ul>
+<li>
+<p>logic should not be tightly coupled with documents as they are ever-changing</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>working with a small data sets</p>
+<div class="ulist">
+<ul>
+<li>
+<p>depending on performance requirements</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">It is not advised for</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>replacing actual entities</p>
+</li>
+<li>
+<p>using documents that must never be modified</p>
+</li>
+<li>
+<p>working with documents being mostly steered through code</p>
+<div class="ulist">
+<ul>
+<li>
+<p>logic should not be tightly coupled with documents as they can be changed at runtime.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>working with large data sets</p>
+<div class="ulist">
+<ul>
+<li>
+<p>depending on performance requirements</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_documents"><a class="anchor" href="#_documents"></a>Documents</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Documents are the base building blocks to create manageable groups of fields.
+They are split up in various parts, being a <a href="#document-definition">template</a> for a document, the <a href="#type-definition">types</a> that can be used in a document and filled in <a href="#document-data">data</a> for a document.</p>
+</div>
+<div class="paragraph">
+<p>A document definition is a template defining the fields and sets of fields that the document represents.
+The document holds the content for the various fields of its definition.</p>
+</div>
+<div class="sect2">
+<h3 id="document-definition"><a class="anchor" href="#document-definition"></a>.1. Document definition</h3>
+<div class="paragraph">
+<p>Document definitions represent groups of fields and are in turn grouped within datasets.
+Each definition is defined as a <code>RawDocumentDefinition</code>, which is the base representation of a document template in a <code>json</code> or <code>yaml</code> format.
+A <code>RawDocumentDefinition</code> can be converted to a <code>DynamicDocumentDefinition</code>, which represents a fully usable document.</p>
+</div>
+<div class="paragraph">
+<p>Conversion is done through the <code>DynamicDocumentDefinitionBuilder</code>, which creates property descriptors with the correct type and validation for the various fields defined in the document definition.
+Aside of creating the <code>DynamicDocumentDefinition</code>, it will also ensure that document definitions have a correct configuration.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example document definition</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">document-definition:
+  name: Event <i class="conum" data-value="1"></i><b>(1)</b>
+  content:
+  - id: location <i class="conum" data-value="2"></i><b>(2)</b>
+    type: string
+    label: Location
+  - id: date <i class="conum" data-value="2"></i><b>(2)</b>
+    type: date
+    label: Date</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We create a definition for an event.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>An event has 2 fields, being the location and date of the event.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="type-definition"><a class="anchor" href="#type-definition"></a>.2. Type definition</h3>
+<div class="paragraph">
+<p>Type definitions enable documents to use typed fields, as well as provide the necessary configuration for a specific field.
+The default type definitions are the building blocks to create new custom types and have a java representation.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Default types</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Backing java type</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>string</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a field containing a single line of text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>text</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>String.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text represents a field containing multiple lines of text.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>boolean</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Boolean.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents true or false</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>date</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LocalDate.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a specific year, month and day.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>time</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LocalTime.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a combination of hours, minutes, seconds, milliseconds and nanoseconds.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>datetime</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>LocalDateTime.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a specific point in time. Per se <code>datetime</code> is a combination of <code>date</code> and <code>time</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>number</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Long.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a whole number.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>decimal</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BigDecimal.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a decimal number. Can optionally define a precision.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>currency</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BigDecimal.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a value in a specific currency.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>percentage</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>BigDecimal.class</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a fraction. Optionally, the multiplier and precision can be specified.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>A type can also represent a group of fields.
+This enables the possibility to define custom data-types, without any code intervention.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example type definition</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">document-definition:
+  name: Sample document
+  types:
+  - id: address <i class="conum" data-value="1"></i><b>(1)</b>
+    base-type: fieldset
+    fields:
+    - id: street <i class="conum" data-value="2"></i><b>(2)</b>
+      type: string
+    - id: number <i class="conum" data-value="2"></i><b>(2)</b>
+      type: number
+    - id: zip-code <i class="conum" data-value="2"></i><b>(2)</b>
+      type: number
+      label: Zipcode
+    - id: city <i class="conum" data-value="2"></i><b>(2)</b>
+      type: string</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We define a custom <code>address</code> type.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>An address consists of a <code>street</code>, a house <code>number</code>, a <code>zip-code</code> and a <code>city</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="document-data"><a class="anchor" href="#document-data"></a>.3. Document data</h3>
+<div class="paragraph">
+<p>Document data holds the content for a specified document definition.</p>
+</div>
+<div class="listingblock">
+<div class="title">Example document data</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml"></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../_/js/site.js"></script>
+<script src="../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

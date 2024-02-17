@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thymeleaf integration - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="web-cms-module" data-version="0.2.0-SNAPSHOT">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Web CMS</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.2.x.html">0.2.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.1.x.html">0.1.x</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.0.x.html">0.0.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration-properties.html">Configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../domain-model/assets/index.html">Web CMS Asset model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../domain-model/assets/endpoint-url.html">Endpoints &amp; URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/pages/index.html">Web Pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/publication/index.html">Publications &amp; Articles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/images/index.html">Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/redirects/index.html">Redirects</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/menus/index.html">Menus</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Web Components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="component-types.html">Component types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-a-component-type.html">Creating a custom component</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-markers.html">Content markers</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="thymeleaf.html">Thymeleaf integration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../importing/index.html">Importing data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../importing/yaml-structure.html">YAML structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../multi-domain/index.html">Multi-domain support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/setup.html">Application configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/using-domains.html">Using domains</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/importing.html">Importing domain data</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/entitymodule-attributes.html">EntityModule attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/thymeleaf-dialect.html">Thymeleaf dialect</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/default-data.html">Default data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../performance-tuning/index.html">Performance tuning</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/creating-a-custom-asset.html">Creating a custom asset type</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Web CMS</span>
+    <span class="version">0.2.0-SNAPSHOT</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/5.1.0-SNAPSHOT/index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/3.1.0-SNAPSHOT/index.html">3.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.2.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Web CMS</a></li>
+    <li class="crumb"><a href="index.html">Web Components</a></li>
+    <li class="crumb"><a href="thymeleaf.html">Thymeleaf integration</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="versions-menu-toggle" title="Show other versions of page">0.2.0-SNAPSHOT</button>
+  <div class="versions-menu">
+    <a class="version is-current" href="thymeleaf.html">0.2.0-SNAPSHOT</a>
+    <a class="version" href="../../0.0.7/components/thymeleaf.html">0.0.7</a>
+    <a class="version" href="../../0.0.6/components/thymeleaf.html">0.0.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-web-cms-module/edit/master/docs/modules/ROOT/pages/components/thymeleaf.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Thymeleaf integration</h1>
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>WebCmsModule provides its own Thymeleaf dialect for working with components.
+It enables you to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>replace template fragments by component output</p>
+</li>
+<li>
+<p>auto-create components from templates based on the template content</p>
+</li>
+<li>
+<p>define placeholder content</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Thymeleaf dialect is a very powerful tool to convert your static templates into user modifiable components.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_html_attributes"><a class="anchor" href="#_html_attributes"></a>HTML attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Interacting with components is done by adding attributes to your template elements.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:component</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The body of the element will be replaced with the rendering of the component, if the component is found.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Specify the name of the scope in which the component should be looked for - if omitted wil look in the default scope and all parent scopes.
+When specified, only that scope will be queried unless <em>search-parent-scopes</em> is explicitly present.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:search-parent-scopes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Set explicitly to <code>false</code> if you only want the component to be looked up in the scope specified (or the default scope) but none of the parent scopes.
+Otherwise adding the attribute will ensure that parent scopes are always searched, even if an explicit <em>wcm:scope</em> was specified.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:always-replace</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If present the body of the element will always be replaced even if the component is not found.
+The actual (optional) value of this attribute is irrelevant.</p>
+<p class="tableblock">Default behaviour is to render the original template markup if a component is not found, use this attribute to force empty output instead.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:auto-create</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If present, the component will be auto-created with the element body as input parameters.
+ Optionally the attribute value can be be the scope name in which the component should be created.
+If no value is present, the value of <em>wcm:scope</em> will be used to determine the scope in which to create the component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Type key of the <code>WebCmsComponentType</code> of the component.
+This will only be used for auto-creation of a component.
+If no type is specified, generic markup (<strong>html</strong>) will be assumed.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:parent-create-include</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Relevant only during auto-creation of a possible parent component.
+If the parent component is being auto-created nested components would by default be inserted as content markers or added as <code>ProxyWebCmsComponentModel</code> members.
+By providing this attribute (the actual value is ignored) you indicate the output of the component should be inserted instead.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:parse-placeholders</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If present on an element attributed with <em>wcm:component</em>, the body of the element will always be parsed and all sections marked <em>wcm:placeholder</em> will be made available in the <code>WebCmsPlaceholderContentModel</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:placeholder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute to indicate that a section should be rendered to a placeholder.
+ The name of the placeholder is the value of the attribute.
+ Note that the element itself will also be part of the placeholder content, not just the body of the element.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:prop:{propertyName} / wcm:property:{propertyName}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute to set the property of a component.
+ The key contains the name of the property on the component and the value of the attribute will be applied to the property when the component is auto-created.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:meta:{propertyName} / wcm:metadata:{propertyName}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute to set a property on the metadata attached to a component.
+ The key contains the name of the property on the metadata attached to the component and the value of the attribute will be applied to the property when the component is auto-created.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">wcm:attr:{attributeName} / wcm:attribute:{attributeName}</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Attribute to register the value to either a property or metadata property on the component.
+ The value of the attribute will be applied to the property when the component is auto-created.
+ If the attribute name matches a property of the component, it will be applied to that property.
+ If not, it will be treated as a metadata property.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_rendering_a_component"><a class="anchor" href="#_rendering_a_component"></a>Rendering a component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can specify a component to render by just setting the name of the component as the value of the <em>wcm:component</em> attribute.</p>
+</div>
+<div class="listingblock">
+<div class="title">Simple rendering of component</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component"&gt;This markup will only be rendered if that component does not exist.&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the example above the entire component hierarchy for the request will be searched bottom-up for a component with that name.
+Only if that component does not exist will the original template be rendered.
+If the component is found, the content of the <em>div</em> element will be replaced, but the <em>div</em> element itself will remain.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can still use the standard Thymeleaf dialect (eg. <em>th:block</em> or <em>th:remove</em>) to manipulate the wrapping element.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="title">Replace the component body if the component is not found</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component" wcm:always-replace&gt;This markup will never be rendered.&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By adding the <em>wcm:always-replace</em> attribute you can ensure the original template markup will be suppressed.
+Even if the component is not found, the body of the <em>div</em> element will be empty.</p>
+</div>
+<div class="paragraph">
+<div class="title">Specifying a scope for the component</div>
+<p>In our original example all scopes will be traversed bottom-up to find the component.
+If you only want to look for the component in a specific scope, simply set the <em>wcm:scope</em> attribute.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component" wcm:scope="global"&gt;Replaced by a globally shared component.&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When set, the component will be looked for only in that scope (unless you also set <em>wcm:search-parent-scopes</em>).
+In our example we look for a component 'my-component' in the set of shared components.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A <code>WebCmsComponentModel</code> is also a <code>ViewElement</code> and can always be rendered using the <strong>across:view</strong> element from the AcrossWebDialect as well.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="paragraph">
+<p>This section contains a number of real-life examples for working with components from Thymeleaf.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;th:block wcm:component="page-header" wcm:scope="page" wcm:search-parent-scopes="false"&gt;
+    &lt;div class="l-page__title"&gt;Our title&lt;/div&gt;
+    &lt;p&gt;
+        Our text
+    &lt;/p&gt;
+&lt;/th&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Start by looking in the scope of the page asset, don&#8217;t look in the parent components even if you don&#8217;t find them in the page scope.
+If the component is not found, render the code that is written down in the thymeleaf template.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;th:block wcm:component="page-header" wcm:scope="page"&gt;
+    &lt;div class="l-page__title"&gt;Our title&lt;/div&gt;
+    &lt;p&gt;
+        Our text
+    &lt;/p&gt;
+&lt;/th&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Start by looking if the component exists in the page asset, but look in the parent scope(s) if you don&#8217;t find the component in the page scope.
+If the component is nowhere to be found, the content in the thymeleaf template itself is rendered.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;th:block wcm:component="page-header" wcm:scope="global"&gt;
+    &lt;div class="l-page__title"&gt;Our title&lt;/div&gt;
+    &lt;p&gt;
+        Our text
+    &lt;/p&gt;
+&lt;/th&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Look in the global scope for the component, skipping over any and all more granular scopes.
+If the component is nowhere to be found, the content in the thymeleaf template itself is rendered.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_auto_create_a_component_from_markup"><a class="anchor" href="#_auto_create_a_component_from_markup"></a>Auto-create a component from markup</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The presence of <em>wcm:auto-create</em> will automatically create a component for you if it does not yet exist.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component" wcm:auto-create&gt;This markup will only be rendered if that component does not exist.&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In our example we now create 'my-component' upon first rendering of the template.
+Because we did not specify an explicit component type, the default type will be used: a HTML <code>TextWebCmsComponentModel</code> will be created.
+The processed body of the <em>div</em> element will be set as the content of our text component.</p>
+</div>
+<div class="paragraph">
+<p>As with the component type, because we did not specify an explicit scope, the component will be added to the default scope: usually the asset being rendered.</p>
+</div>
+<div class="sect2">
+<h3 id="_specifying_component_type"><a class="anchor" href="#_specifying_component_type"></a>Specifying component type</h3>
+<div class="paragraph">
+<p>Adding a component type is done with the <em>wcm:type</em> attribute.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component" wcm:auto-create wcm:type="rich-text"&gt;This markup will only be rendered if that component does not exist.&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We still create a <code>TextWebCmsComponentModel</code>, except it will now be of rich-text type.
+The value of the <em>wcm:type</em> attribute must be a known <code>WebCmsComponentType</code> type key.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The component type you want to create must have a registered <code>WebCmsComponentAutoCreateStrategy</code> for auto-creation to be successful.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_specifying_creation_scope"><a class="anchor" href="#_specifying_creation_scope"></a>Specifying creation scope</h3>
+<div class="paragraph">
+<p>The <em>wcm:auto-create</em> attribute can optionally have a value.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component" wcm:auto-create="global"&gt;This markup will only be rendered if that component does not exist.&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In our example we look for <em>my-component</em> in the default scope and all its parents (including global).
+If the component is not found, we now auto-create it in the <em>global</em> scope instead of the default.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+You can combine the use of <em>wcm:scope</em> with a scope in <em>wcm:auto-create</em>.
+Be careful though because if you auto-create the component in a scope that is in fact not searched for the component, you will re-create on every request.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_specifying_properties_and_metadata"><a class="anchor" href="#_specifying_properties_and_metadata"></a>Specifying properties and metadata</h3>
+<div class="paragraph">
+<p>Several attributes are available to specify the value for properties of the component or metadata attached to the component.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;img wcm:component="someImage" wcm:type="image" wcm:auto-create
+     wcm:prop:sortIndex="10" wcm:attr:title="Image example"
+     wcm:meta:altText="An image of a deer" wcm:metadata:image="classpath:installers/deer.jpg" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the above example a component will be created of which both properties and metadata properties will be set on creation.
+In this case, the properties <code>sortIndex</code> and <code>title</code> of the <code>WebCmsComponentModel</code> will be modified as well as the properties <code>altText</code> and <code>image</code> on the metadata instance attached to the component.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Properties can also be defined using a nested element syntax for more complex use cases, for example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div id="attribute-elements" wcm:component="attribute-elements" wcm:type="image-with-alt" wcm:auto-create&gt;
+    &lt;wcm:component-attribute name="sortIndex" value="12"/&gt;
+    &lt;wcm:component-attribute th:if="${false}" name="sortIndex" value="13"/&gt;
+    &lt;wcm:component-property name="title" th:text="'Updated component title'"&gt;Component title&lt;/wcm:component-property&gt;
+    &lt;wcm:component-metadata name="altText"&gt;&lt;strong th:text="${5+6}"&gt;&lt;/strong&gt;[[${'numbers'}]]&lt;/wcm:component-metadata&gt;
+    This content should never show...
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_auto_creation_rules_and_scopes"><a class="anchor" href="#_auto_creation_rules_and_scopes"></a>Auto-creation rules and scopes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>if you don&#8217;t specify a component type - the default component type will be created</p>
+</li>
+<li>
+<p>if you don&#8217;t specify a scope on a component - a default scope will be used:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>outside a parent component the default scope will be <em>asset</em>, and parents will be searched if not specified within the <em>asset</em> scope.</p>
+</li>
+<li>
+<p>inside a parent component that is not a container: the default scope will be <em>asset</em> and parent scopes will be searched if not specified</p>
+</li>
+<li>
+<p>inside a parent component that is a container: the default scope will be the <em>container</em> and parents will <strong>not</strong> be searched</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>if your component is a container:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>any placeholders in the body will be added as placeholder child components and the body markup will refer to those components</p>
+</li>
+<li>
+<p>any scoped component will be added as a proxy component referring to the original scoped component and the body markup will refer to the proxy components</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Special scopes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>default</strong>: always refers to the lowest level - first one to perform the lookup (usually asset) - you would not normally use this scope name as it is the default if a scope name is omitted</p>
+</li>
+<li>
+<p><strong>asset</strong>: components attached to the current asset being rendered, usually an asset specific name (e.g. <strong>article</strong>) will be available as well, but both will refer to the same components</p>
+</li>
+<li>
+<p><strong>global</strong>: always refers to the global scope, components that have no owner and are shared across domain</p>
+</li>
+<li>
+<p><strong>domain</strong>: components that have no owner but are only available on the specific domain</p>
+</li>
+<li>
+<p><strong>container</strong>: this is a reserved scope name that ensures the component is added as a container member - you would not normally use this scope name as it is the default if omitted inside a container component</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>NOTE</strong>
+In a single domain configuration, scope <strong>domain</strong> will always be the same as scope <strong>global</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_placeholders_in_a_markup_component"><a class="anchor" href="#_using_placeholders_in_a_markup_component"></a>Using placeholders in a markup component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can define placeholder sections in your template and allow other components to include them.
+Using placeholders is handy for fixed dynamic content that is not a component in itself, but you would like to provide some flexibility on positioning the content.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component" wcm:parse-placeholders&gt;
+    Template content...
+    &lt;div wcm:placeholder="my-placeholder"&gt;Placeholder content&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you want your component to access placeholder content from the template, you must attribute your component element with <em>wcm:parse-placeholders</em>.
+When present, the original template markup will always be processed to generate the placeholder content.
+There is no limit to the number of placeholders defined in a segment, but be aware that those placeholders are only available within that section (eg. during the rendering of <em>my-component</em>).</p>
+</div>
+<div class="paragraph">
+<p>Any element attributed with <em>wcm:placeholder</em> defines placeholder content.
+The attribute value is the name of the placeholder.</p>
+</div>
+<div class="paragraph">
+<p>The element on which the attribute is present is also part of the placeholder content.
+In the example above the placeholder content would be: <code>&lt;div&gt;Placeholder content&lt;/div&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Rendering placeholder content in markup components</div>
+<p>The presence of <em>wcm:parse-placeholders</em> ensures that placeholder content will be processed and made available during rendering.
+Rendering the actual placeholder however is always up to the component.</p>
+</div>
+<div class="paragraph">
+<p>Markup components can render placeholders by using <a href="#components-placeholder-content-markers">placeholder content markers</a>.</p>
+</div>
+<div class="paragraph">
+<p>Assume <em>my-component</em> is a <code>TextWebCmsComponentModel</code> with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">My placeholder: @@wcm:placeholder(my-placeholder)@@
+My other placeholder: @@wcm:placeholder(my-other-placeholder)@@</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Upon rendering the template fragment specified above, the following output would be the result:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div&gt;
+    My placeholder: &lt;div&gt;Placeholder content&lt;/div&gt;
+    My other placeholder:
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Because there is no placeholder content <em>my-other-placeholder</em> defined, an empty string is rendered.</p>
+</div>
+<div class="paragraph">
+<div class="title">Example auto-creation of markup with a placeholder</div>
+<p>When rendering an existing component all markup outside the placeholders is simply ignored.
+When auto-creating the component however, that markup is still used to generate the default content of the component.</p>
+</div>
+<div class="paragraph">
+<p>Assume we auto-create our component:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component" wcm:parse-placeholders wcm:auto-create&gt;
+    Template content...
+    &lt;div wcm:placeholder="my-placeholder"&gt;Placeholder content&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This would result in a <code>TextWebCmsComponentModel</code> with the following content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Template content...
+@@wcm:placeholder(my-placeholder)@@</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_nesting_components"><a class="anchor" href="#_nesting_components"></a>Nesting components</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Like with placeholders, a markup component can include other components using <a href="#components-component-content-markers">component content markers</a>.</p>
+</div>
+<div class="paragraph">
+<p>Assume you have a <code>TextWebCmsComponentModel</code> with the following content: <code>My component: @@wcm:component(header,global,false)@@</code>.<br>
+And on the global level the <em>header</em> component is a <code>TextWebCmsComponentModel</code> with content <code>my header</code>.</p>
+</div>
+<div class="paragraph">
+<p>When rendering the first component, the output would be <code>My component: my header</code>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Component content marker parameters</div>
+<p>A component content marker always requires 3 attributes that are equivalents of the Thymeleaf dialect attributes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>component name (equivalent of <em>wcm:component</em>)</p>
+</li>
+<li>
+<p>initial scope to look for the component (equivalent of <em>wcm:scope</em>)</p>
+</li>
+<li>
+<p>true/false if parent scopes should or should not be searched (equivalent of <em>wcm:search-parent-scopes</em>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If a component is not found, an empty string is added to the output and the marker removed.</p>
+</div>
+<div class="paragraph">
+<div class="title">Auto-create nested components</div>
+<p>When nesting components in template markup, nested components will always be replaced by a component content marker.</p>
+</div>
+<div class="paragraph">
+<p>The following markup:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component" wcm:auto-create&gt;
+    My title: &lt;span wcm:component="title"&gt;title&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Would result in a <code>TextWebCmsComponentModel</code> with the content <code>My title: &lt;span&gt;@@wcm:component(title,default,true)@@&lt;/span&gt;</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Because <em>my-component</em> is not a container, component <em>title</em> will not get auto-created unless it is in turn attributed with <em>wcm:auto-create</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<div class="title">Including nested component output</div>
+<p>In some cases you don&#8217;t want to include a content marker for another component, but include the actual component output instead.
+You can do so by adding the <em>wcm:parent-create-include</em> attribute.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s change our example markup to the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-component" wcm:auto-create&gt;
+    My title: &lt;span wcm:component="title" wcm:parent-create-include&gt;title&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assume component <em>title</em> is a <code>TextWebCmsComponentModel</code> with <code>Some title</code> as content.
+Upon first rendering <em>my-component</em> would get created with the <em>title</em> component output included: <code>My title: &lt;span&gt;Some title&lt;/span&gt;</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_auto_create_a_simple_container"><a class="anchor" href="#_auto_create_a_simple_container"></a>Auto-create a simple container</h3>
+<div class="paragraph">
+<p>Apart from simple markup components like <code>TextWebCmsComponentModel</code> you can also auto-create <code>ContainerWebCmsComponentModel</code> components.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s change our example markup to the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-container" wcm:type="container" wcm:auto-create&gt;
+    &lt;th:block wcm:component="title"&gt;Title&lt;/th:block&gt;
+    &lt;th:block wcm:component="body"&gt;Body&lt;/th:block&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Rendering the above example will create <em>my-container</em> as a <code>ContainerWebCmsComponentModel</code>.
+The container will have 2 members: <em>title</em> and <em>body</em>, both being <code>TextWebCmsComponentModel</code> implementations with their respective processed template markup as content.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Because <em>title</em> and <em>body</em> are component children within a container type, they do not require the <em>wcm:auto-create</em> attribute themselves.
+It is assumed they should be created automatically as members of the container - if the container itself gets auto-created.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_nesting_container_components"><a class="anchor" href="#_nesting_container_components"></a>Nesting container components</h3>
+<div class="paragraph">
+<p>You&#8217;re not limited to using a single level of containers for auto-creation.
+Consider the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-container" wcm:type="container" wcm:auto-create&gt;
+    &lt;th:block wcm:component="title"&gt;Title&lt;/th:block&gt;
+    &lt;th:block wcm:component="body" wcm:type="container"&gt;
+        &lt;th:block wcm:component="intro"&gt;Intro&lt;/th:block&gt;
+        &lt;th:block wcm:component="main-text"&gt;Main text&lt;/th:block&gt;
+    &lt;/th:block&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case the following components would be created:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>my-container</em> as <code>ContainerWebCmsComponentModel</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>member: <em>title</em> as <code>TextWebCmsComponentModel</code></p>
+</li>
+<li>
+<p>member: <em>body</em> as <code>ContainerWebCmsComponentModel</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>member: <em>intro</em> as <code>TextWebCmsComponentModel</code></p>
+</li>
+<li>
+<p>member: <em>main-text</em> as <code>TextWebCmsComponentModel</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>No additional <em>wcm:auto-create</em> attributs are required as all nested components have a container as direct parent.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_placeholders_in_containers"><a class="anchor" href="#_using_placeholders_in_containers"></a>Using placeholders in containers</h3>
+<div class="paragraph">
+<p>Much like a regular markup component, a container can also use placeholders that are defined in the template.
+Where a markup component uses a <a href="#components-placeholder-content-markers">placeholder content markers</a> to render the placeholder content, a <code>ContainerWebCmsComponentModel</code> will get a member component of type <code>PlaceholderWebCmsComponentModel</code> instead.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-container" wcm:type="container" wcm:auto-create&gt;
+    &lt;th:block wcm:component="title"&gt;Title&lt;/th:block&gt;
+    &lt;div wcm:placeholder="body"&gt;
+        &lt;div wcm:component="footer" /&gt;
+    &lt;/th:block&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This would auto-create the following components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>my-container</em> as <code>ContainerWebCmsComponentModel</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>member: <em>title</em> as <code>TextWebCmsComponentModel</code></p>
+</li>
+<li>
+<p>member: <em>body</em> as <code>PlaceholderWebCmsComponentModel</code> with <em>body</em> as the placeholder name</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In the above example the <em>footer</em> component reference is outside of the container section as it is inside the placeholder block.
+This means that all ties with the container will be severed: the normal scope lookup will apply and the component will not get auto-created unless it also has the <em>wcm:auto-create</em> attribute.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_linking_to_other_components"><a class="anchor" href="#_linking_to_other_components"></a>Linking to other components</h3>
+<div class="paragraph">
+<p>A <code>ContainerWebCmsComponentModel</code> can hold <code>ProxyWebCmsComponentModel</code> members that refer to other components that are not container members.
+If your template refers to a scoped component inside a container, a proxy will get auto-created as well.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-container" wcm:type="container" wcm:auto-create&gt;
+    &lt;th:block wcm:component="title"&gt;Title&lt;/th:block&gt;
+    &lt;th:block wcm:component="footer" wcm:scope="global"&gt;Replace by the global footer&lt;/th:block&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case member <em>footer</em> would be a <code>ProxyWebCmsComponentModel</code> that is linked to the global component with the name <em>footer</em>.
+If the global <em>footer</em> component is not found however, no member would have been created either, as a proxy only links to an existing component.</p>
+</div>
+<div class="paragraph">
+<p>You can of course still auto-create the global component as well - just as if it were outside a container:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-container" wcm:type="container" wcm:auto-create&gt;
+    &lt;th:block wcm:component="title"&gt;Title&lt;/th:block&gt;
+    &lt;th:block wcm:component="footer" wcm:scope="global" wcm:auto-create&gt;Replace by the global footer&lt;/th:block&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now the global <em>footer</em> component would first get created if it doesn&#8217;t exist yet and then a proxy member would be added to the container.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_containers_with_markup"><a class="anchor" href="#_containers_with_markup"></a>Containers with markup</h3>
+<div class="paragraph">
+<p>Unless a container has markup support active, all template markup outside of <em>wcm:component</em> blocks will simply be ignored.
+If markup is supported however, the markup will contain component content markers much like in the case of markup components.</p>
+</div>
+<div class="paragraph">
+<p>However, in the case of container markup, only component content markers will be added that refer to container members.
+The container members in turn might be <code>ProxyWebCmsComponentModel</code> instances or might be <code>PlaceholderWebCmsComponentModel</code> instances.</p>
+</div>
+<div class="paragraph">
+<p>A full example for a markup supporting container:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">&lt;div wcm:component="my-container" wcm:type="markup-container" wcm:auto-create&gt;
+    Title: &lt;th:block wcm:component="title"&gt;Title&lt;/th:block&gt;
+    &lt;div wcm:placeholder="body"&gt;
+        &lt;div wcm:component="footer" wcm:scope="global" /&gt;
+    &lt;/th:block&gt;
+    Footer: &lt;th:block wcm:component="footer" wcm:scope="global"&gt;Replace by the global footer&lt;/th:block&gt;
+&lt;/div&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This would auto-create:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>my-container</em> as <code>ContainerWebCmsComponentModel</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p>member: <em>title</em> as <code>TextWebCmsComponentModel</code></p>
+</li>
+<li>
+<p>member: <em>body</em> as <code>PlaceholderWebCmsComponentModel</code> with <em>body</em> as the placeholder name</p>
+</li>
+<li>
+<p>member: <em>footer</em> as <code>ProxyWebCmsComponentModel</code> linked to the global <em>footer</em> component (same as is rendered inside the placeholder)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The markup of <em>my-container</em> would only link to container members:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Title: @@wcm:component(title,container,false)@@
+@@wcm:component(body,container,false)@@
+Footer: @@wcm:component(footer,container,false)@@</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="components-thymeleaf-rendering"><a class="anchor" href="#components-thymeleaf-rendering"></a>Custom rendering of component</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Web components in Thymeleaf are rendered using a <code>WebCmsComponentModelRenderer</code> implementation.
+You can easily create your own implementation for custom rendering:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>create your own implementation of <code>WebCmsComponentModelRenderer</code></p>
+</li>
+<li>
+<p>implement the <code>supports()</code> method to ensure it is used for the correct types</p>
+</li>
+<li>
+<p>register your implementation as a bean so it can be picked up by the rendering infrastructure</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you want to override the default rendering, you must ensure your implementation is registered <strong>before</strong> the default implementations.
+You can do so by ordering your beans (using an <code>@Order</code> annotation or implementing the <code>Ordered</code> interface).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you want to use content markers in your content snippets, you can use the <code>WebCmsComponentContentModelWriter</code> to render the content with Thymeleaf.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="components-thymeleaf-content-markers"><a class="anchor" href="#components-thymeleaf-content-markers"></a>Custom content markers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Content containing content markers can easily be written to Thymeleaf output using the <code>WebCmsComponentContentModelWriter</code>.
+If you want to implement your own custom content markers you must provide an implementation of <code>WebCmsComponentContentMarkerRenderer</code> as a bean.</p>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="content-markers.html">&laquo; Content markers</a>
+            <span class="article-footer-nav-current">Thymeleaf integration</span>
+        <a class="article-footer-nav-next" href="../importing/index.html">Importing data &raquo;</a>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

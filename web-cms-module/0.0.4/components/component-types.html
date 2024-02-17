@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Across - Across</title>
+    <meta name="generator" content="Antora 1.0.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="web-cms-module" data-version="0.0.4">
+  <aside class="navigation" role="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Module: Web CMS</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../quick-start.html">Quick start</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../releases/index.html">Releases</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../releases/0.0.x.html#0-0-3">0.0.3</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../configuration-properties.html">Configuration properties</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../domain-model/assets/index.html">Web CMS Asset model</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../domain-model/assets/endpoint-url.html">Endpoints &amp; URLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/pages/index.html">Web Pages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/publication/index.html">Publications &amp; Articles</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/images/index.html">Images</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/redirects/index.html">Redirects</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../domain-model/menus/index.html">Menus</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="index.html">Web Components</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="component-types.html">Component types</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="creating-a-component-type.html">Creating a custom component</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="content-markers.html">Content markers</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="thymeleaf.html">Thymeleaf integration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../importing/index.html">Importing data</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../importing/yaml-structure.html">YAML structure</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../multi-domain/index.html">Multi-domain support</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/setup.html">Application configuration</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/using-domains.html">Using domains</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../multi-domain/importing.html">Importing domain data</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../services-and-components/index.html">Services and components</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/entitymodule-attributes.html">EntityModule attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/message-codes.html">Message codes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/thymeleaf-dialect.html">Thymeleaf dialect</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../services-and-components/default-data.html">Default data</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../performance-tuning/index.html">Performance tuning</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../guides/index.html">Guides &amp; How-tos</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/creating-a-custom-asset.html">Creating a custom asset type</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../guides/creating-a-site-template.html">Creating a website template</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Module: Web CMS</span>
+    <span class="version">0.0.4</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../guides/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/1.0.0/index.html">1.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/0.0.1/index.html">0.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/1.2.0/index.html">1.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/dev/index.html">dev</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">0.0.4</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main" role="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/2.1.0/index.html" class="home-link"></a>
+<nav class="crumbs" role="navigation" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Module: Web CMS</a></li>
+    <li class="crumb"><a href="index.html">Web Components</a></li>
+    <li class="crumb is-current"><a href="component-types.html">Component types</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-web-cms-module/edit/develop/docs/modules/ROOT/pages/components/component-types.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+<div class="sect2">
+<h3 id="components-default-component-types"><a class="anchor" href="#components-default-component-types"></a>Default component types</h3>
+<div class="paragraph">
+<p>WebCmsModule contains a number of default component types, backed by a set of default <code>WebCmsComponentModel</code> implementations.
+You can easily define your own component types by extending one of these base types, see the chapter <a href="#components-defining-component-types">Defining component types</a>.</p>
+</div>
+<div class="paragraph">
+<p>The following component types are added with the default data:</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 57.1428%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2858%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type key</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Base type <sup>1</sup></th>
+<th class="tableblock halign-left valign-top">WebCmsComponentModel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">proxy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A proxy for another component that will be rendered instead.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">proxy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ProxyWebCmsComponentModel</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">placeholder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a placeholder for content provided by code or templates.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">placeholder</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>PlaceholderWebCmsComponentModel</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">container</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container of multiple ordered components. The user can add or remove child components to the container.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">container</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ContainerWebCmsComponentModel</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fixed-container</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Container of a fixed set of components. The user can not add or remove child components to the container.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">fixed-container</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ContainerWebCmsComponentModel</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">text-field</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A single line of plain text.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">plain-text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TextWebCmsComponentModel</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">plain-text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Plain text component.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">plain-text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TextWebCmsComponentModel</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rich-text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Rich text component - supporting HTML markup and default assets if enabled by other modules.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rich-text</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TextWebCmsComponentModel</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">html</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A snippet of HTML.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">markup</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TextWebCmsComponentModel</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Represents a <code>WebCmsImage</code> asset.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">image</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>ImageWebCmsComponentModel</code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><sup>1</sup> The <em>Base type</em> is the value of the <strong>type</strong> attribute on the <code>WebCmsComponentType</code>.  Every component type must have a unique type key, but several component types can have the same base type.</p>
+</div>
+<div class="paragraph">
+<p>See <code>WebCmsComponentUtils</code> for some utility functions when working with components and component types.</p>
+</div>
+<div class="sect3">
+<h4 id="_webcmscomponentmodel_implementations"><a class="anchor" href="#_webcmscomponentmodel_implementations"></a>WebCmsComponentModel implementations</h4>
+<div class="paragraph">
+<p>All component models must extend <code>WebCmsComponentModel</code>.
+A number of default implementations is provided by the WebCmsModule.
+It is usually the <code>WebCmsComponentType</code> base type (<em>type</em> attribute) that will determine the <code>WebCmsComponentModel</code> that gets instantiated.</p>
+</div>
+<div class="sect4">
+<h5 id="_textwebcmscomponentmodel"><a class="anchor" href="#_textwebcmscomponentmodel"></a>TextWebCmsComponentModel</h5>
+<div class="paragraph">
+<p>Represents a text component that can be either plain text, rich text or markup.
+In all cases an optional profile is supported that can indicate the sub-types of content that are supported.</p>
+</div>
+<div class="paragraph">
+<p>A <code>TextWebCmsComponentModel</code> is a large body of text (the <code>content</code> property) that should be escaped or not upon rendering.
+The other properties are mostly relevant for the administrative user interface.</p>
+</div>
+<div class="paragraph">
+<p><code>TextWebCmsComponentModel</code> content can contain <a href="#components-content-markers">content markers</a>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Base types</div>
+<p>The following base types will create a <code>TextWebCmsComponentModel</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>plain-text</em>: will escape its content when rendering</p>
+</li>
+<li>
+<p><em>rich-text</em>: unescaped content with a RTE in the administration UI</p>
+</li>
+<li>
+<p><em>markup</em>: unescaped content with a HTML editor in the administration UI</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Component type attributes</div>
+<p><code>TextWebCmsComponentModel</code> implementations check extra <code>WebCmsComponentType</code> attributes to map their properties.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>multiLine</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If set to false, the component will behave as a single line of text.
+In all other cases it will behave as a multi-line text component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>rows</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Size indicator: number of rows the component should have by default.
+Only applicable in case of a multi-line component.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>profile</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Optionally specify an additional text profile this component should use.
+The text profile can for example be used to determine settings of the rich text editor.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_containerwebcmscomponentmodel"><a class="anchor" href="#_containerwebcmscomponentmodel"></a>ContainerWebCmsComponentModel</h5>
+<div class="paragraph">
+<p>A <code>ContainerWebCmsComponentModel</code> represents an ordered collection of other components (the container members).
+By default a container simply renders its individual members in order.</p>
+</div>
+<div class="paragraph">
+<div class="title">Markup containers</div>
+<p>Containers can optionally also support markup (determined by the <em>supportsMarkup</em> attribute on the actual <code>WebCmsComponentType</code>).
+If markup is set, it represents the rendering template for the container and members should be rendered using <a href="#components-content-markers">content markers</a>.</p>
+</div>
+<div class="paragraph">
+<p>Within container markup, component content markers can use the <em>container</em> scope to reference a member of the container itself.</p>
+</div>
+<div class="paragraph">
+<div class="title">Base types</div>
+<p>The following base types will create a <code>ContainerWebCmsComponentModel</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>container</em>: allows dynamic addition/removal of members</p>
+</li>
+<li>
+<p><em>fixed-container</em>: holds a fixed set of members (useful as a base type for custom components)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Component type attributes</div>
+<p><code>ContainerWebCmsComponentModel</code> implementations check extra <code>WebCmsComponentType</code> attributes to map their properties.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Attribute</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>supportsMarkup</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">If set to <strong>true</strong> then markup on the container will be used for rendering if there is markup set.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_placeholderwebcmscomponentmodel"><a class="anchor" href="#_placeholderwebcmscomponentmodel"></a>PlaceholderWebCmsComponentModel</h5>
+<div class="paragraph">
+<p>A <code>PlaceholderWebCmsComponentModel</code> has only a single relevant property: the name of the placeholder whose content should be rendered.
+By default if no placeholder content is available, this component will render an empty string.</p>
+</div>
+<div class="paragraph">
+<p>Base type: <em>placeholder</em></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_proxywebcmscomponentmodel"><a class="anchor" href="#_proxywebcmscomponentmodel"></a>ProxyWebCmsComponentModel</h5>
+<div class="paragraph">
+<p>A <code>ProxyWebCmsComponentModel</code> holds a reference to another component (the proxy target) and renders that component instead.
+Use a <code>ProxyWebCmsComponentModel</code> if you want to add an already existing component as a member of a container.</p>
+</div>
+<div class="paragraph">
+<p>Base type: <em>proxy</em></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_imagewebcmscomponentmodel"><a class="anchor" href="#_imagewebcmscomponentmodel"></a>ImageWebCmsComponentModel</h5>
+<div class="paragraph">
+<p>An <code>ImageWebCmsComponentModel</code> holds a reference to a <code>WebCmsImage</code> asset.
+Default rendering of an <code>ImageWebCmsComponentModel</code> is not very useful and developers should provide their own rendering by either updating the <code>WebCmsComponentType</code> with a custom <em>template</em> or by providing the rendering infrastructure (see <a href="#components-thymeleaf-rendering">Thymeleaf rendering</a>).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For the <code>ImageWebCmsComponentModel</code> to function, a valid <code>WebCmsImageConnector</code>  bean should be present.  See the chapter <a href="#images-image-model">Image model</a> for more information.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>

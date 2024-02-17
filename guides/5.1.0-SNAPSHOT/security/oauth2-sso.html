@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrating with OAuth2 using SSO. - Across</title>
+    <meta name="generator" content="Antora 2.1.1">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<meta name="og:title" content="Across Documentation"/>
+<meta name="og:image" content="https://across.foreach.be/across/resources/static/acrossWebsite/img/og-image-across.jpg"/>
+<link rel="icon" type="image/png" sizes="16x16" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-16x16.png"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-32x32.png"/>
+<link rel="icon" type="image/png" sizes="96x96" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/favicon-96x96.png"/>
+<link rel="apple-touch-icon" type="image/png" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-120x120.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-152x152.png"/>
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://across.foreach.be/across/resources/static/acrossWebsite/img/favicon/apple-icon-180x180.png"/>
+  </head>
+  <body class="article">
+<header class="header" role="banner">
+  <div class="m-mobile-menu__button js-overlay-menu-button" data-target="mobile-menu">
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+    <span class="m-mobile-menu__line"></span>
+  </div>
+
+  <div class="m-mobile-menu">
+    <div class="m-mobile-menu__logo">
+      <a class="m-nav__logo" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+          <title>logo-across</title>
+          <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+          <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+          <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+          <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+          <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+          <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+        </svg>
+        <span>Across</span>
+      </a>
+    </div>
+  </div>
+  <div class="m-mobile-menu__container js-mobile-menu-overlay" id="mobile-menu">
+    <nav class="m-mobile-menu__list">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </nav>
+  </div>
+  <nav class="m-nav is-sticky">
+    <a class="m-nav__logo" href="../../..">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 82.9 95.7">
+        <title>logo-across</title>
+        <path fill="#3CA873" d="M0 23.9l15.9-9.2 41.5 23.9-16 9.2"></path>
+        <path fill="#0093D8" d="M25.5 9.2L41.4 0l41.5 23.9-16 9.2"></path>
+        <path fill="#53DD99" d="M41.4 95.7l16-9.3V38.6l-16 9.2"></path>
+        <path fill="#22CEFA" d="M66.9 80.9l16-9.2V23.9l-16 9.2"></path>
+        <path fill="#257A50" d="M12.5 64.5L28.9 55l-16.4-9.4"></path>
+        <path fill="#4DBC86" d="M12.5 64.5L28.9 74V55"></path>
+      </svg>
+      <span>Across</span>
+    </a>
+
+    <div class="m-nav__link-group">
+      <a href="https://across.foreach.be/blog">Blog</a>
+      <a href="https://across.foreach.be/documentation" class="is-active">Docs</a>
+      <a href="https://across.foreach.be/modules">Modules</a>
+      <a href="https://across.foreach.be/faq">FAQ</a>
+      <a href="http://start-across.foreach.be">Get started</a>
+    </div>
+  </nav>
+</header>
+<div class="main-wrapper">
+<div class="navigation-container" data-component="guides" data-version="5.1.0-SNAPSHOT">
+  <aside class="navigation">
+    <div class="panels">
+      <div id="search-box" class="search-box is-active">
+        <input id="search-input" type="text" placeholder="Search the documentation">
+      </div>
+      <div class="navigation-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Application Guides</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="../modular-monoliths/index.html">Building a modular monolith</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modular-monoliths/1-creating-a-module.html">Applications and modules</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modular-monoliths/2-module-dependencies.html">Module dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modular-monoliths/3-using-module-components.html">Using module components</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modular-monoliths/4-working-with-events.html">Working with events</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../modular-monoliths/5-dynamic-application-module.html">Dynamic application module</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-toggle"></button>
+    <a class="nav-link" href="oauth2-sso.html">Adding security</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="oauth2-sso.html">OAuth2 with Single-Sign On</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+      <div class="navigation-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Application Guides</span>
+    <span class="version">5.1.0-SNAPSHOT</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <span class="title">Across Platform</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.5/index.html">2.1.5</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.4/index.html">2.1.4</a>
+        </li>
+        <li class="version">
+          <a href="../../../across/2.1.3/index.html">2.1.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <span class="title">Application Guides</span>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.1.0-SNAPSHOT</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Auto-configuration Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../across-autoconfigure/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Migration guides</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../migration/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Admin Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../admin-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.2.0/index.html">3.2.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../admin-web-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Application Info</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../application-info-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../application-info-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Batch Processing</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-batch-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.2/index.html">1.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-batch-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Bootstrap UI</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../bootstrap-ui-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.2/index.html">2.2.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.2.1/index.html">2.2.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../bootstrap-ui-module/2.1.1/index.html">2.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Caching - Ehcache</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ehcache-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ehcache-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Debug Web</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../debug-web-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../debug-web-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Documents & Forms</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../dynamic-forms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.3/index.html">0.0.3</a>
+        </li>
+        <li class="version">
+          <a href="../../../dynamic-forms-module/0.0.2/index.html">0.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Entity Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../entity-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.4.0/index.html">3.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.3.0/index.html">3.3.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../entity-module/3.2.0/index.html">3.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: File Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../file-manager-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/2.1.0-SNAPSHOT/index.html">2.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.4.0/index.html">1.4.0</a>
+        </li>
+        <li class="version">
+          <a href="../../../file-manager-module/1.3.0/index.html">1.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Hibernate JPA</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../hibernate-jpa-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../hibernate-jpa-module/3.0.0/index.html">3.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: LDAP Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../ldap-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../ldap-module/1.0.1/index.html">1.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Logging</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../logging-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../logging-module/1.1.0/index.html">1.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Mobile Support</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-mobile-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-mobile-module/2.0.0/index.html">2.0.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Properties</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../properties-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../properties-module/1.1.1/index.html">1.1.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-module/3.0.2/index.html">3.0.2</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - ACLs</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../spring-security-acl-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.2/index.html">3.0.2</a>
+        </li>
+        <li class="version">
+          <a href="../../../spring-security-acl-module/3.0.1/index.html">3.0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Security - OAuth2</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../oauth2-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.1/index.html">2.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../oauth2-module/2.1.0/index.html">2.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: User Management</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../user-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/4.1.0-SNAPSHOT/index.html">4.1.0-SNAPSHOT</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version">
+          <a href="../../../user-module/3.1.0/index.html">3.1.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <span class="title">Module: Web CMS</span>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../web-cms-module/index.html">master</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.7/index.html">0.0.7</a>
+        </li>
+        <li class="version">
+          <a href="../../../web-cms-module/0.0.6/index.html">0.0.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+    <script>
+      var indexName = window.location.href.indexOf('across-site/production/')>0 ? 'antora-across-site-production' : 'antora-across-site-preview';
+      docsearch({
+                  appId: 'YNK2RERBV5',
+                  apiKey: '201d66bbf44a6c62002472e491d74568',
+                  indexName: indexName,
+                  inputSelector: '#search-input',
+                  algoliaOptions: { hitsPerPage: 10 }
+                })
+    </script>
+  </aside>
+</div>
+  <main class="main">
+<div class="toolbar" role="navigation">
+  <button class="navigation-toggle"></button>
+  <a href="../../../across/index.html" class="home-link"></a>
+<nav class="crumbs" aria-label="breadcrumbs">
+  <ul>
+    <li class="crumb"><a href="../index.html">Application Guides</a></li>
+    <li class="crumb"><a href="oauth2-sso.html">Adding security</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/ForeachOS/ax-docs-platform/edit/master/docs/guides/modules/ROOT/pages/security/oauth2-sso.adoc">Edit this Page</a></div>
+</div>
+<article class="doc"><a name="section-top"></a>
+      <h1>Integrating with OAuth2 using SSO.</h1>
+    <div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this guide, we&#8217;ll integrate with an external OAuth2 service using Single sign-on.
+We&#8217;ll be using the OAuth2 auto configuration provided by spring boot, and then further customize this to our needs.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_starting_point"><a class="anchor" href="#_starting_point"></a>Starting point</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>For this guide we&#8217;ll start from an application generated by <a href="https://start.across.dev/">Across Initializr</a>.
+We&#8217;ll start from the default preset (Blank Across application without any modules) and select the option AcrossWebModule.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_setting_up_oauth2"><a class="anchor" href="#_setting_up_oauth2"></a>Setting up OAuth2</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>During this guide, we&#8217;re going to build upon the configuration provided by Spring Boot.
+As such, we&#8217;ll add the following dependencies:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Spring Boot starter security, this will enable us to configure basic security within the applications.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Spring Security OAuth, to perform an OAuth2 based login.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.security.oauth&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-security-oauth2&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_oauth2_settings"><a class="anchor" href="#_configuring_oauth2_settings"></a>Configuring OAuth2 settings</h3>
+<div class="paragraph">
+<p>Our OAuth2 configuration is entirely based on Spring&#8217;s OAuth auto configuration.
+If you&#8217;re already familiar with that topic, you can simply jump over to the next section.</p>
+</div>
+<div class="paragraph">
+<p>Next up, we&#8217;ll add our OAuth2 configuration to our application properties:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>security:
+  oauth2:
+    client:
+      clientId: 2117460915207240
+      clientSecret: a915914ff942cf92cbee88c95ce479
+      accessTokenUri: https://graph.facebook.com/oauth/access_token
+      userAuthorizationUri: https://www.facebook.com/dialog/oauth
+      tokenName: oauth_token
+      authenticationScheme: query
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: https://graph.facebook.com/me</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The above clientId and clientSecret are fake, and can not be used to actually perform authentication.
+To get valid OAuth2 credentials for facebook, take a look at their <a href="https://developers.facebook.com/">developer section</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When referring to the above parameters, we&#8217;ve shortened security.oauth2.client and .resource to s.o.c and s.o.r respectively.
+.parameters</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s.o.c.clientId</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The clientId given by the OAuth2 provider</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s.o.c.clientSecret</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The clientSecret given by the OAuth2 provider.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s.o.c.accessTokenUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uri from which we can retrieve the access token.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s.o.c.userAuthorizationUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uri to retrieve the authorization code from, which can be used to retrieve the access token.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s.o.c.tokenName</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s.o.c.authenticationScheme</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This means that when we&#8217;re performing OAuth2 calls, we&#8217;ll be sending the access token as a uri parameter.
+If we need to send the token through the header, we can use <code>header</code> as a value instead.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s.o.c.clientAuthenticationScheme</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">s.o.r.userInfoUri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The uri from which we can retrieve the user information.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&#8230;&#8203;</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Now, when we try to navigate to our application, we&#8217;ll be redirected to Facebook by default.
+If the user subsequently logs in, he&#8217;ll be redirected to our application.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_integration_with_adminwebmodule"><a class="anchor" href="#_integration_with_adminwebmodule"></a>Integration with AdminWebModule</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Instead of securing the entire application, let&#8217;s just make the administrative section secured by using OAuth2.</p>
+</div>
+<div class="sect2">
+<h3 id="_configuring_http_security"><a class="anchor" href="#_configuring_http_security"></a>Configuring Http Security</h3>
+<div class="paragraph">
+<p>To configure the secured path, we&#8217;ll require a <code>WebSecurityConfigurerAdapter</code>. what is
+This allows us to configure the security options for various paths.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>@Override
+protected void configure(HttpSecurity http) throws Exception{
+ http.antMatcher( adminWeb.path( "/**" ) )
+                .authorizeRequests()
+                .and().authorizeRequests().anyRequest().authenticated()
+                .and().csrf().csrfTokenRepository( CookieCsrfTokenRepository.withHttpOnlyFalse() )
+                .and().logout().logoutUrl( adminWeb.path( "/logout" ) )
+                .logoutSuccessUrl( adminWeb.path( "/" ) )
+                .permitAll()
+                .logoutRequestMatcher( new AntPathRequestMatcher( adminWeb.path( "/logout" ) ) );
+
+  ExpressionUrlAuthorizationConfigurer&lt;HttpSecurity&gt;.ExpressionInterceptUrlRegistry urlRegistry =
+                 http.authorizeRequests();
+
+  publisher.publishEvent( new AdminWebUrlRegistry( adminWeb, urlRegistry ) );
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Additionally we&#8217;ll need to add an @Order annotation, to ensure that this <code>WebSecurityConfigurerAdapter</code> is matched before the <code>WebSecurityConfigurerAdapter</code> configured for AdminWebModule.
+If we wouldn&#8217;t, our security configuration would be processed after the security configuration for AdminWebModule.
+When a security configuration is applicable for a given url, that security will be used and later configurations will not be checked.
+We&#8217;re also going to be using single sign-on, so we&#8217;ll need to add @EnableOAuth2Sso to the configuration class.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>@Order(0)
+@EnableOAuth2Sso
+@Configuration
+public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+    ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>AdminWebModule allows developers to configure which permissions grant access to the secured section.
+As such, we can simply apply the same settings to our new configuration.</p>
+</div>
+<div class="paragraph">
+<p>AdminWebModuleSettings is not an exposed bean, so we&#8217;ll retrieve the instance from the module itself, through the across context.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code>@Override
+protected void configure(HttpSecurity http) throws Exception{
+ ...
+ AdminWebModuleSettings adminWebModuleSettings=
+        acrossContext.getModule( AdminWebModule.NAME )
+                 .getAcrossApplicationContextHolder()
+                 .getBeanFactory()
+                 .getBean( AdminWebModuleSettings.class )
+ String[] authorities = {};
+ // if we have AdminWebModuleSettings, use those instead.
+ if (adminWebModuleSettings != null) {
+     authorities = adminWebModuleSettings.getAccessPermissions();
+ }
+
+ urlRegistry.anyRequest().hasAnyAuthority( authorities );
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_security_configuration"><a class="anchor" href="#_configuring_security_configuration"></a>Configuring security configuration</h3>
+<div class="paragraph">
+<p>This however isn&#8217;t sufficient to ensure that our OAuth2 with Sso is used when navigating to the secured section.
+We&#8217;ll need to inject our configuration in SpringSecurityModule, otherwise our configuration will have no effect &#8230;&#8203;?</p>
+</div>
+<div class="paragraph">
+<p>Because of a slight difference between @ComponentScan and @Import, we&#8217;ll have to make create an intermediate configuration class to inject into SpringSecurityModule.</p>
+</div>
+<div class="listingblock">
+<div class="title">Configuration class that imports the aformentioned WebSecurityConfigurerAdapter.</div>
+<div class="content">
+<pre class="highlightjs highlight"><code>@Import(OAuth2AutoConfiguration.class)
+@ComponentScan(basePackageClasses = WebSecurityConfiguration.class)
+@ModuleConfiguration(SpringSecurityModule.NAME)
+public class MProfileConfiguration {
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Since this class injects a configuration class into a different module, we&#8217;ll need to put it in the <code>extensions</code> package.</p>
+</div>
+<div class="paragraph">
+<p>We also have to make sure that we don&#8217;t create unnecessary beans by using <code>@ComponentScan</code>.
+As such, it&#8217;s best to insert the <code>WebSecurityConfiguration</code> class in a separate package, preferably outside the application package.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_integration_with_usermodule"><a class="anchor" href="#_integration_with_usermodule"></a>Integration with UserModule</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OAuth2 allows to immediately retrieve user information after the access token is fetched through a ResourceServerTokenServices.
+Through the use of OAuth2, we&#8217;ll have a Principal set on the SecurityContext.
+The principal itself is extracted through the use of a <code>PrincipalExtractor</code>.
+The corresponding authorities for the principal are retrieved through an <code>AuthoritiesExtractor</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="_configuring_the_authenticated_user"><a class="anchor" href="#_configuring_the_authenticated_user"></a>Configuring the authenticated user</h3>
+<div class="paragraph">
+<p><code>UserInfoTokenServices</code> provides a default <code>PrincipalExtractor</code>, which is a <code>FixedPrincipalExtractor</code>.
+An AuthoritiesExtractor is simply an intermediate class that creates a <code>Principal</code> based on the user information that was retrieved by the <code>UserTokenInfoServices</code>.
+We could very easily integrate this with UserModule, by creating a User object based on the user information we&#8217;ve received.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_configuring_authorities"><a class="anchor" href="#_configuring_authorities"></a>Configuring authorities</h3>
+<div class="paragraph">
+<p><code>UserInfoTokenServices</code> also uses a default <code>AuthoritiesExtractor</code>, which is a <code>FixedAuthoriesExtractor</code>.
+An AuthoritiesExtractor is simply an intermediate class that extracts the authorities based on the user information that was retrieved by the <code>UserTokenInfoServices</code>.
+This AuthoritiesExtractor looks for the key <code>authorities within the user authorities and converts the presented authorities.
+By simply providing an `AuthoritiesExtractor</code> bean, this functionality can be overridden.</p>
+</div>
+<div class="paragraph">
+<p>An <code>AuthoritiesExtractor</code> receives the map containing the keys and values from the user response and is processed after the PrincipalExtractor has executed.
+When using UserModule, we can opt in to provide our own AuthoritiesExtractor which creates roles and permissions based on the incoming authorities.</p>
+</div>
+</div>
+</div>
+</div>
+    <div class="article-footer-nav">
+        <a class="article-footer-nav-previous" href="../modular-monoliths/5-dynamic-application-module.html">&laquo; Dynamic application module</a>
+            <span class="article-footer-nav-current">Adding security</span>
+    </div>
+</article>
+<aside class="article-aside hidden" role="navigation">
+  <h3 class="toc-title">Contents</h3>
+  <div id="article-toc"></div>
+</aside>
+  </main>
+</div>
+<footer class="footer">
+  <p>The Across documentation site is generated using <a href="https://antora.org" target="_blank">Antora</a>.</p>
+  <div class="footer-totop">
+    <!--srcset="/acrossWebsite/img/foreach-logo@2x.png 2x"-->
+    <a class="footer-partner" href="http://foreach.be/" target="_blank">
+      sponsored by <svg width="20" height="20" viewBox="0 0 277 311" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M27 307.3V133.5H.9V92.7H27v-8.8c0-24.1 4.3-46.5 19.7-64.1C58.2 6.6 74.7.1 92.9.1c13.4 0 23.7 2.2 31.2 4.8l-5.9 44.8c-3.9-1.8-9.5-2.6-15.8-2.6-17.4 0-23.7 16.7-23.7 35.5v10.1h33.6v40.8H78.7v173.8H27z" fill="#FFCE01" fill-rule="nonzero"></path>
+          <path d="M229.2 181c0-27.6-6.3-49.1-21.7-49.1-17 0-23.7 27.7-24.1 49.1h45.8zM183 221.4c.8 33.4 18.2 45.6 41.1 45.6 14.6 0 27.6-3.5 36.7-7l7.1 41.2c-13.4 5.7-33.6 9.7-53.3 9.7-52.5 0-81.4-38.6-81.4-105.8 0-72 33.6-115 77.4-115 41.5 0 65.6 36.4 65.6 101.4 0 15.4-.4 23.7-1.6 29.8H183v.1z" fill="#FFF" fill-rule="nonzero"></path>
+        </g>
+      </svg>
+    </a>
+    <a href="#section-top">
+      <svg width="34" height="34" viewBox="0 0 62 62" xmlns="http://www.w3.org/2000/svg">
+        <title>icon</title>
+        <g transform="rotate(-90 30.5 30.5)" fill="none" fill-rule="evenodd">
+          <circle stroke="#ffffff" fill="#1D2A3A" transform="rotate(180 30.007 30.942)" cx="30.007" cy="30.942" r="30"></circle>
+          <path fill="#ffffff" d="M25 38.884h3.713l6.3-7.797-6.3-8.087-3.713.064 6.155 7.972"></path>
+        </g>
+      </svg>
+    </a>
+  </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.1.1/tocbot.min.js"></script>
+<script src="../../../_/js/site.js"></script>
+<script src="../../../_/js/vendor/highlight.js"></script>
+<script>hljs.initHighlighting()</script>
+<script>
+  tocbot.init( {
+                 tocSelector: '#article-toc',
+                 contentSelector: 'article',
+                 headingSelector: 'h2, h3, h4',
+                 collapseDepth: 3,
+                 positionFixedSelector: '#article-toc',
+                 scrollSmooth: false
+               } );
+  var tocList = document.getElementById( 'article-toc' ).getElementsByClassName( 'toc-list' );
+  if ( tocList && tocList.length > 0 && tocList[0].childNodes.length > 0 ) {
+    document.getElementById( 'article-toc' ).parentNode.classList.remove( 'hidden' );
+  }
+</script>
+  </body>
+</html>
